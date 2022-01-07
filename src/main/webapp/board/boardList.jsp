@@ -68,6 +68,7 @@
         <main>
             <h1>자유게시판</h1>
             <hr id="hr1">
+            <button onclick="">글 작성</button>
             <table border="1">
                 <tr>
                     <th>번호</th>
@@ -79,7 +80,7 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                    <td>1111</td>
+                    <td><a href="">1111</a></td>
                     <td>qwer</td>
                     <td>2022-01-06</td>
                     <td>2</td>
@@ -87,7 +88,7 @@
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>2222</td>
+                    <td><a href="">2222</a></td>
                     <td>qwer</td>
                     <td>2022-01-06</td>
                     <td>2</td>

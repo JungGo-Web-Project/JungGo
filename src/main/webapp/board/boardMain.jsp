@@ -1,3 +1,4 @@
+<%@page import="utility.DBManager"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,13 +26,6 @@
             font-size: 5em;
             color: white;
         }
-        #ad{
-            height: 40vh;
-            background-color: violet;
-            text-align: center;
-            font-size: 10em;
-            color: white;
-        }
         main{
 
         }
@@ -43,20 +37,49 @@
             background-color: black;
             color: white;
         }
-        td{
-            width: 300px;
-            height: 200px;
-            background-color: cornflowerblue;
+        #hr1{
+            margin-top: 30px;
+            width: 80vw;
+            border: thin solid black;
+            margin-bottom: 30px;
+        }
+        #hr2{
+            margin-top: 30px;
+            width: 80vw;
+            margin-bottom: 30px;
+        }
+        #sec1{
+            display: flex;
+            align-items: center;
+        }
+        h2{
+            width: 200px;
+        }
+        #boardTable{
+            width: 80vw;
             text-align: center;
-            font-size: 5em;
-            color: white;
+            font-size: 1.3em;
         }
-        th{
-            text-align: left;
-            font-size: 2em;
+        #code{
+            width: 10vw;
         }
-        table{
-            margin-top: 50px;
+        #title{
+            width: 25vw;
+        }
+        #id{
+            width: 10vw;
+        }
+        #date{
+            width: 15vw;
+        }
+        #view{
+            width: 10vw;
+        }
+        #boardWrite{
+            margin-left: 75vw;
+        }
+        #num{
+            text-align: center;
         }
     </style>
     <title>main</title>
@@ -70,53 +93,34 @@
             </section>
         </header>
         <main>
-            <section id="ad">
-                ad
-            </section>
-            <table>
+            <h1>자유게시판</h1>
+            <hr id="hr1">
+            <button onclick="" id="boardWrite">글 작성</button>
+            <table border="1" id="boardTable">
                 <tr>
-                    <th colspan="3">최신글</th>
+                    <th id="code">번호</th>
+                    <th id="title">제목</th>
+                    <th id="id">작성자</th>
+                    <th id="date">작성일</th>
+                    <th id="view">조회수</th>
                 </tr>
                 <tr>
                     <td>1</td>
+                    <td><a href="">1111</a></td>
+                    <td>qwer</td>
+                    <td>2022-01-06</td>
                     <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><a href="">2222</a></td>
+                    <td>qwer</td>
+                    <td>2022-01-06</td>
+                    <td>2</td>
                 </tr>
             </table>
-            <table>
-                <tr>
-                    <th colspan="3">자유게시판</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th colspan="3">상품후기</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th colspan="3">상품요청</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-            </table>
+            <h2 id="num">-1-</h2>
+            <hr id="hr2">
         </main>
         <footer>
             footer
