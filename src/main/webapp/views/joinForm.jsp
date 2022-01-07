@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="revalidation.js"></script>
     <link rel="stylesheet" href="views/joinForm.css" type="text/css">
-    <title>Document</title>
+    <title>Join</title>
 </head>
 <body>
     <div class="wrap">
         <h2>회원가입 정보입력</h2>
-        <form action="">
+        <form method="post" action="service">
             <div>
                 <hr color="grey" size="2">
                 <table>
@@ -51,14 +51,14 @@
                     <tr>
                         <td class="txt"><span>전화번호</span></td>
                         <td>
-                            <input type="tel" name="tel" id="tel" class="required"><br>
+                            <input type="tel" name="phone" id="phone" class="required"><br>
                             <span id="alert5" class="alert">필수정보입니다</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="txt"><span>닉네임</span></td>
+                        <td class="txt"><span>주소</span></td>
                         <td>
-                            <input type="tel" name="nickname" id="nickname" class="required"><br>
+                            <input type="text" name="address" id="address" class="required"><br>
                             <span id="alert6" class="alert">필수정보입니다</span>
                         </td>
                     </tr>
@@ -87,7 +87,7 @@
                 <hr color="grey" size="2">
             </div>
             <div class="btn">
-                <input type="button" value="취소" id="cancel">
+                <input type="button" value="취소" id="cancel" onclick="location.href='main'">
                 <input type="button" value="회원가입" id="join" onclick="checkJoin(form)">
             </div>
             <input type="hidden" name="command" value="join">
