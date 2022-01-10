@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="01_main.css">
+<link rel="stylesheet" type="text/css" href="../resource/css/01_main.css">
 <title>중고마켓</title>
 </head>
 <body>

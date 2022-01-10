@@ -6,55 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        div{
-            display: grid;
-            justify-content: center;
-        }
-        header{
-            height: 20vh;
-        }
-        .top{
-            height: 15vh;
-            background-color: burlywood;
-            text-align: center;
-            font-size: 5em;
-            color: white;
-        }
-        main{
-
-        }
-        footer{
-            margin-top: 50px;
-            height: 50vh;
-            text-align: center;
-            font-size: 10em;
-            background-color: black;
-            color: white;
-        }
-        #hr1{
-            margin-top: 30px;
-            width: 70vw;
-            border: thin solid black;
-            margin-bottom: 30px;
-        }
-        #hr2{
-            margin-top: 30px;
-            width: 70vw;
-            margin-bottom: 30px;
-        }
-        #sec1{
-            display: flex;
-            align-items: center;
-        }
-        h2{
-            width: 200px;
-        }
-    </style>
+    <link rel="stylesheet" href="../resource/css/boardUpdateForm.css" type="text/css">
     <title>main</title>
 </head>
 <body>

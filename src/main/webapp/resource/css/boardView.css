@@ -1,0 +1,83 @@
+@charset "UTF-8";
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .boardView-div{
+            width: 100vw;
+            height: 120vw;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: 20% 40% 40%;
+            grid-template-areas: 
+            "header"
+            "main"
+            "footer"
+            ;
+        }
+        .boardView-header{
+            margin-top: 100px;
+            grid-area: header;
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            font-size: 2em;
+        }
+        .boardView-main{
+            grid-area: main;
+            display: grid;
+            justify-content: center;
+        }
+        #boardView-textarea{
+            width: 60vw;
+            height: 40vh;
+            resize: none;
+        }
+        #boardView-submit{
+            width: 150px;
+            height: 60px;
+            color: white;
+            font-size: 1.5em;
+            background-color: rgb(62, 224, 56);
+        }
+        #boardView-list{
+            width: 100px;
+            height: 60px;
+            color: white;
+            font-size: 1.5em;
+            background-color: black;
+        }
+        .boardView-footer{
+            grid-area: footer;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .boardView-sec{
+            display: grid;
+            grid-template-areas: 
+            'arti1 arti1'
+            'arti2 arti3'
+            'arti4 arti5'
+            ;
+            gap: 50px;
+        }
+        #boardView-arti1{
+            grid-area: arti1;
+            text-align: center;
+            font-size: 1.7em;
+        }
+        #boardView-arti2{
+            grid-area: arti2;
+        }
+        #boardView-arti3{
+            grid-area: arti3;
+            text-align: right;
+        }
+        #boardView-arti4{
+            grid-area: arti4;
+        }
+        #boardView-arti5{
+            grid-area: arti5;
+            text-align: right;
+        }
