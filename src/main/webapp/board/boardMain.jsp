@@ -148,7 +148,6 @@ for(int i=0; i<board.size(); i++){
                         <h3>작성일 : <%=free.get(free.size()-4).getDate() %></h3>
                         <h3>조회수 : <%=free.get(free.size()-4).getView() %></h3>
                     </section></td>
-                    
                 </tr>
             </table>
             <hr id="hr2">
