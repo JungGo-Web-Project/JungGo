@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="center_wrap">
-		<h2>새로 올라온 상품</h2>		
+		<h2>새로 올라온 상품</h2>
 		<ul>
 			<!-- 더미 -->
 			<li>
