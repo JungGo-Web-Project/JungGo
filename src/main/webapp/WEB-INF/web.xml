@@ -5,6 +5,8 @@
   
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
+    <welcome-file>login.css</welcome-file>
+    <welcome-file>revalidation.js</welcome-file>
   </welcome-file-list>
 	<!-- 변수명처럼 join을 선언하고, -->
 	<!-- 해당 이름의 대상을 JoinServlet -->
@@ -18,7 +20,7 @@
 		<url-pattern>/service</url-pattern>
 	</servlet-mapping>
 	
-	<!--  jsp파일 맵핑도 가능 -->
+
 	<servlet>
 		<servlet-name>main</servlet-name>
 		<jsp-file>/views/main.jsp</jsp-file>
@@ -45,5 +47,23 @@
 		<servlet-name>login</servlet-name>
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>	
+	
+<!--  	<servlet>
+		<servlet-name>boardWriteForm</servlet-name>
+		<jsp-file>/board/boardWriteForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boradWriteForm</servlet-name>
+		<url-pattern>/boradWriteForm</url-pattern>
+	</servlet-mapping> -->
+	
+		<servlet>
+		<servlet-name>boardList</servlet-name>
+		<jsp-file>boardList.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardList</servlet-name>
+		<url-pattern>/boardList</url-pattern>
+	</servlet-mapping>
 	
 </web-app>

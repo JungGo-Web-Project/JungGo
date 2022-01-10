@@ -111,7 +111,8 @@ String cate = "";
             <hr id="hr2">
             <form>
             <input type="hidden" value="">
-            <input type="button" value="글 작성" onclick="">
+            <input type="button" value="글 작성" onclick="location.href='service'">
+            <input type="hidden" name="command" value="boardWriteForm">
             <input type="button" id="boardList-list" onclick="location.href='boardMain.jsp'" value="전체 목록">
             </form>
             <hr id="hr2">
