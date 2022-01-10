@@ -15,10 +15,9 @@ public class ActionFactory {
 	public Action getAction(String command) {
 		if(command.equals("login")) return new LoginAction();
 		else if(command.equals("join")) return new JoinAction();
-		else if(command.equals("boardView")) return new BoardViewAction();
 		else if(command.equals("boardUpdate")) return new BoardUpdateAction();
 		else if(command.equals("boardWrite")) return new BoardWriteAction();
-		
+		else if(command.equals("boardDelete")) return new BoardDeleteAction();
 		return null;
 	}
 	

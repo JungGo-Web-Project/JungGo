@@ -1,3 +1,6 @@
+<%@page import="board.boardDTO"%>
+<%@page import="board.boardDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,9 +18,6 @@
             display: grid;
             justify-content: center;
         }
-        header{
-            height: 20vh;
-        }
         .top{
             height: 15vh;
             background-color: burlywood;
@@ -25,16 +25,8 @@
             font-size: 5em;
             color: white;
         }
-        main{
-
-        }
-        footer{
-            margin-top: 50px;
-            height: 50vh;
-            text-align: center;
-            font-size: 10em;
-            background-color: black;
-            color: white;
+        #boardList-table{
+			text-align: center;
         }
         #hr1{
             margin-top: 30px;
@@ -54,57 +46,76 @@
         h2{
             width: 200px;
         }
+        #boardView-list{
+            width: 100px;
+            height: 60px;
+            color: white;
+            font-size: 1.5em;
+            background-color: black;
+        }
     </style>
     <title>main</title>
 </head>
 <body>
 <% 
+int list = Integer.parseInt(request.getParameter("list"));
+boardDAO dao =  boardDAO.getInstance();
+ArrayList<boardDTO> allBoard = dao.getBoard();
+ArrayList<boardDTO> board = new ArrayList<boardDTO>();
+String cate = "";
+	if(list == 1){
+		cate = "자유게시판";
+	}
+	else if(list == 2){
+		cate = "구매 후기";
+	}
+	else if(list == 3){
+		cate = "판매 요청";
+	}
 
-
-
+	for(int i=0; i<allBoard.size(); i++){
+		if(allBoard.get(i).getCategory().equals(cate)){
+			board.add(allBoard.get(i));
+		}
+	}
 %>
     <div>
-        <header>
-            <h1>title</h1>
-            <section class="top">
-                top
-            </section>
-        </header>
         <main>
-            <h1><%= %></h1>
+        	<h1><%=cate %></h1>
             <hr id="hr1">
-            <form>
-            <input type="hidden" value="<%= %>">
-            <input type="text" value="글 작성">
-            </form>
-            <table border="1">
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                    <th>조회수</th>
+
+            <table id="boardList-table" border="5">
+                <tr id="title">
+                    <td id="title1" style="width: 4vw">번 호</td>
+                    <td id="title2" style="width: 30vw">제  목</td>
+                    <td id="title3" style="width: 10vw">작성자</td>
+                    <td id="title4" style="width: 5vw">조회수</td>
+                    <td id="title6" style="width: 15vw">작성일자</td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td><a href="">1111</a></td>
-                    <td>qwer</td>
-                    <td>2022-01-06</td>
-                    <td>2</td>
+                <%
+                
+                for(int i=0; i<board.size(); i++){
+                	%>
+                <tr id="tr">
+                    <td><%=board.get(i).getCode() %></td>
+                    <td><a href="boardView.jsp?code=<%=board.get(i).getCode() %>" ><%=board.get(i).getTitle() %></a></td>
+                    <td><%=board.get(i).getId() %></td>
+                    <td><%=board.get(i).getView() %></td>
+                    <td><%=board.get(i).getDate() %></td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td><a href="">2222</a></td>
-                    <td>qwer</td>
-                    <td>2022-01-06</td>
-                    <td>2</td>
-                </tr>
+                	<%
+                }
+                
+                %>
             </table>
             <hr id="hr2">
+            <form>
+            <input type="hidden" value="">
+            <input type="button" value="글 작성" onclick="">
+            <input type="button" id="boardList-list" onclick="location.href='boardMain.jsp'" value="전체 목록">
+            </form>
+            <hr id="hr2">
         </main>
-        <footer>
-            footer
-        </footer>
     </div>
 </body>
 </html>

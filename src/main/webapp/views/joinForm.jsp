@@ -87,7 +87,7 @@
                 <hr color="grey" size="2">
             </div>
             <div class="btn">
-                <input type="button" value="취소" id="cancel" onclick="location.href='main'">
+                <input type="button" value="취소" id="cancel" onclick="location.href='01_main'">
                 <input type="button" value="회원가입" id="join" onclick="checkJoin(form)">
             </div>
             <input type="hidden" name="command" value="join">

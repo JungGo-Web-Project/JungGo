@@ -68,7 +68,7 @@
         <main>
             <h1>게시글 작성</h1>
             <hr id="hr1">
-            <form>
+            <form method="post" action="">
                 <section id="sec1">
                     <h2>제목</h2>
                     <input type="text" required>

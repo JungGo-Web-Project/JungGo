@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import user.UserDTO;
 import utility.DBManager;
 
 public class boardDAO {
@@ -122,5 +123,15 @@ public class boardDAO {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
+	}
+	
+	public boolean checkBoard(String id, String password, int code) {
+		ArrayList<boardDTO> board = getBoard();
+		for(int i=0; i<board.size(); i++) {
+			if(board.get(i).getCode() == code && board.get(i).getId().equals(id) && board.get(i).getPassword().equals(password)) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
