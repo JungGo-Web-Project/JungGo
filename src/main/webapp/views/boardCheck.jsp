@@ -6,45 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        .boardCheck-div{
-            display: grid;
-            justify-content: center;
-        }
-        #boardCheck-form{
-            margin-top: 30vh;
-            width: 300px;
-            height: 200px;
-            border: solid black 1px;
-            display: grid;
-            justify-content: center;
-        }
-        #boardCheck-pw{
-            margin-top: 30px;
-            width: 200px;
-            height: 50px;
-            font-size: 2em;
-        }
-        #boardCheck-submit{
-            margin-left: 25px;
-            width: 150px;
-            height: 50px;
-            font-size: 1.5em;
-            color: white;
-            background-color: black;
-        }
-    </style>
-    <title>main</title>
+    <link rel="stylesheet" href="../resource/css/boardCheck.css" type="text/css">
+    <title>boardCheck</title>
 </head>
 <body>
     <div class="boardCheck-div">
     <%
     int code = Integer.parseInt(request.getParameter("code"));
-    
     if(code == 1){ // 수정시에 id, pw 체크
     	%><form id="boardCheck-form" method="post" action="boardUpdate"><%
     }

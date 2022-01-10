@@ -4,8 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="login.css" type="text/css">
-<script type="text/javascript" src="revalidation.js"></script>
+<link rel="stylesheet" type="text/css" href="../resource/css/login.css">
+<script type="text/javascript" src="../resource/js/revalidation.js"></script>
 <title>login</title>
 </head>
 <body>

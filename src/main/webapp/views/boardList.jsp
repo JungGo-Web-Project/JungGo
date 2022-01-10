@@ -9,51 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        div{
-            display: grid;
-            justify-content: center;
-        }
-        .top{
-            height: 15vh;
-            background-color: burlywood;
-            text-align: center;
-            font-size: 5em;
-            color: white;
-        }
-        #boardList-table{
-			text-align: center;
-        }
-        #hr1{
-            margin-top: 30px;
-            width: 70vw;
-            border: thin solid black;
-            margin-bottom: 30px;
-        }
-        #hr2{
-            margin-top: 30px;
-            width: 70vw;
-            margin-bottom: 30px;
-        }
-        #sec1{
-            display: flex;
-            align-items: center;
-        }
-        h2{
-            width: 200px;
-        }
-        #boardView-list{
-            width: 100px;
-            height: 60px;
-            color: white;
-            font-size: 1.5em;
-            background-color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="../resource/css/boardList.css" type="text/css">
     <title>main</title>
 </head>
 <body>

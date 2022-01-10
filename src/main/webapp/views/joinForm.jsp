@@ -4,10 +4,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="revalidation.js"></script>
-    <link rel="stylesheet" href="views/joinForm.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../resource/css/joinForm.css">
+    <script type="text/javascript" src="../resource/js/revalidation.js"></script>
     <title>Join</title>
 </head>
 <body>
