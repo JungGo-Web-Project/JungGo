@@ -48,14 +48,6 @@
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>	
 	
-<!--  	<servlet>
-		<servlet-name>boardWriteForm</servlet-name>
-		<jsp-file>/board/boardWriteForm.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>boradWriteForm</servlet-name>
-		<url-pattern>/boradWriteForm</url-pattern>
-	</servlet-mapping> -->
 	
 		<servlet>
 		<servlet-name>boardList</servlet-name>
