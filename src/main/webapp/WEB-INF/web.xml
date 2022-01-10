@@ -47,7 +47,7 @@
 		<servlet-name>login</servlet-name>
 		<url-pattern>/login</url-pattern>
 	</servlet-mapping>	
-	
+
 	<servlet>
 		<servlet-name>myPage</servlet-name>
 		<jsp-file>/views/myPage.jsp</jsp-file>
