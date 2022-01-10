@@ -2,6 +2,7 @@ package controller;
 
 import contoller.action.Action;
 import contoller.action.BoardWriteAction;
+import contoller.action.EditInfoAction;
 import contoller.action.JoinAction;
 import contoller.action.LoginAction;
 import contoller.action.boardWriteFormAction;
@@ -17,6 +18,7 @@ public class ActionFactory {
 	public Action getAction(String command) {
 		if(command.equals("login")) return new LoginAction();
 		else if(command.equals("join")) return new JoinAction();
+		else if(command.equals("editInfo")) return new EditInfoAction();
 		//else if(command.equals("boardUpdate")) return new BoardUpdateAction();
 		else if(command.equals("boardWrite")) return new BoardWriteAction();
 		else if(command.equals("boardWriteForm")) return new boardWriteFormAction();

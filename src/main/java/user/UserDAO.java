@@ -71,4 +71,31 @@ public class UserDAO {
 		}
 		return false;
 	}
+	
+	public UserDTO getUserById(String id) {
+		ArrayList<UserDTO> users = getUsers();
+		for(UserDTO user : users) {
+			if(id.equals(user.getId())) {
+				return user;
+			}
+		}
+		return null;
+	}
+	
+	public void editUser(UserDTO user) {
+		try {
+			conn = DBManager.getConnection();
+			String sql = "update users set pw=?, phone=?, address=? where code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getPw());
+			pstmt.setString(2, user.getPhone());
+			pstmt.setString(3, user.getAddress());
+			pstmt.setInt(4, user.getCode());
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 }
