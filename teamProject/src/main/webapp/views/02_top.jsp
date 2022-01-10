@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="02_top.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -19,10 +18,10 @@
 						<!-- 로그인 여부에 따라 변화 -->
 					<ul>
 						<li>
-							<a href="01_main.jsp?center=login.jsp">로그인</a>
+							<a href="01_main.jsp?center=../login.jsp">로그인</a>
 						</li>
 						<li>
-							<a href="01_main.jsp?center=join.jsp">회원가입</a>
+							<a href="01_main.jsp?center=joinForm.jsp">회원가입</a>
 						</li>
 						<li>
 						<a href="01_main.jsp?center=mypage.jsp">마이페이지</a>
@@ -36,11 +35,11 @@
 			<div id="nav_inner">
 				<ul>
 					<li>
-						<a href="01_main.jsp?center=itemUpdateForm.jsp">상품등록</a>
+						<a href="01_main.jsp?center=../board/itemUpdateForm.jsp">상품등록</a>
 					</li>
 					
 					<li>
-						<a href="01_main.jsp?center=boardMain.jsp">우리동네 게시판</a>
+						<a href="01_main.jsp?center=../board/boardMain.jsp">우리동네 게시판</a>
 					</li>
 				</ul>
 				

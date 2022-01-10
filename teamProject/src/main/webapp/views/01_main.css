@@ -29,7 +29,7 @@ header{
 	left: 0;
 	right: 0;
 }
-#center_wrap{	
+main{	
 	width: 1280px;
 	height:1200px;
 	padding-top: 200px; /* 메인부분 시작지점(조정예정) */
