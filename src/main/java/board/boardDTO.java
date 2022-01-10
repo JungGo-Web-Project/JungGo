@@ -4,11 +4,12 @@ import java.sql.Timestamp;
 
 public class boardDTO {
 	private int code, view;
-	private String title, content, id, password;
+	private String category, title, content, id, password;
 	private Timestamp date;
 	
-	public boardDTO(String title, String content, String id, String password) {
+	public boardDTO(String title, String category, String content, String id, String password) {
 		this.title = title;
+		this.category = category;
 		this.content = content;
 		this.id = id;
 		this.password = password;
@@ -20,14 +21,23 @@ public class boardDTO {
 		this.password = password;
 	}
 	
-	public boardDTO(int code, String title, String content, String id, String password, int view, Timestamp date) {
+	public boardDTO(int code, String category, String title, String content, String id, String password, int view, Timestamp date) {
 		this.code = code;
 		this.title = title;
+		this.category = category;
 		this.content = content;
 		this.id = id;
 		this.password = password;
 		this.view = view;
 		this.date = date;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 	public int getCode() {

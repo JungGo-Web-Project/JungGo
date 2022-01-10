@@ -1,7 +1,8 @@
-create database JungGoServer;
+create database JungGo_test;
 
-create table JungGoServer.board(
+create table JungGo_test.board(
 	code integer primary key auto_increment,
+	category varchar(200),
     title varchar(200),
     content varchar(5000),
     id varchar(20),
@@ -10,6 +11,6 @@ create table JungGoServer.board(
     date datetime not null default current_timestamp
 )
 
-use JungGoServer;
+use JungGo_test;
 
-insert into board (title, content, id, password, date) values('테스트', '테스트용 입니다.', 'qwer', '1234', current_timestamp());
+insert into board (category, title, content, id, password, date) values('자유게시판','테스트', '테스트용 입니다.', 'qwer', '1234', current_timestamp());

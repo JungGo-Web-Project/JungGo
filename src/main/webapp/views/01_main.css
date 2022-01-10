@@ -1,0 +1,35 @@
+@charset "UTF-8";
+*{
+	padding: 0;
+	margin: 0;
+}
+#wrap{
+	display:grid;
+}
+#top_header{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+/*스크롤 해도 헤더 고정*/
+header{
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+main{
+	display: flex;
+	justify-content: center;
+	
+	padding-top: 200px; /* 메인부분 시작지점(조정예정) */
+	background-color: yellow;
+}
+nav{
+	display: flex;
+	justify-content: center;
+	background-color: lightgray;
+}
+
+/* 방식이 바뀌면서 재설계중 */

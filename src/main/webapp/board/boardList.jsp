@@ -58,6 +58,11 @@
     <title>main</title>
 </head>
 <body>
+<% 
+
+
+
+%>
     <div>
         <header>
             <h1>title</h1>
@@ -66,9 +71,12 @@
             </section>
         </header>
         <main>
-            <h1>자유게시판</h1>
+            <h1><%= %></h1>
             <hr id="hr1">
-            <button onclick="">글 작성</button>
+            <form>
+            <input type="hidden" value="<%= %>">
+            <input type="text" value="글 작성">
+            </form>
             <table border="1">
                 <tr>
                     <th>번호</th>
@@ -76,7 +84,6 @@
                     <th>작성자</th>
                     <th>작성일</th>
                     <th>조회수</th>
-                    <th>추천수</th>
                 </tr>
                 <tr>
                     <td>1</td>
@@ -84,7 +91,6 @@
                     <td>qwer</td>
                     <td>2022-01-06</td>
                     <td>2</td>
-                    <td>0</td>
                 </tr>
                 <tr>
                     <td>2</td>
@@ -92,7 +98,6 @@
                     <td>qwer</td>
                     <td>2022-01-06</td>
                     <td>2</td>
-                    <td>0</td>
                 </tr>
             </table>
             <hr id="hr2">

@@ -33,14 +33,15 @@ public class boardDAO {
 			
 			while(rs.next()) {
 				int code = rs.getInt(1);
-				String title = rs.getString(2);
-				String content = rs.getString(3);
-				String id = rs.getString(4);
-				String password = rs.getString(5);
-				int view = rs.getInt(6);
-				Timestamp date = rs.getTimestamp(7);
+				String category = rs.getString(2);
+				String title = rs.getString(3);
+				String content = rs.getString(4);
+				String id = rs.getString(5);
+				String password = rs.getString(6);
+				int view = rs.getInt(7);
+				Timestamp date = rs.getTimestamp(8);
 				
-				boardDTO board = new boardDTO(code, title, content, id, password, view, date);
+				boardDTO board = new boardDTO(code, category, title, content, id, password, view, date);
 				boards.add(board);
 			}
 		} catch (Exception e) {
@@ -53,13 +54,14 @@ public class boardDAO {
 	public void addBoard(boardDTO board) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into board(title, content, id, password, date) value (?, ?, ?, ?, ?)";
+			String sql = "insert into board(category, title, content, id, password, date) value (?, ?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, board.getTitle());
-			pstmt.setString(2, board.getContent());
-			pstmt.setString(3, board.getId());
-			pstmt.setString(4, board.getPassword());
-			pstmt.setTimestamp(5, new Timestamp(Calendar.getInstance().getTimeInMillis()));
+			pstmt.setString(1, board.getCategory());
+			pstmt.setString(2, board.getTitle());
+			pstmt.setString(3, board.getContent());
+			pstmt.setString(4, board.getId());
+			pstmt.setString(5, board.getPassword());
+			pstmt.setTimestamp(6, new Timestamp(Calendar.getInstance().getTimeInMillis()));
 			
 			pstmt.executeUpdate();
 			

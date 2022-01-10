@@ -81,10 +81,35 @@
         #num{
             text-align: center;
         }
+        #boardMain-sec{
+            margin-left: 15px;
+            width: 18vw;
+            height: 30vh;
+            background-color: burlywood;
+            text-align: center;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: solid 1px black;
+        }
+        .boardMain-main{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        #boardMain-title{
+            cursor: pointer;
+        }
     </style>
     <title>main</title>
 </head>
 <body>
+<%
+
+
+
+
+
+%>
     <div>
         <header>
             <h1>title</h1>
@@ -92,34 +117,115 @@
                 top
             </section>
         </header>
-        <main>
-            <h1>자유게시판</h1>
+        <main class="boardMain-main">
             <hr id="hr1">
-            <button onclick="" id="boardWrite">글 작성</button>
-            <table border="1" id="boardTable">
+            <table>
                 <tr>
-                    <th id="code">번호</th>
-                    <th id="title">제목</th>
-                    <th id="id">작성자</th>
-                    <th id="date">작성일</th>
-                    <th id="view">조회수</th>
+                    <th colspan="4"><h1 id="boardMain-title" onclick="">자유게시판</h1><br></th>
                 </tr>
                 <tr>
-                    <td>1</td>
-                    <td><a href="">1111</a></td>
-                    <td>qwer</td>
-                    <td>2022-01-06</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><a href="">2222</a></td>
-                    <td>qwer</td>
-                    <td>2022-01-06</td>
-                    <td>2</td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
                 </tr>
             </table>
-            <h2 id="num">-1-</h2>
+            <hr id="hr2">
+            <table>
+                <tr>
+                    <th colspan="4"><h1 id="boardMain-title" onclick="">구매 후기</h1><br></th>
+                </tr>
+                <tr>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                </tr>
+            </table>
+            <hr id="hr2">
+            <table>
+                <tr>
+                    <th colspan="4"><h1 id="boardMain-title" onclick="">판매 요청</h1><br></th>
+                </tr>
+                <tr>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                    <td><section id="boardMain-sec" onclick="">
+                        <br><br>
+                        <h1>title</h1>
+                        <h3>작성자 : id</h3>
+                        <h3>작성일 : 2022-01-09</h3>
+                        <h3>조회수 : 0</h3>
+                    </section></td>
+                </tr>
+            </table>
             <hr id="hr2">
         </main>
         <footer>
