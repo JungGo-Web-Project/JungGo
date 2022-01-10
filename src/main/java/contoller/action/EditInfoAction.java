@@ -20,7 +20,7 @@ public class EditInfoAction implements Action{
 		
 		UserDAO dao = UserDAO.getInstane();
 		UserDTO user = dao.getUserById(id);
-		
+		 
 		if(user != null) {
 			if(!pw.equals(user.getPw())) user.setPw(pw);
 			if(!phone.equals(user.getPhone())) user.setPhone(phone);

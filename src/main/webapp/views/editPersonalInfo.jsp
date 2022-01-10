@@ -49,6 +49,7 @@
         </table>
         <input type="submit" value="수정하기">
         <input type="hidden" name="command" value="editInfo">
+        
     </form>
 </body>
 </html>

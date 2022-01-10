@@ -24,6 +24,7 @@ public class ActionFactory {
 		else if(command.equals("boardWriteForm")) return new boardWriteFormAction();
 		//else if(command.equals("boardDelete")) return new BoardDeleteAction();
 		return null;
+		
 	}
 	
 }

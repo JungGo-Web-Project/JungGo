@@ -96,6 +96,5 @@ public class UserDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 	}
 }
