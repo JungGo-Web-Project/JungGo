@@ -91,22 +91,40 @@
 		<url-pattern>/editPersonalInfo</url-pattern>
 	</servlet-mapping>	
 	
-<!--  	<servlet>
+  	<servlet>
 		<servlet-name>boardWriteForm</servlet-name>
-		<jsp-file>/board/boardWriteForm.jsp</jsp-file>
+		<jsp-file>/views/boardWriteForm.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>boradWriteForm</servlet-name>
-		<url-pattern>/boradWriteForm</url-pattern>
-	</servlet-mapping> -->
+		<servlet-name>boardWriteForm</servlet-name>
+		<url-pattern>/boardWriteForm</url-pattern>
+	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
 		<servlet-name>boardList</servlet-name>
-		<jsp-file>/boardList.jsp</jsp-file>
+		<jsp-file>/views/boardList.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>boardList</servlet-name>
 		<url-pattern>/boardList</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>boardMain</servlet-name>
+		<jsp-file>/views/boardMain.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardMain</servlet-name>
+		<url-pattern>/boardMain</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>itemUpdateForm</servlet-name>
+		<jsp-file>/views/itemUpdateForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemUpdateForm</servlet-name>
+		<url-pattern>/itemUpdateForm</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

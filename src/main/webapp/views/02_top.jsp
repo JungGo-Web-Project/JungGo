@@ -47,11 +47,11 @@
 			<div id="nav_inner">
 				<ul>
 					<li>
-						<a href="01_main.jsp?center=../board/itemUpdateForm.jsp">상품등록</a>
+						<a href="main?center=itemUpdateForm">상품등록</a>
 					</li>
 					
 					<li>
-						<a href="01_main.jsp?center=../board/boardMain.jsp">우리동네 게시판</a>
+						<a href="main?center=boardMain">우리동네 게시판</a>
 					</li>
 				</ul>
 				
