@@ -10,16 +10,17 @@
 <body>
 	<div id="wrap">
 	<%	
-		String center = request.getParameter("center");
+		String value = request.getParameter("center");
 		
 		// 처음 실행시에는 center값이 넘어오지 않기에
 		// null처리 해줌
-		if(center == null){	
-			center = "./04_center.jsp";		// defulat center값을 부여
+		if(value == null){	
+			value = "center";		// defulat center값을 부여
 		}
+		String center = "/" + value;
 	%>
 	<header>
-		<jsp:include page="./02_top.jsp" />
+		<jsp:include page="/top" />
 	</header>
 	<div id=main_wrap>
 		<main>
@@ -27,7 +28,7 @@
 		</main>
 	</div>
 	<footer>
-		<jsp:include page="./03_bottom.jsp" />
+		<jsp:include page="/bottom" />
 	</footer>
 	
 	<!-- 로그인 여부 추가 -->

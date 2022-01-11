@@ -9,7 +9,7 @@
 <title>login</title>
 </head>
 <body>
-	<h1><a href="main">LOGO</a></h1>
+	<h1 id="logo"><a id="logo" href="main?center=login">LOGIN</a></h1>
     <div class="wrap">
 	    <form method="post" action="service">
             <div>
@@ -20,7 +20,7 @@
             </div>
             <div class="btn">
                 <input type="button" class="btn" value="로그인" onclick="checkLogin(form)">
-                <input type="button" class="btn" value="회원가입" onclick="location.href='join'">
+                <input type="button" class="btn" value="회원가입" onclick="location.href='main?center=join'">
             </div>
             <input type="hidden" name="command" value="login">
         </form>

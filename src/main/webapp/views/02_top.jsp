@@ -11,20 +11,20 @@
 	<div id="header_wrap">
 		<div id="top_header">
 			<h1>
-				<a href="01_main.jsp?center=04_center.jsp">중고마켓</a>
+				<a href="main">중고마켓</a>
 				
 			</h1>
 			<div id="account">
 						<!-- 로그인 여부에 따라 변화 -->
 					<ul>
 						<li>
-							<a href="01_main.jsp?center=../login.jsp">로그인</a>
+							<a href="main?center=login">로그인</a>
 						</li>
 						<li>
-							<a href="01_main.jsp?center=joinForm.jsp">회원가입</a>
+							<a href="main?center=join">회원가입</a>
 						</li>
 						<li>
-						<a href="01_main.jsp?center=mypage.jsp">마이페이지</a>
+						<a href="main?center=myPage">마이페이지</a>
 						</li>
 					</ul>
 				</div>

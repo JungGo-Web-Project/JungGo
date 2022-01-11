@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<button onclick="location.href='editPersonalInfo'">회원정보수정</button>
+<button onclick="location.href='main?center=editPersonalInfo'">회원정보수정</button>
 </body>
 </html>

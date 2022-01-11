@@ -18,14 +18,14 @@ body{
     "div";
     
 }
-h1{
+h1#logo{
     display: flex;
 
     align-items: center;
     justify-content: center;
     grid-area: logo;
 }
-a{
+a#logo{
     font-size: 2em;
     font-weight: bold;
     color: black;

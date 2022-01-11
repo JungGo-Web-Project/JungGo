@@ -1,11 +1,11 @@
 package controller;
 
-import contoller.action.Action;
-import contoller.action.BoardWriteAction;
-import contoller.action.EditInfoAction;
-import contoller.action.JoinAction;
-import contoller.action.LoginAction;
-import contoller.action.boardWriteFormAction;
+import controller.action.Action;
+import controller.action.BoardWriteAction;
+import controller.action.EditInfoAction;
+import controller.action.JoinAction;
+import controller.action.LoginAction;
+import controller.action.boardWriteFormAction;
 
 public class ActionFactory {
 	

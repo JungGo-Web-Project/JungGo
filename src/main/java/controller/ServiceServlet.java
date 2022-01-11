@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import contoller.action.Action;
+import controller.action.Action;
 
 /**
  * Servlet implementation class ServiceServlet
