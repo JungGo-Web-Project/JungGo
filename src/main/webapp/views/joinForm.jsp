@@ -4,8 +4,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../resource/css/joinForm.css">
-    <script type="text/javascript" src="../resource/js/revalidation.js"></script>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/joinForm.css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/revalidation.js"></script>
     <title>Join</title>
 </head>
 <body>
