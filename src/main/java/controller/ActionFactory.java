@@ -5,6 +5,7 @@ import controller.action.BoardWriteAction;
 import controller.action.EditInfoAction;
 import controller.action.JoinAction;
 import controller.action.LoginAction;
+import controller.action.LogoutAction;
 import controller.action.boardWriteFormAction;
 
 public class ActionFactory {
@@ -17,6 +18,7 @@ public class ActionFactory {
 	
 	public Action getAction(String command) {
 		if(command.equals("login")) return new LoginAction();
+		else if(command.equals("logout")) return new LogoutAction();
 		else if(command.equals("join")) return new JoinAction();
 		else if(command.equals("editInfo")) return new EditInfoAction();
 		//else if(command.equals("boardUpdate")) return new BoardUpdateAction();

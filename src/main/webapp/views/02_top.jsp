@@ -17,15 +17,27 @@
 			<div id="account">
 						<!-- 로그인 여부에 따라 변화 -->
 					<ul>
+					<%
+					boolean log = false;
+					if(session.getAttribute("log") != null) log = true;
+
+					
+					if(!log){%>
 						<li>
 							<a href="main?center=login">로그인</a>
 						</li>
 						<li>
 							<a href="main?center=join">회원가입</a>
 						</li>
+					<%} 
+					else{ %>
+						<li>
+						<a href="service?command=logout">로그아웃</a>
+						</li>
 						<li>
 						<a href="main?center=myPage">마이페이지</a>
 						</li>
+					<%} %>
 					</ul>
 				</div>
 			</div>

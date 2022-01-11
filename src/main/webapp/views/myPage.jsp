@@ -8,5 +8,6 @@
 </head>
 <body>
 <button onclick="location.href='main?center=editPersonalInfo'">회원정보수정</button>
+<button onclick="location.href=''">작성한 글 보기</button>
 </body>
 </html>
