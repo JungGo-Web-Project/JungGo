@@ -101,6 +101,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>boardUpdateForm</servlet-name>
+		<jsp-file>/views/boardUpdateForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardUpdateForm</servlet-name>
+		<url-pattern>/boardUpdateForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>boardList</servlet-name>
 		<jsp-file>/views/boardList.jsp</jsp-file>
 	</servlet>
@@ -116,6 +125,15 @@
 	<servlet-mapping>
 		<servlet-name>boardMain</servlet-name>
 		<url-pattern>/boardMain</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>boardView</servlet-name>
+		<jsp-file>/views/boardView.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardView</servlet-name>
+		<url-pattern>/boardView</url-pattern>
 	</servlet-mapping>
 	
 	<servlet>
