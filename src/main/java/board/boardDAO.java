@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import user.UserDTO;
-import utility.DBManager;
+import util.DBManager;
 
 public class boardDAO {
 	private boardDAO() {}
@@ -133,5 +133,35 @@ public class boardDAO {
 			}
 		}
 		return false;
+	}
+	
+	public ArrayList<boardDTO> myBoardList(String boardCategory,String userId){
+		ArrayList<boardDTO> list = new ArrayList<>();
+		try {
+			conn = DBManager.getConnection();
+			String sql = "select * from board where category=? id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, boardCategory);
+			pstmt.setString(2, userId);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int code = rs.getInt(1);
+				String category = rs.getString(2);
+				String title = rs.getString(3);
+				String content = rs.getString(4);
+				String id = rs.getString(5);
+				String password = rs.getString(6);
+				int view = rs.getInt(7);
+				Timestamp date = rs.getTimestamp(8);
+				
+				boardDTO board = new boardDTO(code, category, title, content, id, password, view, date);
+				list.add(board);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
 	}
 }

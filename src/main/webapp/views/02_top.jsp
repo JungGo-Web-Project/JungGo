@@ -34,10 +34,10 @@
 						<li>
 						<a href="service?command=logout">로그아웃</a>
 						</li>
+					<%} %>
 						<li>
 						<a href="main?center=myPage">마이페이지</a>
 						</li>
-					<%} %>
 					</ul>
 				</div>
 			</div>

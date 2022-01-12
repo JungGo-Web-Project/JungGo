@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+div.myPageWrap{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.myPage{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+div.myPageTitle{
+    display: flex;
+    justify-content: center;
+}
+span#myPageTitle{
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: bold;
+}
+div.profileInfo{
+    display: flex;
+    gap: 30px;
+}
+img#profileImage{
+    width: 100px;
+    height: 100px;
+}
+span#profileId{
+    line-height: 100px;
+    font-weight: bold;
+}
+div.myPageMenu{
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+button.myPageMenu{
+    width: 120px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+}

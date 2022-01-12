@@ -12,7 +12,7 @@ public class DBManager {
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			
+			//JungGoDB(메인) / JungGo_test(테스트)
 			String url = "jdbc:mysql://junggo-db.chhmnd3itapy.ap-northeast-2.rds.amazonaws.com:3306/JungGo_test?serverTimeZone=UTC";
 			String user = "admin";
 			String password = "mqaRNbPH8S9m3CQB";
