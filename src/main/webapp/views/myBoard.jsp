@@ -36,8 +36,8 @@ ArrayList<boardDTO> list = dao.myBoardList(board, id);
             </div>
             <div class="boardSelect">
                 <button class="boardSelect" onclick="location.href='main?center=myBoard&board=자유게시판'">자유게시판</button>
-                <button class="boardSelect" onclick="location.href='main?center=myBoard&board=구매후기'">구매후기</button>
-                <button class="boardSelect" onclick="location.href='main?center=myBoard&board=판매요청'">판매요청</button>
+                <button class="boardSelect" onclick="location.href='main?center=myBoard&board=구매 후기'">구매후기</button>
+                <button class="boardSelect" onclick="location.href='main?center=myBoard&board=판매 요청'">판매요청</button>
             </div>
             <div class="boardList">
                 <table class="myBoard">

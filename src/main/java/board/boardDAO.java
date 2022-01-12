@@ -139,7 +139,7 @@ public class boardDAO {
 		ArrayList<boardDTO> list = new ArrayList<>();
 		try {
 			conn = DBManager.getConnection();
-			String sql = "select * from board where category=? id=?";
+			String sql = "select * from board where category=? and id=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, boardCategory);
 			pstmt.setString(2, userId);
