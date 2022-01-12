@@ -91,6 +91,15 @@
 		<url-pattern>/editPersonalInfo</url-pattern>
 	</servlet-mapping>	
 	
+	<servlet>
+		<servlet-name>myBoard</servlet-name>
+		<jsp-file>/views/myBoard.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myBoard</servlet-name>
+		<url-pattern>/myBoard</url-pattern>
+	</servlet-mapping>	
+	
   	<servlet>
 		<servlet-name>boardWriteForm</servlet-name>
 		<jsp-file>/views/boardWriteForm.jsp</jsp-file>

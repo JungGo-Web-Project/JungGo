@@ -11,12 +11,6 @@
 </head>
 <body>
     <div>
-        <header>
-            <h1>title</h1>
-            <section class="top">
-                top
-            </section>
-        </header>
         <main>
             <h1>게시글 작성</h1>
             <hr id="hr1">
@@ -39,9 +33,6 @@
                 <input type="submit" value="확인">
             </form>
         </main>
-        <footer>
-            footer
-        </footer>
     </div>
 </body>
 </html>

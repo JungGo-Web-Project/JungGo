@@ -10,14 +10,6 @@ div {
 	justify-content: center;
 }
 
-.top {
-	height: 15vh;
-	background-color: burlywood;
-	text-align: center;
-	font-size: 5em;
-	color: white;
-}
-
 #boardList-table {
 	text-align: center;
 }

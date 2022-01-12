@@ -15,14 +15,6 @@
             "footer"
             ;
         }
-        .boardView-header{
-            margin-top: 100px;
-            grid-area: header;
-            display: grid;
-            justify-content: center;
-            text-align: center;
-            font-size: 2em;
-        }
         .boardView-main{
             grid-area: main;
             display: grid;
@@ -46,12 +38,6 @@
             color: white;
             font-size: 1.5em;
             background-color: black;
-        }
-        .boardView-footer{
-            grid-area: footer;
-            display: flex;
-            justify-content: center;
-            gap: 50px;
         }
         .boardView-sec{
             display: grid;

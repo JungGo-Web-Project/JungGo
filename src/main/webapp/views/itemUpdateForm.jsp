@@ -6,25 +6,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/itemUpdateForm.css" type="text/css">
+    <!--  <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/itemUpdateForm.css" type="text/css"> -->
     <title>main</title>
 </head>
 <body>
     <div>
-        <header>
-            <h1>title</h1>
-            <section class="top">
-                top
-            </section>
-        </header>
         <main>
             <h1>기본정보</h1>
             <hr id="hr1">
             <form>
-                <section id="sec1">
-                    <h2>상품이미지</h2>
-                </section>
-                <hr id="hr2">
                 <section id="sec1">
                     <h2>제목</h2>
                     <input type="text" required>
@@ -33,16 +23,13 @@
                 <section id="sec1">
                     <h2>카테고리</h2>
                     <select>
-                        <option>여성의류</option>
-                        <option>남성의류</option>
-                    </select>
-                    <select>
-                        <option>패딩/점퍼</option>
-                        <option>코트</option>
-                    </select>
-                    <select>
-                        <option>롱패딩</option>
-                        <option>숏패딩</option>
+                        <option>디지털기기</option>
+                        <option>생활가전</option>
+                        <option>남성/여성의류</option>
+                        <option>가구/인테리어</option>
+                        <option>스포츠용품</option>
+                        <option>서적/음반</option>
+                        <option>기타</option>
                     </select>
                 </section>
                 <hr id="hr2">
@@ -83,9 +70,6 @@
                 <input type="submit" value="등록하기">
             </form>
         </main>
-        <footer>
-            footer
-        </footer>
     </div>
 </body>
 </html>

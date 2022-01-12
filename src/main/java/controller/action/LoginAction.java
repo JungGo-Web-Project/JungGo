@@ -31,7 +31,7 @@ public class LoginAction implements Action{
 			}
 		}
 		
-		String url = "login";
+		String url = "main?center=login";
 		if(login) {
 			HttpSession session = request.getSession();
 			session.setAttribute("log", id);

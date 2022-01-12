@@ -1,25 +1,18 @@
 @charset "UTF-8";
+/*
         *{
             margin: 0;
             padding: 0;
         }
+        /*
         div{
             display: grid;
             justify-content: center;
         }
-        header{
-            height: 20vh;
-        }
-        .top{
-            height: 15vh;
-            background-color: burlywood;
-            text-align: center;
-            font-size: 5em;
-            color: white;
-        }
         main{
 
-        }
+        }*/
+        /*
         #hr1{
             margin-top: 30px;
             width: 70vw;
@@ -30,11 +23,12 @@
             margin-top: 30px;
             width: 70vw;
             margin-bottom: 30px;
-        }
+        }*/
+        /*
         #sec1{
             display: flex;
             align-items: center;
         }
         h2{
             width: 200px;
-        }
+        }*/

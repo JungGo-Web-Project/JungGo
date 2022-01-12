@@ -54,7 +54,7 @@ String cate = "";
                 	%>
                 <tr id="tr">
                     <td><%=board.get(i).getCode() %></td>
-                    <td><a href="boardView.jsp?code=<%=board.get(i).getCode() %>" ><%=board.get(i).getTitle() %></a></td>
+                    <td><a href="main?center=boardView&code=<%=board.get(i).getCode() %>" ><%=board.get(i).getTitle() %></a></td>
                     <td><%=board.get(i).getId() %></td>
                     <td><%=board.get(i).getView() %></td>
                     <td><%=board.get(i).getDate() %></td>
@@ -67,9 +67,9 @@ String cate = "";
             <hr id="hr2">
             <form>
             <input type="hidden" value="">
-            <input type="button" value="글 작성" onclick="location.href='service'">
+            <input type="button" value="글 작성" onclick="location.href='main?center=boardWriteForm'">
             <input type="hidden" name="command" value="boardWriteForm">
-            <input type="button" id="boardList-list" onclick="location.href='boardMain.jsp'" value="전체 목록">
+            <input type="button" id="boardList-list" onclick="location.href='main?center=boardMain'" value="전체 목록">
             </form>
             <hr id="hr2">
         </main>

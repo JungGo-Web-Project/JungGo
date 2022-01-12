@@ -11,12 +11,6 @@
 </head>
 <body>
     <div>
-        <header>
-            <h1>title</h1>
-            <section class="top">
-                top
-            </section>
-        </header>
         <main>
             <h1>게시글 수정</h1>
             <hr id="hr1">
@@ -40,9 +34,6 @@
                 <button onclick="">삭제</button>
             </form>
         </main>
-        <footer>
-            footer
-        </footer>
     </div>
 </body>
 </html>

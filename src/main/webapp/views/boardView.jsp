@@ -14,9 +14,6 @@
 </head>
 <body>
         <div class="boardView-div">
-            <header class="boardView-header">
-                <h1>게시글 보기</h1>
-            </header>
             <main class="boardView-main">
             <%
             int code = Integer.parseInt(request.getParameter("code"));
@@ -48,18 +45,16 @@
                         <article id="boardView-arti4">조회수 : <%=board.get(0).getView()+1 %></article>
                     </section>
                     <textarea id="boardView-textarea" name="content" readonly><%=board.get(0).getContent() %></textarea><br>
-                <form id="boardView-form" method="post" action="_14_checkPassForm.jsp">
+                <form id="boardView-form" method="post" action="">
                     <input type="hidden" name="code" value="<%=board.get(0).getCode() %>">
-                </form>
-            </main>
-            <footer class="boardView-footer">
                    <%String id = (String) session.getAttribute("log");
                     if(board.get(0).getId().equals(id)){%>
                         <input id="boardView-submit" type="submit" value="수정" form="form">
                 <%
                     }%>
-                    <input type="button" id="boardView-list" onclick="location.href='boardList.jsp?list=<%=list %>'" value="목록">
-            </footer>
+                    <input type="button" id="boardView-list" onclick="location.href='main?center=boardList&list=<%=list %>'" value="목록">
+                </form>
+            </main>
         </div>
 </body>
 </html>

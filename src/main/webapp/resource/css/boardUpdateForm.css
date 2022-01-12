@@ -10,29 +10,8 @@ div {
 	justify-content: center;
 }
 
-header {
-	height: 20vh;
-}
-
-.top {
-	height: 15vh;
-	background-color: burlywood;
-	text-align: center;
-	font-size: 5em;
-	color: white;
-}
-
 main {
 	
-}
-
-footer {
-	margin-top: 50px;
-	height: 50vh;
-	text-align: center;
-	font-size: 10em;
-	background-color: black;
-	color: white;
 }
 
 #hr1 {
