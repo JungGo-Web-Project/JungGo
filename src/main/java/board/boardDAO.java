@@ -68,7 +68,6 @@ public class boardDAO {
 			
 			System.out.println("보드 작성 성공!");
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
 	}
