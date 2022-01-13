@@ -3,10 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>bottom</title>
 </head>
 <body>
-	<h2>BOTTOM</h2>
+	<div id="bottom_wrap">
+		<h2>BOTTOM</h2>
+	</div>
 </body>
 </html>

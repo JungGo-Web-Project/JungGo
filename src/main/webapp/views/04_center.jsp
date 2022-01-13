@@ -3,11 +3,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>main</title>
 </head>
 <body>
 	<div id="center_wrap">
+	
+		<div id="visual">
+			<p class="visual_inner">
+				<img src="" alt=""/>
+			</p>
+		</div>
 		<h2>새로 올라온 상품</h2>	
 		<div id=content>
 			<ul>
