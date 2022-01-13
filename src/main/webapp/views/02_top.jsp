@@ -3,16 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
 </head>
 <body>
 <div id="top_wrap">
 	<div id="header_wrap">
 		<div id="top_header">
 			<h1>
-				<a href="main">중고마켓</a>
-				
+				<a href="main">
+					<img src="../resource/img/LOGO.png">
+				</a>	
+						
 			</h1>
 			<div id="account">
 						<!-- 로그인 여부에 따라 변화 -->
