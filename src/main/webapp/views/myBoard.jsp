@@ -1,5 +1,6 @@
 <%@page import="board.BoardDTO"%>
 <%@page import="board.BoardDAO"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -13,10 +14,8 @@
 <body>
 <%
 request.setCharacterEncoding("utf-8");
-
 String id = "";
 String board = request.getParameter("board");
-
 if(session.getAttribute("log") == null){
 	request.getRequestDispatcher("main?center=login").forward(request, response);
 }
@@ -24,9 +23,7 @@ else{
 	id=session.getAttribute("log").toString();
 }
 if(board == null) board = "자유게시판";
-
 BoardDAO dao = BoardDAO.getInstance();
-
 ArrayList<BoardDTO> list = dao.myBoardList(board, id);
 %>
 	<div class="myBoardWrap">
@@ -48,19 +45,21 @@ ArrayList<BoardDTO> list = dao.myBoardList(board, id);
                         <th class="view">View</th>
                         <th class="date">Date</th>
                     </tr>
-					<%
-					if (list.size() > 0) {
-						for (BoardDTO b : list) {
-							int no = b.getCode();
-							String category = b.getCategory();
-							String title = b.getTitle();
-							int view = b.getView();
-							String date = String.format("yyyy-mm-dd", b.getDate());
-					%>
-					<tr class="myBoard">
+	            	<%
+           			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	            	if(list.size() > 0){
+	            		for(BoardDTO b : list){ 
+	            			int no = b.getCode();
+	            			String category = b.getCategory();
+	            			String title = b.getTitle();
+	            			int view = b.getView();
+	            			String date = sdf.format(b.getDate());
+	            			String url = "main?center=boardView&code="+b.getCode();
+	            		%>
+           			<tr class="myBoard">
                         <td class="no"><%=no %></td>
                         <td class="category"><%=category %></td>
-                        <td class="title"><%=title %></td>
+                        <td class="title"><a class=myBoardUrl href=<%=url %>><%=title %></a></td>
                         <td class="view"><%=view %></td>
                         <td class="date"><%=date %></td>
                     </tr>
