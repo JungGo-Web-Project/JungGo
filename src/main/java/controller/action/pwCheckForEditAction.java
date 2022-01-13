@@ -21,7 +21,7 @@ public class pwCheckForEditAction implements Action{
 		
 		String url = "main?center=pwCheckForEdit&pwCheck=false";
 		if(user.getPw().equals(pw)) {
-			url = "main?center=EditPersonalInfo";
+			url = "main?center=editPersonalInfo";
 		}
 		
 		request.getRequestDispatcher(url).forward(request, response);

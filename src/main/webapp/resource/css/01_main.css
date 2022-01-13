@@ -12,7 +12,7 @@
 	justify-content: center;
 }
 #top_header{
-	width: 1280px;
+	width: 100vw;
     background-color: aqua;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@ header{
 	right: 0;
 }
 main{
-	width: 1280px;
+	width: 100vw;
 	/*height:1200px;*/
 	padding-top: 200px; /* 메인부분 시작지점(조정예정) */
 	background-color: white;
@@ -104,7 +104,7 @@ main{
 }
 
 #search_area{
-	width:680px;
+	width:50vw;
 	height:50px;
 	float:left;
 }

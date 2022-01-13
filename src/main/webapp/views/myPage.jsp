@@ -34,7 +34,7 @@
 	        <div class="myPageMenu">
 	            <button class="myPageMenu" onclick="location.href='main?center=pwCheckForEdit'">정보수정</button>
 	            <button class="myPageMenu" onclick="location.href='main?center=myBoard'">작성한 글</button>
-	            <button class="myPageMenu">댓글 쓴 글</button>
+	            <button class="myPageMenu">등록한 상품</button>
 	        </div>
 	    </div>
  	</div>

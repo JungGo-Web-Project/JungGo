@@ -29,7 +29,7 @@ if(pwCheck == null){
                     </div>
                 </div>
                 <input type="submit" value="확인" id="pwCheckBtn">
-                <input type="hidden" value="pwCheck">
+                <input type="hidden" name="command" value="pwCheck">
             </form>
         </div>
     </div>
