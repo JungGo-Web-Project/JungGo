@@ -83,6 +83,15 @@
 	</servlet-mapping>	
 	
 	<servlet>
+		<servlet-name>pwCheckForEdit</servlet-name>
+		<jsp-file>/views/pwCheckForEdit.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>pwCheckForEdit</servlet-name>
+		<url-pattern>/pwCheckForEdit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>editPersonalInfo</servlet-name>
 		<jsp-file>/views/editPersonalInfo.jsp</jsp-file>
 	</servlet>
@@ -145,6 +154,15 @@
 		<url-pattern>/boardView</url-pattern>
 	</servlet-mapping>
 	
+		<servlet>
+		<servlet-name>boardCheck</servlet-name>
+		<jsp-file>/views/boardCheck.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>boardCheck</servlet-name>
+		<url-pattern>/boardCheck</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>itemUpdateForm</servlet-name>
 		<jsp-file>/views/itemUpdateForm.jsp</jsp-file>
@@ -152,6 +170,15 @@
 	<servlet-mapping>
 		<servlet-name>itemUpdateForm</servlet-name>
 		<url-pattern>/itemUpdateForm</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>itemWriteForm</servlet-name>
+		<jsp-file>/views/itemWriteForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemWriteForm</servlet-name>
+		<url-pattern>/itemWriteForm</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

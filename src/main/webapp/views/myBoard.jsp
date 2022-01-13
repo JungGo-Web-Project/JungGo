@@ -1,5 +1,5 @@
-<%@page import="board.boardDAO"%>
-<%@page import="board.boardDTO"%>
+<%@page import="board.BoardDTO"%>
+<%@page import="board.BoardDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -25,9 +25,9 @@ else{
 }
 if(board == null) board = "자유게시판";
 
-boardDAO dao = boardDAO.getInstance();
+BoardDAO dao = BoardDAO.getInstance();
 
-ArrayList<boardDTO> list = dao.myBoardList(board, id);
+ArrayList<BoardDTO> list = dao.myBoardList(board, id);
 %>
 	<div class="myBoardWrap">
         <div class="myBoard">
@@ -48,16 +48,16 @@ ArrayList<boardDTO> list = dao.myBoardList(board, id);
                         <th class="view">View</th>
                         <th class="date">Date</th>
                     </tr>
-	            	<%
-	            	if(list.size() > 0){
-	            		for(boardDTO b : list){ 
-	            			int no = b.getCode();
-	            			String category = b.getCategory();
-	            			String title = b.getTitle();
-	            			int view = b.getView();
-	            			String date = String.format("yyyy-mm-dd", b.getDate());
-	            		%>
-           			<tr class="myBoard">
+					<%
+					if (list.size() > 0) {
+						for (BoardDTO b : list) {
+							int no = b.getCode();
+							String category = b.getCategory();
+							String title = b.getTitle();
+							int view = b.getView();
+							String date = String.format("yyyy-mm-dd", b.getDate());
+					%>
+					<tr class="myBoard">
                         <td class="no"><%=no %></td>
                         <td class="category"><%=category %></td>
                         <td class="title"><%=title %></td>

@@ -6,8 +6,11 @@ import controller.action.EditInfoAction;
 import controller.action.JoinAction;
 import controller.action.LoginAction;
 import controller.action.LogoutAction;
-import controller.action.boardDeleteAction;
+import controller.action.boardCheckAction;
+import controller.action.boardListAction;
 import controller.action.boardWriteFormAction;
+import controller.action.itemWriteFormAction;
+import controller.action.pwCheckForEditAction;
 
 public class ActionFactory {
 	
@@ -21,11 +24,13 @@ public class ActionFactory {
 		if(command.equals("login")) return new LoginAction();
 		else if(command.equals("logout")) return new LogoutAction();
 		else if(command.equals("join")) return new JoinAction();
+		else if(command.equals("pwCheck")) return new pwCheckForEditAction();
 		else if(command.equals("editInfo")) return new EditInfoAction();
+		else if(command.equals("boardList")) return new boardListAction();
 		else if(command.equals("boardUpdate")) return new BoardUpdateAction();
-		else if(command.equals("boardWrite")) return new boardWriteFormAction();
 		else if(command.equals("boardWriteForm")) return new boardWriteFormAction();
-		else if(command.equals("boardDelete")) return new boardDeleteAction();
+		else if(command.equals("boardCheck")) return new boardCheckAction();
+		else if(command.equals("itemWriteForm")) return new itemWriteFormAction();
 		return null;
 		
 	}
