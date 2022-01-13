@@ -6,12 +6,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class boardDeleteAction implements Action {
+public class itemWriteFormAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("boardWriteForm").forward(request, response);
 		
+		request.getRequestDispatcher("main?center=").forward(request, response);
 	}
 
 }

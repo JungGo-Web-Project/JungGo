@@ -2,12 +2,12 @@ package board;
 
 import java.sql.Timestamp;
 
-public class boardDTO {
+public class BoardDTO {
 	private int code, view;
 	private String category, title, content, id, password;
 	private Timestamp date;
 	
-	public boardDTO(String title, String category, String content, String id, String password) {
+	public BoardDTO(String title, String category, String content, String id, String password) {
 		this.title = title;
 		this.category = category;
 		this.content = content;
@@ -15,13 +15,13 @@ public class boardDTO {
 		this.password = password;
 	}
 	
-	public boardDTO(String title, String content, String password) {
+	public BoardDTO(String title, String content, String password) {
 		this.title = title;
 		this.content = content;
 		this.password = password;
 	}
 	
-	public boardDTO(int code, String category, String title, String content, String id, String password, int view, Timestamp date) {
+	public BoardDTO(int code, String category, String title, String content, String id, String password, int view, Timestamp date) {
 		this.code = code;
 		this.title = title;
 		this.category = category;

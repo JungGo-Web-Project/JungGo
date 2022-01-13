@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 import utility.DBManager;
 
-public class categoryDAO {
-	private categoryDAO() {}
-	private static categoryDAO instance = new categoryDAO();
-	public static categoryDAO getInstance() {
+public class CategoryDAO {
+	private CategoryDAO() {}
+	private static CategoryDAO instance = new CategoryDAO();
+	public static CategoryDAO getInstance() {
 		return instance;
 	}
 
@@ -18,10 +18,10 @@ public class categoryDAO {
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
 	
-	private ArrayList<categoryDTO> categorys = null;
+	private ArrayList<CategoryDTO> categorys = null;
 	
-	public ArrayList<categoryDTO> getCategory(){
-		categorys = new ArrayList<categoryDTO>();
+	public ArrayList<CategoryDTO> getCategory(){
+		categorys = new ArrayList<CategoryDTO>();
 		try {
 			conn = DBManager.getConnection();
 			String sql = "select* from category";
@@ -33,7 +33,7 @@ public class categoryDAO {
 				String category = rs.getString(2);
 				String img = rs.getString(3);
 				
-				categoryDTO cate = new categoryDTO(code, category, img);
+				CategoryDTO cate = new CategoryDTO(code, category, img);
 				categorys.add(cate);
 			}
 			

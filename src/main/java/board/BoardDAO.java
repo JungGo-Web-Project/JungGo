@@ -7,13 +7,12 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import user.UserDTO;
 import util.DBManager;
 
-public class boardDAO {
-	private boardDAO() {}
-	private static boardDAO instance = new boardDAO();
-	public static boardDAO getInstance() {
+public class BoardDAO {
+	private BoardDAO() {}
+	private static BoardDAO instance = new BoardDAO();
+	public static BoardDAO getInstance() {
 		return instance;
 	}
 	
@@ -21,10 +20,10 @@ public class boardDAO {
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
 	
-	private ArrayList<boardDTO> boards = null;
+	private ArrayList<BoardDTO> boards = null;
 	
-	public ArrayList<boardDTO> getBoard(){
-		boards = new ArrayList<boardDTO>();
+	public ArrayList<BoardDTO> getBoard(){
+		boards = new ArrayList<BoardDTO>();
 		
 		try {
 			conn = DBManager.getConnection();
@@ -42,7 +41,7 @@ public class boardDAO {
 				int view = rs.getInt(7);
 				Timestamp date = rs.getTimestamp(8);
 				
-				boardDTO board = new boardDTO(code, category, title, content, id, password, view, date);
+				BoardDTO board = new BoardDTO(code, category, title, content, id, password, view, date);
 				boards.add(board);
 			}
 		} catch (Exception e) {
@@ -52,10 +51,10 @@ public class boardDAO {
 		return boards;
 	}
 	
-	public void addBoard(boardDTO board) {
+	public void addBoard(BoardDTO board) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into board(category, title, content, id, password, date) value (?, ?, ?, ?, ?, ?)";
+			String sql = "insert into board(category, title, content, id, passward, date) value (?, ?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, board.getCategory());
 			pstmt.setString(2, board.getTitle());
@@ -72,10 +71,10 @@ public class boardDAO {
 		}
 	}
 	
-	public void updateBoard(boardDTO board, int code) {
+	public void updateBoard(BoardDTO board, int code) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "UPDATE board SET title = ?, content = ?, password = ?, date = ? WHERE code = ?";
+			String sql = "UPDATE board SET title = ?, content = ?, passward = ?, date = ? WHERE code = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, board.getTitle());
 			pstmt.setString(2, board.getContent());
@@ -108,7 +107,7 @@ public class boardDAO {
 		}
 	}
 	
-	public void viewBoard(boardDTO board) {
+	public void viewBoard(BoardDTO board) {
 		try {
 			conn = DBManager.getConnection();
 			String sql = "update board set view = view + 1 where code = ?";
@@ -125,7 +124,7 @@ public class boardDAO {
 	}
 	
 	public boolean checkBoard(String id, String password, int code) {
-		ArrayList<boardDTO> board = getBoard();
+		ArrayList<BoardDTO> board = getBoard();
 		for(int i=0; i<board.size(); i++) {
 			if(board.get(i).getCode() == code && board.get(i).getId().equals(id) && board.get(i).getPassword().equals(password)) {
 				return true;
@@ -134,8 +133,8 @@ public class boardDAO {
 		return false;
 	}
 	
-	public ArrayList<boardDTO> myBoardList(String boardCategory,String userId){
-		ArrayList<boardDTO> list = new ArrayList<>();
+	public ArrayList<BoardDTO> myBoardList(String boardCategory,String userId){
+		ArrayList<BoardDTO> list = new ArrayList<>();
 		try {
 			conn = DBManager.getConnection();
 			String sql = "select * from board where category=? and id=?";
@@ -154,7 +153,7 @@ public class boardDAO {
 				int view = rs.getInt(7);
 				Timestamp date = rs.getTimestamp(8);
 				
-				boardDTO board = new boardDTO(code, category, title, content, id, password, view, date);
+				BoardDTO board = new BoardDTO(code, category, title, content, id, password, view, date);
 				list.add(board);
 			}
 			

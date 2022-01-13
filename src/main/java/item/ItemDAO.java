@@ -9,10 +9,10 @@ import java.util.Calendar;
 
 import utility.DBManager;
 
-public class itemDAO {
-	private itemDAO() {}
-	private static itemDAO instance = new itemDAO();
-	public static itemDAO getInstance() {
+public class ItemDAO {
+	private ItemDAO() {}
+	private static ItemDAO instance = new ItemDAO();
+	public static ItemDAO getInstance() {
 		return instance;
 	}
 	
@@ -20,10 +20,10 @@ public class itemDAO {
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
 	
-	private ArrayList<itemDTO> items = null;
+	private ArrayList<ItemDTO> items = null;
 	
-	public ArrayList<itemDTO> getItem(){
-		items = new ArrayList<itemDTO>();
+	public ArrayList<ItemDTO> getItem(){
+		items = new ArrayList<ItemDTO>();
 		
 		try {
 			conn = DBManager.getConnection();
@@ -35,18 +35,19 @@ public class itemDAO {
 				int code = rs.getInt(1);
 				String category = rs.getString(2);
 				String title = rs.getString(3);
-				String content = rs.getString(4);
-				String sellerId = rs.getString(5);
-				String buyerId = rs.getString(6);
-				String status = rs.getString(7);
-				String option1 = rs.getString(8);
-				String option2 = rs.getString(9);
-				int num = rs.getInt(10);
-				int price = rs.getInt(11);
-				int view = rs.getInt(12);
-				Timestamp date = rs.getTimestamp(13);
+				String address = rs.getString(4);
+				String content = rs.getString(5);
+				String sellerId = rs.getString(6);
+				String buyerId = rs.getString(7);
+				String status = rs.getString(8);
+				String option1 = rs.getString(9);
+				String option2 = rs.getString(10);
+				int num = rs.getInt(11);
+				int price = rs.getInt(12);
+				int view = rs.getInt(13);
+				Timestamp date = rs.getTimestamp(14);
 				
-				itemDTO item = new itemDTO(code, category, title, content, sellerId, buyerId, status, option1, option2, num, price, view, date);
+				ItemDTO item = new ItemDTO(code, category, title, address, content, sellerId, buyerId, status, option1, option2, num, price, view, date);
 				items.add(item);
 			}
 			
@@ -57,21 +58,22 @@ public class itemDAO {
 		return items;
 	}
 	
-	public void addItem(itemDTO item) {
+	public void addItem(ItemDTO item) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into items (category, title, content, sellerId, status, option1, option2, num, price, date) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into items (category, title, address, content, sellerId, status, option1, option2, num, price, date) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, item.getCategory());
 			pstmt.setString(2, item.getTitle());
-			pstmt.setString(3, item.getContent());
-			pstmt.setString(4, item.getSellerId());
-			pstmt.setString(5, item.getStatus());
-			pstmt.setString(6, item.getOption1());
-			pstmt.setString(7, item.getOption2());
-			pstmt.setInt(8, item.getNum());
-			pstmt.setInt(9, item.getPrice());
-			pstmt.setTimestamp(10, new Timestamp(Calendar.getInstance().getTimeInMillis()));
+			pstmt.setString(3, item.getAddress());
+			pstmt.setString(4, item.getContent());
+			pstmt.setString(5, item.getSellerId());
+			pstmt.setString(6, item.getStatus());
+			pstmt.setString(7, item.getOption1());
+			pstmt.setString(8, item.getOption2());
+			pstmt.setInt(9, item.getNum());
+			pstmt.setInt(10, item.getPrice());
+			pstmt.setTimestamp(11, new Timestamp(Calendar.getInstance().getTimeInMillis()));
 			
 			pstmt.executeUpdate();
 			
@@ -81,21 +83,22 @@ public class itemDAO {
 		}
 	}
 	
-	public void updateBoard(itemDTO item, int code) {
+	public void updateBoard(ItemDTO item, int code) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "UPDATE items SET category = ?, title = ?, content = ?, status = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ? WHERE code = ?";
+			String sql = "UPDATE items SET category = ?, title = ?, address = ?, content = ?, status = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ? WHERE code = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, item.getCategory());
 			pstmt.setString(2, item.getTitle());
-			pstmt.setString(3, item.getContent());
-			pstmt.setString(4, item.getStatus());
-			pstmt.setString(5, item.getOption1());
-			pstmt.setString(6, item.getOption2());
-			pstmt.setInt(7, item.getNum());
-			pstmt.setInt(8, item.getPrice());
-			pstmt.setTimestamp(9, new Timestamp(Calendar.getInstance().getTimeInMillis()));
-			pstmt.setInt(10, code);
+			pstmt.setString(3, item.getAddress());
+			pstmt.setString(4, item.getContent());
+			pstmt.setString(5, item.getStatus());
+			pstmt.setString(6, item.getOption1());
+			pstmt.setString(7, item.getOption2());
+			pstmt.setInt(8, item.getNum());
+			pstmt.setInt(9, item.getPrice());
+			pstmt.setTimestamp(10, new Timestamp(Calendar.getInstance().getTimeInMillis()));
+			pstmt.setInt(11, code);
 			
 			pstmt.executeUpdate();
 			

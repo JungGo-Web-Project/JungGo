@@ -2,15 +2,17 @@ package item;
 
 import java.sql.Timestamp;
 
-public class itemDTO {
+public class ItemDTO {
 	private int code, num, price, view;
-	private String category, title, content, sellerId, buyerId, status, option1, option2;
+	private String category, title, address, content, sellerId, buyerId, status, option1, option2;
 	private Timestamp date;
 	
-	public itemDTO(int code,String category,String title,String content,String sellerId,String buyerId,String status,String option1,String option2,int num,int price,int view,Timestamp date) {
+
+	public ItemDTO(int code,String category,String title,String address,String content,String sellerId,String buyerId,String status,String option1,String option2,int num,int price,int view,Timestamp date) {
 		this.code = code;
 		this.category = category;
 		this.title = title;
+		this.address = address;
 		this.content = content;
 		this.sellerId = sellerId;
 		this.buyerId = buyerId;
@@ -21,6 +23,14 @@ public class itemDTO {
 		this.price = price;
 		this.view = view;
 		this.date = date;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public int getCode() {

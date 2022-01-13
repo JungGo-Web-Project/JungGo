@@ -1,8 +1,4 @@
 @charset "UTF-8";
-*{
-    margin: 0;
-    padding: 0;
-}
 div.myBoardWrap{
     width: 100vw;
     display: flex;
@@ -42,22 +38,22 @@ tr.myBoard{
     border: solid 1px black;
     border-collapse: collapse;
 }
-td.no{
+th.no,td.no{
     width: 50px;
     text-align: center;
 }
-td.category{
+th.category,td.category{
 	width: 100px;
 	text-align: center;
 }
 td.title{
     padding-left: 20px;
 }
-td.view{
+th.view,td.view{
     width: 50px;
     text-align: center;
 }
-td.date{
+th.date,td.date{
     width: 150px;
     text-align: center;
 }
@@ -72,4 +68,8 @@ button.boardSelect{
     font-size: 1em;
     border: none;
     cursor: pointer;
+}
+a.myBoardUrl{
+    text-decoration: none;
+    color: black;
 }

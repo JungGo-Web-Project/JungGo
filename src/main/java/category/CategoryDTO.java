@@ -1,10 +1,10 @@
 package category;
 
-public class categoryDTO {
+public class CategoryDTO {
 	private int code;
 	private String category, img;
 	
-	public categoryDTO(int code, String category,String img) {
+	public CategoryDTO(int code, String category,String img) {
 		this.code = code;
 		this.category = category;
 		this.img = img;

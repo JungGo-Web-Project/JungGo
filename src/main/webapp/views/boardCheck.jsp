@@ -12,18 +12,18 @@
 <body>
     <div class="boardCheck-div">
     <%
-    int code = Integer.parseInt(request.getParameter("code"));
-    if(code == 1){ // 수정시에 id, pw 체크
-    	%><form id="boardCheck-form" method="post" action="boardUpdate"><%
-    }
-    else{ // 삭제시에 id, pw 체크
-    	%><form id="boardCheck-form" method="post" action="boardDelete"><%
-    }
+    String id = (String) session.getAttribute("log");
+    String code = request.getParameter("code");
+    int num = Integer.parseInt(request.getParameter("num"));
     %>
-            <input type="hidden" name="id" value="" >
-            <input type="hidden" name="code" value="" >
-            <input id="boardCheck-pw" type="password" name="pw">
+    	<form id="boardCheck-form" method="post" action="service">
+    		<input type="hidden" name="command" value="boardCheck">
+            <input type="hidden" name="id" value="<%=id %>" >
+            <input type="hidden" name="code" value="<%=code %>" >
+            <input type="hidden" name="num" value="<%=num %>" >
+            <input id="boardCheck-pw" type="password" name="pw" required>
             <input id="boardCheck-submit" type="submit" value="확인">
+            <input id="boardCheck-cancle" type="button" onclick="" value="취소">
         </form>
     </div>
 </body>

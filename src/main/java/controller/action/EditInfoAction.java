@@ -29,7 +29,7 @@ public class EditInfoAction implements Action{
 			dao.editUser(user);
 		}
 		
-		request.getRequestDispatcher("myPage").forward(request, response);
+		request.getRequestDispatcher("main?center=myPage").forward(request, response);
 	}
 	
 }

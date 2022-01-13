@@ -9,11 +9,11 @@
 <title>login</title>
 </head>
 <body>
-	<div class="lobinWrap">
+	<div class="loginWrap">
 		<h1 id="logo"><a id="logo" href="main?center=login">LOGIN</a></h1>
 	    <div class="login">
 		    <form method="post" action="service">
-	            <div>
+	            <div class="info">
 	                <span>아이디&#9;</span>
 	                <input type="text" name="id" class="info"><br><br>
 	                <span>비밀번호&#9;</span>
