@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-/*
-body{
+div.loginWrap{
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -11,7 +10,7 @@ body{
     "logo"
     "div";
     
-}*/
+}
 h1#logo{
     display: flex;
 
@@ -25,7 +24,7 @@ a#logo{
     color: black;
     text-decoration: none;
 }
-div.wrap{
+div.login{
     grid-area: div;
 
     display: flex;

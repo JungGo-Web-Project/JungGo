@@ -16,7 +16,7 @@ body{
 	justify-content: center;
 }
 #top_header{
-	width: 1280px;
+	width: 100vw;
     background-color: aqua;
     display: flex;
     justify-content: space-between;
@@ -36,11 +36,11 @@ header{
 	z-index: 99;
 }
 main{
+	width: 100vw;
 	height: 60vh;
 	min-height: 100%;
 	position:relative;
 	padding: 0px;
-	width: 1280px;
 	/*height:1200px;*/
 	padding-top: 186px; /* 메인부분 시작지점(조정예정) */
 	background-color: white;
@@ -124,7 +124,7 @@ main{
 }
 
 #search_area{
-	width:680px;
+	width:50vw;
 	height:50px;
 	float:left;
 }
@@ -154,6 +154,7 @@ main{
 }
 
 footer{
+	margin-top: 100px;
 	display:flex;
 	position: relative;
 	height:20vh;
