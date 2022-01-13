@@ -1,37 +1,36 @@
 @charset "UTF-8";
-*{
-    margin: 0;
-    padding: 0;
-}
-/*
-div.wrap{
+div.joinWrap{
     width: 100vw;
-    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-h2{
+div.join{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2.joinForm{
     line-height: 100px;
 }
-/*
-form{
+form#joinForm{
     display: flex;
     flex-direction: column;
 
     gap: 30px;
-}*/
-table{
+}
+table.info{
     width: 35vw;
 }
-tr{
+tr.info{
     height: 60px;
 }
-td{
+td.info{
     border-spacing: 0;
 }
 td.txt{
+	border-spacing: 0;
     width: calc(35vw - 250px);
 }
 input.required{
@@ -43,7 +42,14 @@ span.alert{
     font-size: 0.7em;
     display: none;
 }
+span#checkId{
+	display: block;
+}
 div#pwAlert{
+    display: flex;
+    flex-direction: column;
+}
+div#idAlert{
     display: flex;
     flex-direction: column;
 }

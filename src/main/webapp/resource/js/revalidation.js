@@ -11,23 +11,6 @@ function checkLogin(form){
 }
 
 function checkJoin(form){
-	const required = document.getElementsByClassName("required");
-	
-	let cnt = 0;
-	for(let i=0; i<required.length; i++){
-		if(required[i].value !== ""){
-			cnt ++;
-		}
-	}
-	if(cnt === required.length){
-		form.submit();
-	}
-	else{
-		alert();
-	}
-}
-
-function checkJoin(form){
     const required = document.getElementsByClassName("required");
     const checkRequired = form.required;
 	
@@ -47,7 +30,12 @@ function checkJoin(form){
     }
 
 	if(cnt === required.length && checked === checkRequired.length){
-		form.submit();
+		if(form.pw.value === form.pwCheck.value){
+			form.submit();
+		}
+		else{
+			alert("비밀번호가 일치하지 않습니다");
+		}
 	}
 	else if(checked !== checkRequired.length){
 		alert("필수정보에 대해 동의가 필요합니다");
@@ -72,4 +60,27 @@ function allCheck(form){
     for(let i=0; i<options.length; i++){
         options[i].checked = form.optionAll.checked;
     }
+}
+
+function checkEdit(form){
+	const required = document.getElementsByClassName("editInfoInput");
+	
+	let cnt = 0;
+	for(let i=0; i<required.length; i++){
+		if(required[i].value != "") cnt ++;
+	}
+	if(cnt === required.length){
+		const pw = form.pw.value;
+		const pwCheck = form.pwCheck.value;
+		
+		if(pw === pwCheck){
+			form.submit();
+		}
+		else{
+			alert("비밀번호가 일치하지 않습니다");
+		}
+	}
+	else{
+		alert("모든 항목을 작성해주세요");
+	}
 }

@@ -26,13 +26,13 @@
 	        <div class="profile">
 	            <hr color="grey" size="2">
 	            <div class="profileInfo">
-	                <img src="https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png" id="profileImage">
+	                <img src="${request.contextPath}resource/img/defaultProfile.png" id="profileImage">
 	                <span id="profileId"><%=id %>님</span>
 	            </div>
 	            <hr color="grey" size="2">
 	        </div>
 	        <div class="myPageMenu">
-	            <button class="myPageMenu" onclick="location.href='main?center=editPersonalInfo'">정보수정</button>
+	            <button class="myPageMenu" onclick="location.href='main?center=pwCheckForEdit'">정보수정</button>
 	            <button class="myPageMenu" onclick="location.href='main?center=myBoard'">작성한 글</button>
 	            <button class="myPageMenu">댓글 쓴 글</button>
 	        </div>

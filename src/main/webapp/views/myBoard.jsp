@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="board.boardDAO"%>
 <%@page import="board.boardDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -49,18 +50,20 @@ ArrayList<boardDTO> list = dao.myBoardList(board, id);
                         <th class="date">Date</th>
                     </tr>
 	            	<%
+           			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	            	if(list.size() > 0){
 	            		for(boardDTO b : list){ 
 	            			int no = b.getCode();
 	            			String category = b.getCategory();
 	            			String title = b.getTitle();
 	            			int view = b.getView();
-	            			String date = String.format("yyyy-mm-dd", b.getDate());
+	            			String date = sdf.format(b.getDate());
+	            			String url = "main?center=boardView&code="+b.getCode();
 	            		%>
            			<tr class="myBoard">
                         <td class="no"><%=no %></td>
                         <td class="category"><%=category %></td>
-                        <td class="title"><%=title %></td>
+                        <td class="title"><a class=myBoardUrl href=<%=url %>><%=title %></a></td>
                         <td class="view"><%=view %></td>
                         <td class="date"><%=date %></td>
                     </tr>
