@@ -22,11 +22,12 @@
 	<header>
 		<jsp:include page="/top" />
 	</header>
-	<div id=main_wrap>
+	<div id="main_wrap">
 		<main>
 			<jsp:include page="<%= center %>" />
 		</main>
 	</div>
+	
 	<footer>
 		<jsp:include page="/bottom" />
 	</footer>

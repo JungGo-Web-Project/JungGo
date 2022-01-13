@@ -20,6 +20,7 @@
 #main_wrap{
 	display: flex;
 	justify-content: center;
+	background-color: gray;
 }
 /*스크롤 해도 헤더 고정*/
 header{
@@ -30,10 +31,10 @@ header{
 	right: 0;
 }
 main{
-	padding-top:10%;
 	width: 1280px;
-	height:1200px;
+	/*height:1200px;*/
 	padding-top: 200px; /* 메인부분 시작지점(조정예정) */
+	background-color: white;
 }
 
 #content{
