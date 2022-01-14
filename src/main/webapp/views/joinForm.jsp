@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +10,6 @@
     <title>Join</title>
 </head>
 <body>
-<%
-	String idDup = request.getParameter("idDup");
-	if(idDup == null){
-		idDup = "false";
-	}
-%>
     <div class="joinWrap">
 	    <div class="join">
 	        <h2 class="joinForm">회원가입 정보입력</h2>
@@ -28,9 +23,9 @@
 	                            <input type="text" name="id" class="required" id="id"><br>
 	                            <div id="idAlert">
 		                            <span id="alert1" class="alert">필수정보입니다</span>
-		                           	<%if(idDup.equals("true")){ %>
-		                            <span id="checkId" class="alert">중복된 아이디입니다</span>
-		                            <%} %>
+		                            <c:if test="${not empty param.idDup}">
+		                            	<span id="checkId" class="alert">중복된 아이디입니다</span>
+		                            </c:if>
 	                            </div>
 	                        </td>
 	                    </tr>

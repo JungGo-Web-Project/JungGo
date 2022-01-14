@@ -2,7 +2,6 @@
 
 div.loginWrap{
     width: 100vw;
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 150px 1fr;
@@ -40,10 +39,10 @@ span{
     white-space: pre;
 }
 input.info{
-    height: 30px;
+    height: 40px;
     width: 250px;
 }
-input[type="button"]{
+input.btn{
     height: 50px;
     width: 150px;
     background-color: black;

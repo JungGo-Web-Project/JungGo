@@ -92,15 +92,6 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>pwCheckForEdit</servlet-name>
-		<jsp-file>/views/pwCheckForEdit.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>pwCheckForEdit</servlet-name>
-		<url-pattern>/pwCheckForEdit</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>editPersonalInfo</servlet-name>
 		<jsp-file>/views/editPersonalInfo.jsp</jsp-file>
 	</servlet>
