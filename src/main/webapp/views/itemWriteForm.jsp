@@ -66,7 +66,7 @@ else{
 			<hr id="hr2">
 			<section id="sec1">
 				<h2>설명</h2>
-				<textarea name="content" id="" cols="30" rows="10"></textarea>
+				<textarea name="content" cols="30" rows="10"></textarea>
 			</section>
 			<hr id="hr2">
 			<section id="sec1">

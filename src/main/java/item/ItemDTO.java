@@ -25,6 +25,19 @@ public class ItemDTO {
 		this.date = date;
 	}
 	
+	public ItemDTO(String category,String title,String address,String content,String sellerId,String status,String option1,String option2,int num,int price) {
+		this.category = category;
+		this.title = title;
+		this.address = address;
+		this.content = content;
+		this.sellerId = sellerId;
+		this.status = status;
+		this.option1 = option1;
+		this.option2 = option2;
+		this.num = num;
+		this.price = price;
+	}
+	
 	public String getAddress() {
 		return address;
 	}
