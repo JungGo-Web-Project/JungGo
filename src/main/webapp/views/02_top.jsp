@@ -10,7 +10,7 @@
 		<div id="top_header">
 			<h1>
 				<a href="main">
-					<img src="../resource/img/LOGO.png">
+					<img src="${request.contextPath}resource/img/LOGO.png">
 				</a>	
 						
 			</h1>
