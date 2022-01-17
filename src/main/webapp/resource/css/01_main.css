@@ -6,8 +6,34 @@
 }
 body{
 	height:100%;
-	background-color:black;
 }
+main{
+	width: 1280px;
+	min-height: 100%;
+	position:relative;
+	padding: 0px;
+	/*height:1200px;*/
+	padding-top: 186px; /* 메인부분 시작지점(조정예정) */
+	background-color: white;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
+footer{
+	margin-top: 100px;
+	display:flex;
+	position: relative;
+	height:20vh;
+	/* transform:translateY(-100%); */
+	justify-content:center;
+}
+
 #wrap{
 	display:grid;
 }
@@ -16,34 +42,17 @@ body{
 	justify-content: center;
 }
 #top_header{
-	width: 100vw;
-    background-color: aqua;
+	width: 1280px;
     display: flex;
     justify-content: space-between;
 }
 #main_wrap{
+	padding-top:100px;
 	display: flex;
 	justify-content: center;
-	background-color: gray;
 }
 /*스크롤 해도 헤더 고정*/
-header{
-	background-color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 99;
-}
-main{
-	width: 100vw;
-	min-height: 100%;
-	position:relative;
-	padding: 0px;
-	/*height:1200px;*/
-	padding-top: 186px; /* 메인부분 시작지점(조정예정) */
-	background-color: white;
-}
+
 
 #content{
 	/*display: flex;*/
@@ -64,7 +73,6 @@ main{
 #content ul{
 	width:100%;
 	height:440px;
-	background-color:aquamarine;
 }
 
 #content ul li{
@@ -102,7 +110,6 @@ main{
 	height:50px;
 	line-height:50px;
 	margin:0;
-	background-color:pink;
 }
 
 #nav_inner ul li{
@@ -113,7 +120,6 @@ main{
 #category{
 	width:600px;
 	height:80px;
-	background-color:aquamarine;
 	float:left;
 }
 #category ul{
@@ -123,7 +129,7 @@ main{
 }
 
 #search_area{
-	width:50vw;
+	width: auto;
 	height:50px;
 	float:left;
 }
@@ -150,16 +156,6 @@ main{
 #search_area button{
 	width:40px;
 	float:left;
-}
-
-footer{
-	margin-top: 100px;
-	display:flex;
-	position: relative;
-	height:20vh;
-	/* transform:translateY(-100%); */
-	justify-content:center;
-	background-color: brown;
 }
 
 /* 방식이 바뀌면서 재설계중 */
