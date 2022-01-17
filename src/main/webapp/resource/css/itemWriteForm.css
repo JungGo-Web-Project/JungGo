@@ -5,29 +5,34 @@
             padding: 0;
         }
         
-        .itemUpdateForm-div{
+        .itemWriteForm-div{
+        	margin-top: 100px;
             display: grid;
             justify-content: center;
-            width: 100vh;
             margin-top: 100px;
+            
         }
         
-        #itemUpdateForm-hr1{
+        #itemWriteForm-hr1{
             margin-top: 30px;
             width: 70vw;
             border: thin solid black;
             margin-bottom: 30px;
         }
-        #itemUpdateForm-hr2{
+        #itemWriteForm-hr2{
             margin-top: 30px;
             width: 70vw;
             margin-bottom: 30px;
         }
         
-        #itemUpdateForm-sec1{
+        #itemWriteForm-sec1{
             display: flex;
             align-items: center;
         }
-        #itemUpdateForm-h2{
-            width: 200px;
+        #itemWriteForm-h2{
+        	font-size: 1.2em;
+        }
+        #itemWriteForm-input1{
+        	width: 120px;
+        	height: 70px;
         }

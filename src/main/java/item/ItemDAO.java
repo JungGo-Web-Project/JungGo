@@ -46,8 +46,9 @@ public class ItemDAO {
 				int price = rs.getInt(12);
 				int view = rs.getInt(13);
 				Timestamp date = rs.getTimestamp(14);
+				String image_path = rs.getString(15);
 				
-				ItemDTO item = new ItemDTO(code, category, title, address, content, sellerId, buyerId, status, option1, option2, num, price, view, date);
+				ItemDTO item = new ItemDTO(code, category, title, address, content, sellerId, buyerId, status, option1, option2, num, price, view, date, image_path);
 				items.add(item);
 			}
 			
@@ -60,7 +61,7 @@ public class ItemDAO {
 	public void addItem(ItemDTO item) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into items (code, title, address, content, sellerId, status, option1, option2, num, price, date) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into items (code, title, address, content, sellerId, status, option1, option2, num, price, date, image_path) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, item.getCode());
 			pstmt.setInt(2, item.getCategory());
@@ -74,6 +75,7 @@ public class ItemDAO {
 			pstmt.setInt(10, item.getNum());
 			pstmt.setInt(11, item.getPrice());
 			pstmt.setTimestamp(12, new Timestamp(Calendar.getInstance().getTimeInMillis()));
+			pstmt.setString(13, item.getImage_path());
 			
 			pstmt.executeUpdate();
 			
@@ -83,10 +85,10 @@ public class ItemDAO {
 		}
 	}
 	
-	public void updateBoard(ItemDTO item, int code) {
+	public void updateItem(ItemDTO item, int code) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "UPDATE items SET category = ?, title = ?, address = ?, content = ?, status = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ? WHERE code = ?";
+			String sql = "UPDATE items SET category = ?, title = ?, address = ?, content = ?, status = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ?, image_path = ? WHERE code = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, item.getCategory());
 			pstmt.setString(2, item.getTitle());
@@ -98,7 +100,8 @@ public class ItemDAO {
 			pstmt.setInt(8, item.getNum());
 			pstmt.setInt(9, item.getPrice());
 			pstmt.setTimestamp(10, new Timestamp(Calendar.getInstance().getTimeInMillis()));
-			pstmt.setInt(11, code);
+			pstmt.setString(11, item.getImage_path());
+			pstmt.setInt(12, code);
 			
 			pstmt.executeUpdate();
 			
