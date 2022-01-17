@@ -53,6 +53,24 @@ footer{
 }
 /*스크롤 해도 헤더 고정*/
 
+header{
+	background-color: white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+main{
+	width: 100vw;
+	min-height: 100%;
+	position:relative;
+	padding: 0px;
+	/*height:1200px;*/
+	padding-top: 300px; /* 메인부분 시작지점(조정예정) */
+	background-color: white;
+}
+
 
 #content{
 	/*display: flex;*/

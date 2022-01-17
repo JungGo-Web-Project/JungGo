@@ -33,9 +33,11 @@ public class UserDAO {
 				String pw = rs.getString(3);
 				String name = rs.getString(4);
 				String phone = rs.getString(5);
-				String address = rs.getString(6);
+				String postcode = rs.getString(6);
+				String address = rs.getString(7);
+				String section = rs.getString(8);
 				
-				UserDTO user = new UserDTO(code, id, pw, name, phone, address);
+				UserDTO user = new UserDTO(code, id, pw, name, phone, postcode, address, section);
 				users.add(user);
 			}
 		} catch (Exception e) {
@@ -47,13 +49,15 @@ public class UserDAO {
 	public void addUser(UserDTO user) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into users(id,pw,name,phone,address) values(?,?,?,?,?)";
+			String sql = "insert into users(id,pw,name,phone,postcode,address,section) values(?,?,?,?,?,?,?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user.getId());
 			pstmt.setString(2, user.getPw());
 			pstmt.setString(3, user.getName());
 			pstmt.setString(4, user.getPhone());
-			pstmt.setString(5, user.getAddress());
+			pstmt.setString(5, user.getPostcode());
+			pstmt.setString(6, user.getAddress());
+			pstmt.setString(7, user.getSection());
 			pstmt.executeUpdate();
 			
 		} catch (Exception e) {
@@ -85,12 +89,14 @@ public class UserDAO {
 	public void editUser(UserDTO user) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "update users set pw=?, phone=?, address=? where code=?";
+			String sql = "update users set pw=?, phone=?, postcode=?, address=?, section=? where code=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, user.getPw());
 			pstmt.setString(2, user.getPhone());
-			pstmt.setString(3, user.getAddress());
-			pstmt.setInt(4, user.getCode());
+			pstmt.setString(3, user.getPostcode());
+			pstmt.setString(4, user.getAddress());
+			pstmt.setString(5, user.getSection());
+			pstmt.setInt(6, user.getCode());
 			pstmt.executeUpdate();
 			
 		} catch (Exception e) {
