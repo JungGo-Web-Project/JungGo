@@ -28,6 +28,7 @@ public class JoinAction implements Action{
 			UserDTO newUser = new UserDTO(id,pw,name,phone,postcode,address,section);
 			dao.addUser(newUser); 
 			url="main";
+			
 		}
 		
 		request.getRequestDispatcher(url).forward(request, response);
