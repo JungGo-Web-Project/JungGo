@@ -3,12 +3,11 @@ package item;
 import java.sql.Timestamp;
 
 public class ItemDTO {
-	private int code, num, price, view;
-	private String category, title, address, content, sellerId, buyerId, status, option1, option2;
+	private int code, category, num, price, view;
+	private String  title, address, content, sellerId, buyerId, status, option1, option2;
 	private Timestamp date;
 	
-
-	public ItemDTO(int code,String category,String title,String address,String content,String sellerId,String buyerId,String status,String option1,String option2,int num,int price,int view,Timestamp date) {
+	public ItemDTO(int code, int category, String title,String address,String content,String sellerId,String buyerId,String status,String option1,String option2,int num,int price,int view,Timestamp date) {
 		this.code = code;
 		this.category = category;
 		this.title = title;
@@ -25,7 +24,7 @@ public class ItemDTO {
 		this.date = date;
 	}
 	
-	public ItemDTO(String category,String title,String address,String content,String sellerId,String status,String option1,String option2,int num,int price) {
+	public ItemDTO(int category, String title,String address,String content,String sellerId,String status,String option1,String option2,int num,int price) {
 		this.category = category;
 		this.title = title;
 		this.address = address;
@@ -74,11 +73,11 @@ public class ItemDTO {
 		this.view = view;
 	}
 
-	public String getCategory() {
+	public int getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(int category) {
 		this.category = category;
 	}
 
