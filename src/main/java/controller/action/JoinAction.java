@@ -17,13 +17,15 @@ public class JoinAction implements Action{
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String phone = request.getParameter("phone");
-		String address = request.getParameter("address");
+		String postcode= request.getParameter("postcode");
+		String address = request.getParameter("address") + ", " + request.getParameter("detailAddress");
+		String section = request.getParameter("section");
 		
 		UserDAO dao = UserDAO.getInstane();
 		String url="main?center=join&idDup=true";
 		
 		if(!dao.checkDup(id)) {
-			UserDTO newUser = new UserDTO(id,pw,name,phone,address);
+			UserDTO newUser = new UserDTO(id,pw,name,phone,postcode,address,section);
 			dao.addUser(newUser); 
 			url="main";
 		}

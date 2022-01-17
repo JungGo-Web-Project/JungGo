@@ -27,6 +27,11 @@ table.info{
 tr.info{
     height: 60px;
 }
+td#address{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 td.txt{
     padding-left: 5px;
     width: calc(35vw - 250px);
@@ -34,6 +39,33 @@ td.txt{
 input.editInfoInput{
     height: 40px;
     width: 250px;
+    padding-left: 10px;
+}
+div.postcode{
+    display: flex;
+    justify-content: space-between;
+}
+input#sample6_postcode{
+    width: 140px;
+    height: 40px;
+    padding-left: 10px;
+}
+input#postcodeBtn{
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-size: 0.7em;
+    border: none;
+    cursor: pointer;
+}
+input#sample6_detailAddress{
+    width: 250px;
+    height: 40px;
+    padding-left: 10px;
+}
+input#sample6_extraAddress{
+    width: 250px;
+    height: 40px;
     padding-left: 10px;
 }
 div.btn{

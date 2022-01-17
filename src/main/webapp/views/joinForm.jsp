@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/joinForm.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/revalidation.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>Join</title>
 </head>
 <body>
@@ -60,11 +61,18 @@
 	                            <span id="alert5" class="alert">필수정보입니다</span>
 	                        </td>
 	                    </tr>
-	                    <tr class="info">
+	                    <tr class="info" id="address">
 	                        <td class="txt"><span>주소</span></td>
-	                        <td class="info">
-	                            <input type="text" name="address" id="address" class="required"><br>
+	                        <td class="info" id="address">
+	                            <div class="postcode">
+									<input type="text" name="postcode" id="sample6_postcode" placeholder="우편번호">
+									<input type="button" id="postcodeBtn"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+								</div>
+								<input type="text" name="address" class="required" id="sample6_address" placeholder="주소">
+								<input type="text" name="detailAddress" id="sample6_detailAddress" placeholder="상세주소">
+								<input type="text" id="sample6_extraAddress" placeholder="참고항목">
 	                            <span id="alert6" class="alert">필수정보입니다</span>
+								<input type="hidden" name="section" id="section">
 	                        </td>
 	                    </tr>
 	                    <tr class="info">
@@ -92,8 +100,8 @@
 	                <hr color="grey" size="2">
 	            </div>
 	            <div class="btn">
-	                <input type="button" value="취소" id="cancel" onclick="location.href='main'">
-	                <input type="button" value="회원가입" id="join" onclick="checkJoin(form)">
+	                <input type="button" value="취소" class="formButton" id="cancel" onclick="location.href='main'">
+	                <input type="button" value="회원가입" class="formButton" id="join" onclick="checkJoin(form)">
 	            </div>
 	            <input type="hidden" name="command" value="join">
 	        </form>

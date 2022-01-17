@@ -2,22 +2,26 @@ package user;
 
 public class UserDTO {
 	private int code;
-	private String id, pw, name, phone, address;
+	private String id, pw, name, phone, postcode, address, section;
 	
-	public UserDTO(int code, String id, String pw, String name, String phone, String address) {
+	public UserDTO(int code, String id, String pw, String name, String phone, String postcode, String address, String section) {
 		this.code = code;
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
+		this.postcode = postcode;
 		this.phone = phone;
 		this.address = address;
+		this.section = section;
 	}
-	public UserDTO(String id, String pw, String name, String phone, String address) {
+	public UserDTO(String id, String pw, String name, String phone, String postcode, String address, String section) {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
+		this.postcode = postcode;
 		this.phone = phone;
 		this.address = address;
+		this.section = section;
 	}
 	
 	public int getCode() {
@@ -47,6 +51,17 @@ public class UserDTO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+	public String getPostcode() {
+		return postcode;
+	}
+	public void setPostcode(String postcode) {
+		this.postcode = postcode;
+	}
+	public String getSection() {
+		return section;
+	}
+	public void setSection(String section) {
+		this.section = section;
+	}
 	
 }

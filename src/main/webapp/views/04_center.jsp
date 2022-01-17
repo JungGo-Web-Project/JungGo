@@ -23,6 +23,7 @@
 		price.add(dao.getItem().get(i).getPrice()+"원");
 		date.add(dao.getItem().get(i).getDate()+"");			
 	}
+	
 %>
 <!-- title,price,date -->
 <!-- 올라온 순서대로 -->
