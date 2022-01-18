@@ -62,7 +62,7 @@ public class ItemDAO {
 	public void addItem(ItemDTO item) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into items (code, title, address, content, sellerId, status, option1, option2, num, price, date, image_path) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into items (code, category, title, address, content, sellerId, status, option1, option2, num, price, date, image_path) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, item.getCode());
 			pstmt.setInt(2, item.getCategory());
@@ -89,20 +89,19 @@ public class ItemDAO {
 	public void updateItem(ItemDTO item, int code) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "UPDATE items SET category = ?, title = ?, address = ?, content = ?, status = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ?, image_path = ? WHERE code = ?";
+			String sql = "UPDATE items SET category = ?, title = ?, address = ?, content = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ?, image_path = ? WHERE code = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, item.getCategory());
 			pstmt.setString(2, item.getTitle());
 			pstmt.setString(3, item.getAddress());
 			pstmt.setString(4, item.getContent());
-			pstmt.setString(5, item.getStatus());
-			pstmt.setString(6, item.getOption1());
-			pstmt.setString(7, item.getOption2());
-			pstmt.setInt(8, item.getNum());
-			pstmt.setInt(9, item.getPrice());
-			pstmt.setTimestamp(10, new Timestamp(Calendar.getInstance().getTimeInMillis()));
-			pstmt.setString(11, item.getImage_path());
-			pstmt.setInt(12, code);
+			pstmt.setString(5, item.getOption1());
+			pstmt.setString(6, item.getOption2());
+			pstmt.setInt(7, item.getNum());
+			pstmt.setInt(8, item.getPrice());
+			pstmt.setTimestamp(9, new Timestamp(Calendar.getInstance().getTimeInMillis()));
+			pstmt.setString(10, item.getImage_path());
+			pstmt.setInt(11, code);
 			
 			pstmt.executeUpdate();
 			
@@ -146,7 +145,7 @@ public class ItemDAO {
 	public void buyItem(String buyerId, int code) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "update items set buyerId = ? where code = ?";
+			String sql = "update items set buyerId = ?, status = '판매완료' where code = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, buyerId);
 			pstmt.setInt(2, code);

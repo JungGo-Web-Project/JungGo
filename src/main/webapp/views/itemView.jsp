@@ -14,6 +14,14 @@
 </head>
 <body>
 <%
+request.setCharacterEncoding("utf-8");
+
+String id = ""; // 접속한 사람 아이디
+String user = ""; // 판매자 아이디
+if(session.getAttribute("log") != null){
+	id=session.getAttribute("log").toString();
+}
+
 int code = Integer.parseInt(request.getParameter("code"));
 ItemDAO dao = ItemDAO.getInstance();
 ItemDTO item = null;
@@ -25,15 +33,13 @@ for(int i=0; i<list.size(); i++){
 		item = list.get(i);
 	}
 }
-
+user = item.getSellerId();
+dao.viewItem(code);
 %>
     <div class="itemView-div">
         <section id="itemView-sec1">
-            <img id="itemView-img" src="">
+            <img id="itemView-img" src="<%=item.getImage_path() %>">
             <table id="itemView-table">
-                <tr>
-                    <th><img src="<%=item.getImage_path() %>"></th>
-                </tr>
                 <tr>
                     <th><h1 id="itemView-h1"><%=item.getTitle() %></h1></th>
                 </tr>
@@ -44,7 +50,7 @@ for(int i=0; i<list.size(); i++){
                     </td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ조회수&nbsp;&nbsp; <%=item.getView() %>회</h3></td>
+                    <td><h3 id="itemView-h3">ㆍ조회수&nbsp;&nbsp; <%=item.getView()+1 %>회</h3></td>
                 </tr>
                 <tr>
                     <td><h3 id="itemView-h3">ㆍ상품상태 <%=item.getOption1() %></h3></td>
@@ -56,9 +62,32 @@ for(int i=0; i<list.size(); i++){
                     <td><h3 id="itemView-h3">ㆍ거래지역 <%=item.getAddress() %></h3></td>
                 </tr>
                 <tr>
+                    <td><h3 id="itemView-h3">ㆍ<%=item.getStatus() %></h3></td>
+                </tr>
+                <tr>
                     <td>
-                        <input id="itemView-btn1" type="button" value="찜하기">
-                        <input id="itemView-btn2" type="button" value="구매하기">
+                        <%
+                        if(id.equals(user)){
+                        	if(item.getBuyerId() != ""){
+                        	%>
+                        <input id="itemView-btn" type="button" value="수정하기" onclick="location.href='main?center=itemUpdateForm&code=<%=code %>'">
+                        	<%
+                        	}
+                        }
+                        else{
+                        	if(!id.equals("") && item.getStatus().equals("판매중")){
+                        	%>
+                       <form method="post" action="service">
+                        <input type="hidden" name="command" value="itemView">
+                        <input type="hidden" name="id" value="<%=id %>">
+                        <input type="hidden" name="code" value="<%=code %>">
+                        <input id="itemView-btn" type="submit" value="구매하기">
+                       </form>
+                        	<%
+                        	}
+                        }
+                        %>
+                        <input id="itemView-btn" type="button" value="목록으로" onclick="location.href='main?center=itemList&category=<%=item.getCategory() %>'">
                     </td>
                 </tr>
             </table>

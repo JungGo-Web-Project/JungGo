@@ -10,6 +10,8 @@ import controller.action.LogoutAction;
 import controller.action.boardCheckAction;
 import controller.action.boardListAction;
 import controller.action.boardWriteFormAction;
+import controller.action.itemUpdateFormAction;
+import controller.action.itemViewAction;
 import controller.action.itemWriteFormAction;
 import controller.action.pwCheckForEditAction;
 
@@ -33,6 +35,8 @@ public class ActionFactory {
 		else if(command.equals("boardWriteForm")) return new boardWriteFormAction();
 		else if(command.equals("boardCheck")) return new boardCheckAction();
 		else if(command.equals("itemWriteForm")) return new itemWriteFormAction();
+		else if(command.equals("itemView")) return new itemViewAction();
+		else if(command.equals("itemUpdateForm")) return new itemUpdateFormAction();
 		return null;
 		
 	}

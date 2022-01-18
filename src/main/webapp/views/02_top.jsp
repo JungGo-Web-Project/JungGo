@@ -66,11 +66,15 @@
 			<div id="nav_inner">
 				<ul>
 					<li>
-						<a href="main?center=itemWriteForm">상품등록</a>
+						<a href="main?center=itemWriteForm">
+							<h2>상품등록</h2>
+						</a>
 					</li>
 					
 					<li>
-						<a href="main?center=boardMain">우리동네 게시판</a>
+						<a href="main?center=boardMain">
+							<h2>우리동네 게시판</h2>
+						</a>
 					</li>
 				</ul>
 				
@@ -89,7 +93,7 @@
 					<form action="${request.contextPath}views/search.jsp" method="post" onsubmit="return keyword_check()">
 						<div>
 							<p><input name="keyword" type="text" placeholder="검색어 입력"></p>
-                            <p class="btnArea"><input type="submit" value="search"></button></p>
+                            <p class="btnArea"><input type="submit" value="search"></p>
 						</div>
 					</form>
 				</div>

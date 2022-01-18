@@ -18,7 +18,7 @@
 	<div id="center_wrap">	
 		<div id="visual">
 			<p class="visual_inner">
-				<img src="" alt=""/>
+				<img width="1280px"height="300px" src="${request.contextPath}resource/img/ad1.jpg" alt=""/>
 			</p>
 		</div>
 		<h2>새로 올라온 상품</h2>		
@@ -29,9 +29,9 @@
 					%>
 				<li>
 					<a href="main?center=itemView&code=<%=item.get(i).getCode() %>">
-						<img src="<%=item.get(i).getImage_path() %>" wight="190" height="190">
-						<strong><%=item.get(i).getTitle() %></strong>
-						<p><%=item.get(i).getPrice() %>원</p>
+						<img src="<%=item.get(i).getImage_path() %>" width="230" height="190"><br>
+						<p><%=item.get(i).getTitle() %></p>
+						<strong><%=item.get(i).getPrice() %>원</strong>
 						<p><%=item.get(i).getDate() %>
 					</a>
 				</li>

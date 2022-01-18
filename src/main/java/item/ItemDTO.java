@@ -39,6 +39,17 @@ public class ItemDTO {
 		this.price = price;
 		this.image_path = image_path;
 	}
+	public ItemDTO(int category, String title,String address,String content,String option1,String option2,int num,int price, String image_path) {
+		this.category = category;
+		this.title = title;
+		this.address = address;
+		this.content = content;
+		this.option1 = option1;
+		this.option2 = option2;
+		this.num = num;
+		this.price = price;
+		this.image_path = image_path;
+	}
 	
 	public String getImage_path() {
 		return image_path;

@@ -28,17 +28,18 @@ else{
 		<hr id="itemWriteForm-hr1">
 		<form method="post" action="service">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">제 목</h2>
+				<h2 id="itemWriteForm-h2">제&nbsp; 목 </h2>
 				<input id="itemWriteForm-input1" type="text" name="title" required>
 			</section>
+			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">이미지</h2>
+				<h2 id="itemWriteForm-h2">이미지 </h2>
 				<input id="itemWriteForm-input1" type="text" name="image_path" required>
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">카테고리</h2>
-				<select name="category">
+				<h2 id="itemWriteForm-h2">카테고리 </h2>
+				<select id="itemWriteForm-category" name="category">
 					<option value="1">디지털기기</option>
 					<option value="2">생활가전</option>
 					<option value="3">남성/여성의류</option>
@@ -50,47 +51,47 @@ else{
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">주 소</h2>
+				<h2 id="itemWriteForm-h2">주&nbsp; 소 </h2>
 	            <div class="postcode">
 					<input type="text" name="postcode" id="sample6_postcode" placeholder="우편번호">
-					<input type="button" id="postcodeBtn"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+					<input type="button" id="postcodeBtn" onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
 				</div>
 				<input type="text" name="address" class="required" id="sample6_address" placeholder="주소">
+				<input type="text" id="sample6_extraAddress" placeholder="주소">
 				<input type="text" name="detailAddress" id="sample6_detailAddress" placeholder="상세주소">
-				<input type="text" id="sample6_extraAddress" placeholder="참고항목">
 				<input type="hidden" name="section" id="section">
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">상 태</h2>
-				<input type="radio" name="status1" checked><span>중고상품</span><br>
-				<input type="radio" name="status2" ><span>새상품</span><br>
+				<h2 id="itemWriteForm-h2">상&nbsp; 태 </h2>
+				<input type="radio" name="option1" value="중고상품" checked><span>중고상품</span><br>
+				<input type="radio" name="option1" value="새상품" ><span>새상품</span><br>
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">교 환</h2>
-				<input type="radio" name="change1" checked><span>교환불가</span><br>
-				<input type="radio" name="change2" ><span>교환가능</span><br>
+				<h2 id="itemWriteForm-h2">교&nbsp; 환 </h2>
+				<input type="radio" name="option2" value="교환불가" checked><span>교환불가</span><br>
+				<input type="radio" name="option2" value="교환가능" ><span>교환가능</span><br>
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">가 격</h2>
+				<h2 id="itemWriteForm-h2">가&nbsp; 격 </h2>
 				<input id="itemWriteForm-input1" type="number" name="price" min="0" max="99999999" required>
 			</section>
 			<hr id="itemWriteForm-hr2">
-			<section id="sec1">
-				<h2 id="itemWriteForm-h2">설 명</h2>
-				<textarea name="content" cols="30" rows="10"></textarea>
+			<section id="itemWriteForm-sec1">
+				<h2 id="itemWriteForm-h2">설&nbsp; 명 </h2>
+				<textarea id="itemWriteForm-textarea" name="content" cols="30" rows="10" placeholder="상품에 대한 내용을 입력하세요"></textarea>
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">수 량</h2>
+				<h2 id="itemWriteForm-h2">수&nbsp; 량 </h2>
 				<input id="itemWriteForm-input1" type="number" name="num" min="1" max="999" value="1" required>
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<input type="hidden" name="command" value="itemWriteForm">
 			<input type="hidden" name="sellerId" value="<%=id %>">
-			<input type="submit" value="등록하기">
+			<input type="submit" id="itemWriteForm-btn" value="등록하기">
 		</form>
 	</div>
 </body>

@@ -9,12 +9,11 @@ body{
 }
 main{
 	width: 1280px;
-	min-height: 100%;
 	position:relative;
 	padding: 0px;
 	/*height:1200px;*/
 	padding-top: 186px; /* 메인부분 시작지점(조정예정) */
-	background-color: white;
+	justify-content:center;
 }
 
 header{
@@ -23,10 +22,10 @@ header{
 	left: 0;
 	right: 0;
 	z-index: 99;
+	background-color:white;
 }
 
 footer{
-	margin-top: 100px;
 	display:flex;
 	position: relative;
 	height:20vh;
@@ -53,29 +52,14 @@ footer{
 }
 /*스크롤 해도 헤더 고정*/
 
-header{
-	background-color: white;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 99;
-}
-main{
-	width: 100vw;
-	min-height: 100%;
-	position:relative;
-	padding: 0px;
-	/*height:1200px;*/
-	padding-top: 300px; /* 메인부분 시작지점(조정예정) */
-	background-color: white;
-}
-
-
 #content{
 	/*display: flex;*/
 	width:100%;
-	justify-content: center;
+	justify-content:space-evenly;
+}
+#content a{
+	color:#191a1a;
+	text-decoration-line:none;
 }
 #visual{
 	width:100%;
@@ -89,21 +73,27 @@ main{
 }
 
 #content ul{
-	width:100%;
-	height:440px;
+	width: 100%;
+    margin-left: 16px;
+    margin-top: 30px;
 }
 
 #content ul li{
-	width:230px;
-	height:200px;
-	margin:10px;
-	outline:1px solid #000;
-	float:left;
+	width: 230px;
+    height: 300px;
+    margin: 10px;
+    outline: 1px solid lightgray;
+    float: left;
 }
 
 #account ul li{
 	display:inline-block;
 	padding-top:13px;
+	margin: 5px;
+}
+header a{
+	color:gray;
+	text-decoration-line:none;
 }
 
 #nav{
@@ -174,6 +164,21 @@ main{
 #search_area button{
 	width:40px;
 	float:left;
+}
+#center_wrap{
+	width:1280px;
+}
+
+/* bottom */
+
+div#bottom_wrap {
+    display: flex;
+}
+div#bottom_left {
+    margin-right: 50px;
+}
+div#bottom_right{
+	margin-left: 50px;
 }
 
 /* 방식이 바뀌면서 재설계중 */

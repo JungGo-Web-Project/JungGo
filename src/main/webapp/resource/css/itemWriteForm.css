@@ -9,8 +9,6 @@
         	margin-top: 100px;
             display: grid;
             justify-content: center;
-            margin-top: 100px;
-            
         }
         
         #itemWriteForm-hr1{
@@ -24,7 +22,6 @@
             width: 70vw;
             margin-bottom: 30px;
         }
-        
         #itemWriteForm-sec1{
             display: flex;
             align-items: center;
@@ -33,6 +30,44 @@
         	font-size: 1.2em;
         }
         #itemWriteForm-input1{
-        	width: 120px;
-        	height: 70px;
+        	width: 250px;
+        	height: 40px;
+        }
+        #itemWriteForm-category{
+        	width: 150px;
+        	height: 40px;
+        }
+        #sample6_postcode{
+        	width: 150px;
+        	height: 40px;
+        }
+        #sample6_address{
+        	width: 150px;
+        	height: 40px;
+        }
+        #sample6_detailAddress{
+        	width: 250px;
+        	height: 40px;
+        }
+        #sample6_extraAddress{
+        	width: 150px;
+        	height: 40px;
+        }
+        #itemWriteForm-btn{
+            width: 100px;
+            height: 40px;
+            font-size: 1.2em;
+            color: white;
+            background-color: black;
+        }
+        #postcodeBtn{
+         	width: 100px;
+            height: 40px;
+            color: white;
+            background-color: black;
+        }
+        #itemWriteForm-textarea{
+        	width: 400px;
+            height: 250px;
+            resize: none;
         }
