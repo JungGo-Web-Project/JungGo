@@ -6,10 +6,9 @@
         }
         
         .itemUpdateForm-div{
+        	margin-top: 100px;
             display: grid;
             justify-content: center;
-            width: 100vh;
-            margin-top: 100px;
         }
         
         #itemUpdateForm-hr1{
@@ -29,5 +28,54 @@
             align-items: center;
         }
         #itemUpdateForm-h2{
-            width: 200px;
+            font-size: 1.2em;
+        }
+        #itemUpdateForm-input1{
+        	width: 250px;
+        	height: 40px;
+        }
+        #itemUpdateForm-category{
+        	width: 150px;
+        	height: 40px;
+        }
+        #itemUpdateForm-btn{
+            width: 100px;
+            height: 40px;
+            font-size: 1.2em;
+            color: white;
+            background-color: black;
+        }
+        #sample6_postcode{
+        	width: 150px;
+        	height: 40px;
+        }
+        #sample6_address{
+        	width: 150px;
+        	height: 40px;
+        }
+        #sample6_detailAddress{
+        	width: 250px;
+        	height: 40px;
+        }
+        #sample6_extraAddress{
+        	width: 150px;
+        	height: 40px;
+        }
+        #itemUpdateForm-btn{
+            width: 100px;
+            height: 40px;
+            font-size: 1.2em;
+            color: white;
+            background-color: black;
+        }
+        #postcodeBtn{
+         	width: 100px;
+            height: 40px;
+            color: white;
+            background-color: black;
+        }
+        #itemUpdateForm-textarea{
+        	width: 400px;
+            height: 250px;
+            resize: none;
         }

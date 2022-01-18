@@ -190,4 +190,22 @@
 		<url-pattern>/itemView</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>itemList</servlet-name>
+		<jsp-file>/views/itemList.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemList</servlet-name>
+		<url-pattern>/itemList</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>itemBuy</servlet-name>
+		<jsp-file>/views/itemBuy.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemBuy</servlet-name>
+		<url-pattern>/itemBuy</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

@@ -46,66 +46,50 @@ for(int i=0; i<board.size(); i++){
 					<br></th>
 			</tr>
 			<tr>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=free.get(free.size()-1).getCode() %>'">
+			<%
+			if(free.size()>=4){
+				for(int i=0; i<4; i++){
+					%>
+					<td><section id="boardMain-sec"
+						onclick="location.href='main?center=boardView&code=<%=free.get(i).getCode() %>'">
 						<br>
 						<br>
-						<h1><%=free.get(free.size()-1).getTitle() %></h1>
+						<h1><%=free.get(i).getTitle() %></h1>
 						<h3>
 							작성자 :
-							<%=free.get(free.size()-1).getId() %></h3>
+							<%=free.get(i).getId() %></h3>
 						<h3>
 							작성일 :
-							<%=free.get(free.size()-1).getDate() %></h3>
+							<%=free.get(i).getDate() %></h3>
 						<h3>
 							조회수 :
-							<%=free.get(free.size()-1).getView() %></h3>
+							<%=free.get(i).getView() %></h3>
 					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=free.get(free.size()-2).getCode() %>'">
+					<%
+				}
+			}
+			else if(free.size()<4){
+				for(int i=0; i<free.size(); i++){
+					%>
+					<td><section id="boardMain-sec"
+						onclick="location.href='main?center=boardView&code=<%=free.get(i).getCode() %>'">
 						<br>
 						<br>
-						<h1><%=free.get(free.size()-2).getTitle() %></h1>
+						<h1><%=free.get(i).getTitle() %></h1>
 						<h3>
 							작성자 :
-							<%=free.get(free.size()-2).getId() %></h3>
+							<%=free.get(i).getId() %></h3>
 						<h3>
 							작성일 :
-							<%=free.get(free.size()-2).getDate() %></h3>
+							<%=free.get(i).getDate() %></h3>
 						<h3>
 							조회수 :
-							<%=free.get(free.size()-2).getView() %></h3>
+							<%=free.get(i).getView() %></h3>
 					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=free.get(free.size()-3).getCode() %>'">
-						<br>
-						<br>
-						<h1><%=free.get(free.size()-3).getTitle() %></h1>
-						<h3>
-							작성자 :
-							<%=free.get(free.size()-3).getId() %></h3>
-						<h3>
-							작성일 :
-							<%=free.get(free.size()-3).getDate() %></h3>
-						<h3>
-							조회수 :
-							<%=free.get(free.size()-3).getView() %></h3>
-					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=free.get(free.size()-4).getCode() %>'">
-						<br>
-						<br>
-						<h1><%=free.get(free.size()-4).getTitle() %></h1>
-						<h3>
-							작성자 :
-							<%=free.get(free.size()-4).getId() %></h3>
-						<h3>
-							작성일 :
-							<%=free.get(free.size()-4).getDate() %></h3>
-						<h3>
-							조회수 :
-							<%=free.get(free.size()-4).getView() %></h3>
-					</section></td>
+					<%
+				}
+			}
+			%>
 			</tr>
 		</table>
 		<hr id="boardMain-hr2">
@@ -116,66 +100,50 @@ for(int i=0; i<board.size(); i++){
 					<br></th>
 			</tr>
 			<tr>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=after.get(after.size()-1).getCode() %>'">
+			<%
+			if(after.size()>=4){
+				for(int i=0; i<4; i++){
+					%>
+					<td><section id="boardMain-sec"
+						onclick="location.href='main?center=boardView&code=<%=after.get(i).getCode() %>'">
 						<br>
 						<br>
-						<h1><%=after.get(after.size()-1).getTitle() %></h1>
+						<h1><%=after.get(i).getTitle() %></h1>
 						<h3>
 							작성자 :
-							<%=after.get(after.size()-1).getId() %></h3>
+							<%=after.get(i).getId() %></h3>
 						<h3>
 							작성일 :
-							<%=after.get(after.size()-1).getDate() %></h3>
+							<%=after.get(i).getDate() %></h3>
 						<h3>
 							조회수 :
-							<%=after.get(after.size()-1).getView() %></h3>
+							<%=after.get(i).getView() %></h3>
 					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=after.get(after.size()-2).getCode() %>'">
+					<%
+				}
+			}
+			else if(after.size()<4){
+				for(int i=0; i<after.size(); i++){
+					%>
+					<td><section id="boardMain-sec"
+						onclick="location.href='main?center=boardView&code=<%=after.get(i).getCode() %>'">
 						<br>
 						<br>
-						<h1><%=after.get(after.size()-2).getTitle() %></h1>
+						<h1><%=after.get(i).getTitle() %></h1>
 						<h3>
 							작성자 :
-							<%=after.get(after.size()-2).getId() %></h3>
+							<%=after.get(i).getId() %></h3>
 						<h3>
 							작성일 :
-							<%=after.get(after.size()-2).getDate() %></h3>
+							<%=after.get(i).getDate() %></h3>
 						<h3>
 							조회수 :
-							<%=after.get(after.size()-2).getView() %></h3>
+							<%=after.get(i).getView() %></h3>
 					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=after.get(after.size()-3).getCode() %>'">
-						<br>
-						<br>
-						<h1><%=after.get(after.size()-3).getTitle() %></h1>
-						<h3>
-							작성자 :
-							<%=after.get(after.size()-3).getId() %></h3>
-						<h3>
-							작성일 :
-							<%=after.get(after.size()-3).getDate() %></h3>
-						<h3>
-							조회수 :
-							<%=after.get(after.size()-3).getView() %></h3>
-					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=after.get(after.size()-4).getCode() %>'">
-						<br>
-						<br>
-						<h1><%=after.get(after.size()-4).getTitle() %></h1>
-						<h3>
-							작성자 :
-							<%=after.get(after.size()-4).getId() %></h3>
-						<h3>
-							작성일 :
-							<%=after.get(after.size()-4).getDate() %></h3>
-						<h3>
-							조회수 :
-							<%=after.get(after.size()-4).getView() %></h3>
-					</section></td>
+					<%
+				}
+			}
+			%>
 			</tr>
 		</table>
 		<hr id="boardMain-hr2">
@@ -186,66 +154,50 @@ for(int i=0; i<board.size(); i++){
 					<br></th>
 			</tr>
 			<tr>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=reque.get(reque.size()-1).getCode() %>'">
+			<%
+			if(reque.size()>=4){
+				for(int i=0; i<4; i++){
+					%>
+					<td><section id="boardMain-sec"
+						onclick="location.href='main?center=boardView&code=<%=reque.get(i).getCode() %>'">
 						<br>
 						<br>
-						<h1><%=reque.get(reque.size()-1).getTitle() %></h1>
+						<h1><%=reque.get(i).getTitle() %></h1>
 						<h3>
 							작성자 :
-							<%=reque.get(reque.size()-1).getId() %></h3>
+							<%=reque.get(i).getId() %></h3>
 						<h3>
 							작성일 :
-							<%=reque.get(reque.size()-1).getDate() %></h3>
+							<%=reque.get(i).getDate() %></h3>
 						<h3>
 							조회수 :
-							<%=reque.get(reque.size()-1).getView() %></h3>
+							<%=reque.get(i).getView() %></h3>
 					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=reque.get(reque.size()-2).getCode() %>'">
+					<%
+				}
+			}
+			else if(reque.size()<4){
+				for(int i=0; i<reque.size(); i++){
+					%>
+					<td><section id="boardMain-sec"
+						onclick="location.href='main?center=boardView&code=<%=reque.get(i).getCode() %>'">
 						<br>
 						<br>
-						<h1><%=reque.get(reque.size()-2).getTitle() %></h1>
+						<h1><%=reque.get(i).getTitle() %></h1>
 						<h3>
 							작성자 :
-							<%=reque.get(reque.size()-2).getId() %></h3>
+							<%=reque.get(i).getId() %></h3>
 						<h3>
 							작성일 :
-							<%=reque.get(reque.size()-2).getDate() %></h3>
+							<%=reque.get(i).getDate() %></h3>
 						<h3>
 							조회수 :
-							<%=reque.get(reque.size()-2).getView() %></h3>
+							<%=reque.get(i).getView() %></h3>
 					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=reque.get(reque.size()-3).getCode() %>'">
-						<br>
-						<br>
-						<h1><%=reque.get(reque.size()-3).getTitle() %></h1>
-						<h3>
-							작성자 :
-							<%=reque.get(reque.size()-3).getId() %></h3>
-						<h3>
-							작성일 :
-							<%=reque.get(reque.size()-3).getDate() %></h3>
-						<h3>
-							조회수 :
-							<%=reque.get(reque.size()-3).getView() %></h3>
-					</section></td>
-				<td><section id="boardMain-sec"
-						onclick="location.href='main?center=boardView&code=<%=reque.get(reque.size()-4).getCode() %>'">
-						<br>
-						<br>
-						<h1><%=reque.get(reque.size()-4).getTitle() %></h1>
-						<h3>
-							작성자 :
-							<%=reque.get(reque.size()-4).getId() %></h3>
-						<h3>
-							작성일 :
-							<%=reque.get(reque.size()-4).getDate() %></h3>
-						<h3>
-							조회수 :
-							<%=reque.get(reque.size()-4).getView() %></h3>
-					</section></td>
+					<%
+				}
+			}
+			%>
 			</tr>
 		</table>
 		<hr id="boardMain-hr2">

@@ -1,6 +1,13 @@
 @charset "UTF-8";
+        *{
+            margin: 0;
+            padding: 0;
+        }
         .itemView-div{
+        	margin-top: 100px;
+        	margin-left: 150px;
             display: grid;
+            justify-content: center;
         }
         #itemView-sec1{
             border: solid black 1px;
@@ -19,19 +26,12 @@
             display: grid;
             margin-left: 30px;
         }
-        #itemView-btn1{
-            width: 150px;
-            height: 50px;
-            font-size: 1.5em;
+        #itemView-btn{
+            width: 100px;
+            height: 40px;
+            font-size: 1.2em;
             color: white;
-            background-color: orange;
-        }
-        #itemView-btn2{
-            width: 150px;
-            height: 50px;
-            font-size: 1.5em;
-            color: white;
-            background-color: red;
+            background-color: black;
         }
         #itemView-h1{
             font-size: 2em;
