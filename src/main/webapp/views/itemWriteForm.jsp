@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resource/css/itemWriteForm.css" type="text/css">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/revalidation.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -48,8 +50,15 @@ else{
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
-				<h2 id="itemWriteForm-h2">거래지역</h2>
-				<input id="itemWriteForm-input1" type="text" name="address" required>
+				<h2 id="itemWriteForm-h2">주 소</h2>
+	            <div class="postcode">
+					<input type="text" name="postcode" id="sample6_postcode" placeholder="우편번호">
+					<input type="button" id="postcodeBtn"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+				</div>
+				<input type="text" name="address" class="required" id="sample6_address" placeholder="주소">
+				<input type="text" name="detailAddress" id="sample6_detailAddress" placeholder="상세주소">
+				<input type="text" id="sample6_extraAddress" placeholder="참고항목">
+				<input type="hidden" name="section" id="section">
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">

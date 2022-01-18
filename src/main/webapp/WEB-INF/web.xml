@@ -172,13 +172,22 @@
 		<url-pattern>/itemUpdateForm</url-pattern>
 	</servlet-mapping>
 	
-		<servlet>
+	<servlet>
 		<servlet-name>itemWriteForm</servlet-name>
 		<jsp-file>/views/itemWriteForm.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>itemWriteForm</servlet-name>
 		<url-pattern>/itemWriteForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>itemView</servlet-name>
+		<jsp-file>/views/itemView.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemView</servlet-name>
+		<url-pattern>/itemView</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
