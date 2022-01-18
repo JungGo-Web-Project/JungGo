@@ -10,14 +10,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resource/css/editPersonalInfo.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/resource/js/revalidation.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>Document</title>
 </head>
 <body>
 	<%
+	if(session.getAttribute("log") == null){
+		 request.getRequestDispatcher("main?center=login").forward(request, response);
+	}
+	
 	String id = session.getAttribute("log").toString();
 	UserDAO dao = UserDAO.getInstane();
 	
-	UserDTO user = dao.getUserById(id); 
+	UserDTO user = dao.getUserById(id);
+	String[] addr = user.getAddress().split(", ");
 	%>
 
     <div class="editInfoWrap">
@@ -48,7 +54,17 @@
                     </tr>
                     <tr class="info">
                         <td class="txt"><span>주소</span></td>
-                        <td class="info"><input type="text" class="editInfoInput" name="address" value="<%=user.getAddress()%>"></td>
+                        <td class="info" id="address">
+                        	<div class="postcode">
+								<input type="text" name="postcode" id="sample6_postcode" placeholder="우편번호" value="<%=user.getPostcode()%>">
+								<input type="button" id="postcodeBtn"onclick="sample6_execDaumPostcode()" value="우편번호 찾기">
+							</div>
+							<input type="text" name="address" class="editInfoInput" id="sample6_address" placeholder="주소" value="<%=addr[0]%>">
+							<input type="text" name="detailAddress" id="sample6_detailAddress" placeholder="상세주소" value="<%=addr[1]%>">
+							<input type="text" id="sample6_extraAddress" placeholder="참고항목" value="<%=user.getSection()%>">
+							<input type="hidden" name="section" id="section">
+                        </td>
+                        
                     </tr>
                 </table>
                 <hr color="grey" size="2">
