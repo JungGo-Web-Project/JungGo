@@ -3,12 +3,11 @@ package item;
 import java.sql.Timestamp;
 
 public class ItemDTO {
-	private int code, num, price, view;
-	private String category, title, address, content, sellerId, buyerId, status, option1, option2;
+	private int code, category, num, price, view;
+	private String  title, address, content, sellerId, buyerId, status, option1, option2, image_path;
 	private Timestamp date;
 	
-
-	public ItemDTO(int code,String category,String title,String address,String content,String sellerId,String buyerId,String status,String option1,String option2,int num,int price,int view,Timestamp date) {
+	public ItemDTO(int code, int category, String title,String address,String content,String sellerId,String buyerId,String status,String option1,String option2,int num,int price,int view,Timestamp date, String image_path) {
 		this.code = code;
 		this.category = category;
 		this.title = title;
@@ -23,9 +22,11 @@ public class ItemDTO {
 		this.price = price;
 		this.view = view;
 		this.date = date;
+		this.image_path = image_path;
 	}
 	
-	public ItemDTO(String category,String title,String address,String content,String sellerId,String status,String option1,String option2,int num,int price) {
+
+	public ItemDTO(int category, String title,String address,String content,String sellerId,String status,String option1,String option2,int num,int price, String image_path) {
 		this.category = category;
 		this.title = title;
 		this.address = address;
@@ -36,6 +37,15 @@ public class ItemDTO {
 		this.option2 = option2;
 		this.num = num;
 		this.price = price;
+		this.image_path = image_path;
+	}
+	
+	public String getImage_path() {
+		return image_path;
+	}
+	
+	public void setImage_path(String image_path) {
+		this.image_path = image_path;
 	}
 	
 	public String getAddress() {
@@ -74,11 +84,11 @@ public class ItemDTO {
 		this.view = view;
 	}
 
-	public String getCategory() {
+	public int getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(int category) {
 		this.category = category;
 	}
 

@@ -1,3 +1,6 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="item.ItemDTO"%>
+<%@page import="item.ItemDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,30 +13,47 @@
     <title>main</title>
 </head>
 <body>
+<%
+int code = Integer.parseInt(request.getParameter("code"));
+ItemDAO dao = ItemDAO.getInstance();
+ItemDTO item = null;
+
+ArrayList<ItemDTO> list = dao.getItem();
+
+for(int i=0; i<list.size(); i++){
+	if(list.get(i).getCode() == code){
+		item = list.get(i);
+	}
+}
+
+%>
     <div class="itemView-div">
         <section id="itemView-sec1">
             <img id="itemView-img" src="">
             <table id="itemView-table">
                 <tr>
-                    <th><h1 id="itemView-h1">PC팝니다</h1></th>
+                    <th><img src="<%=item.getImage_path() %>"></th>
+                </tr>
+                <tr>
+                    <th><h1 id="itemView-h1"><%=item.getTitle() %></h1></th>
                 </tr>
                 <tr>
                     <td>
-                        <h2 id="itemView-h2">1,000,000원</h2>
+                        <h2 id="itemView-h2"><%=item.getPrice() %></h2>
                         <hr id="itemView-hr">
                     </td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ조회수&nbsp;&nbsp; 1회</h3></td>
+                    <td><h3 id="itemView-h3">ㆍ조회수&nbsp;&nbsp; <%=item.getView() %>회</h3></td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ상품상태 중고상품</h3></td>
+                    <td><h3 id="itemView-h3">ㆍ상품상태 <%=item.getOption1() %></h3></td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ교환여부 교환불가</h3></td>
+                    <td><h3 id="itemView-h3">ㆍ교환여부 <%=item.getOption2() %></h3></td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ거래지역 경기도 고양시</h3></td>
+                    <td><h3 id="itemView-h3">ㆍ거래지역 <%=item.getAddress() %></h3></td>
                 </tr>
                 <tr>
                     <td>
@@ -46,7 +66,7 @@
         <section id="itemView-sec2">
             <h3 id="itemView-h3">상품정보</h3>
             <hr id="itemView-hr">
-            <p id="itemView-p">성능좋은 PC 입니다.</p>
+            <p id="itemView-p"><%=item.getContent() %></p>
         </section>
     </div>
 </body>

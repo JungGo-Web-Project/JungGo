@@ -26,42 +26,14 @@ table.info{
 tr.info{
     height: 60px;
 }
-tr#address{
-	height: 210px;
-}
 td.info{
     border-spacing: 0;
-}
-td#address{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 td.txt{
 	border-spacing: 0;
     width: calc(35vw - 250px);
 }
 input.required{
-    width: 250px;
-    height: 40px;
-}
-input#sample6_postcode{
-    width: 140px;
-    height: 40px;
-}
-input#postcodeBtn{
-    width: 100px;
-    background-color: black;
-    color: white;
-    font-size: 0.7em;
-    border: none;
-    cursor: pointer;
-}
-input#sample6_detailAddress{
-    width: 250px;
-    height: 40px;
-}
-input#sample6_extraAddress{
     width: 250px;
     height: 40px;
 }
@@ -72,10 +44,6 @@ span.alert{
 }
 span#checkId{
 	display: block;
-}
-div.postcode{
-    display: flex;
-    justify-content: space-between;
 }
 div#pwAlert{
     display: flex;
@@ -94,7 +62,7 @@ div.checkboxes{
 div.option{
     padding-left: 10px;
 }
-input.formButton{
+input[type="button"]{
     height: 50px;
     width: calc(35vw/2);
     background-color: black;

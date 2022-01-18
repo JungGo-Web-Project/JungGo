@@ -33,7 +33,7 @@ public class ItemDAO {
 			
 			while(rs.next()) {
 				int code = rs.getInt(1);
-				String category = rs.getString(2);
+				int category = rs.getInt(2);
 				String title = rs.getString(3);
 				String address = rs.getString(4);
 				String content = rs.getString(5);
@@ -46,34 +46,36 @@ public class ItemDAO {
 				int price = rs.getInt(12);
 				int view = rs.getInt(13);
 				Timestamp date = rs.getTimestamp(14);
+				String image_path = rs.getString(15);
 				
-				ItemDTO item = new ItemDTO(code, category, title, address, content, sellerId, buyerId, status, option1, option2, num, price, view, date);
+				ItemDTO item = new ItemDTO(code, category, title, address, content, sellerId, buyerId, status, option1, option2, num, price, view, date, image_path);
 				items.add(item);
 			}
 			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		return items;
 	}
 	
 	public void addItem(ItemDTO item) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into items (category, title, address, content, sellerId, status, option1, option2, num, price, date) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			String sql = "insert into items (code, title, address, content, sellerId, status, option1, option2, num, price, date, image_path) value (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, item.getCategory());
-			pstmt.setString(2, item.getTitle());
-			pstmt.setString(3, item.getAddress());
-			pstmt.setString(4, item.getContent());
-			pstmt.setString(5, item.getSellerId());
-			pstmt.setString(6, item.getStatus());
-			pstmt.setString(7, item.getOption1());
-			pstmt.setString(8, item.getOption2());
-			pstmt.setInt(9, item.getNum());
-			pstmt.setInt(10, item.getPrice());
-			pstmt.setTimestamp(11, new Timestamp(Calendar.getInstance().getTimeInMillis()));
+			pstmt.setInt(1, item.getCode());
+			pstmt.setInt(2, item.getCategory());
+			pstmt.setString(3, item.getTitle());
+			pstmt.setString(4, item.getAddress());
+			pstmt.setString(5, item.getContent());
+			pstmt.setString(6, item.getSellerId());
+			pstmt.setString(7, item.getStatus());
+			pstmt.setString(8, item.getOption1());
+			pstmt.setString(9, item.getOption2());
+			pstmt.setInt(10, item.getNum());
+			pstmt.setInt(11, item.getPrice());
+			pstmt.setTimestamp(12, new Timestamp(Calendar.getInstance().getTimeInMillis()));
+			pstmt.setString(13, item.getImage_path());
 			
 			pstmt.executeUpdate();
 			
@@ -83,12 +85,12 @@ public class ItemDAO {
 		}
 	}
 	
-	public void updateBoard(ItemDTO item, int code) {
+	public void updateItem(ItemDTO item, int code) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "UPDATE items SET category = ?, title = ?, address = ?, content = ?, status = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ? WHERE code = ?";
+			String sql = "UPDATE items SET category = ?, title = ?, address = ?, content = ?, status = ?, option1 = ?, option2 = ?, num = ?, price = ?, date = ?, image_path = ? WHERE code = ?";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, item.getCategory());
+			pstmt.setInt(1, item.getCategory());
 			pstmt.setString(2, item.getTitle());
 			pstmt.setString(3, item.getAddress());
 			pstmt.setString(4, item.getContent());
@@ -98,7 +100,8 @@ public class ItemDAO {
 			pstmt.setInt(8, item.getNum());
 			pstmt.setInt(9, item.getPrice());
 			pstmt.setTimestamp(10, new Timestamp(Calendar.getInstance().getTimeInMillis()));
-			pstmt.setInt(11, code);
+			pstmt.setString(11, item.getImage_path());
+			pstmt.setInt(12, code);
 			
 			pstmt.executeUpdate();
 			

@@ -35,16 +35,17 @@ public class itemWriteFormAction implements Action {
 		else {
 			option2 = "교환가능";
 		}
-		String category = request.getParameter("category");
+		int category = Integer.parseInt(request.getParameter("category"));
 		String title = request.getParameter("title");
 		String address = request.getParameter("address");
 		String content = request.getParameter("content");
 		String sellerId = request.getParameter("sellerId");
+		String image_path = request.getParameter("image_path");
 		String status = "판매중";
 		int price = Integer.parseInt(request.getParameter("price"));
 		int num = Integer.parseInt(request.getParameter("num"));
 		
-		ItemDTO item = new ItemDTO(category, title, address, content, sellerId, status, option1, option2, num, price);
+		ItemDTO item = new ItemDTO(category, title, address, content, sellerId, status, option1, option2, num, price, image_path);
 		dao.addItem(item);
 		request.getRequestDispatcher("main?center=center").forward(request, response);
 	}
