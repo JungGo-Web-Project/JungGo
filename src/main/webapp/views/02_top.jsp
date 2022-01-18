@@ -3,6 +3,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script type="text/javascript">
+
+ function keyword_check(){
+
+  if(document.search.keyword.value==''){ //검색어가 없을 경우  
+
+  alert('검색어를 입력하세요'); //경고창 띄움 
+
+  document.search.keyword.focus(); //다시 검색창으로 돌아감 
+
+  return false; 
+
+  }
+
+  else return true;
+
+ }
+
+</script>
 </head>
 <body>
 <div id="top_wrap">
@@ -67,10 +86,10 @@
 				<div id="search_area">
 					<!-- 키워드별 검색옵션 추가도 고려 -->
 					<!-- 검색은 일단 문장을 단어로 분해 후 2~3글자 일치 '연속'여부 확인 후 도출형식 -->
-					<form action="search.jsp" method="post">
+					<form action="${request.contextPath}views/search.jsp" method="post" onsubmit="return keyword_check()">
 						<div>
-							<p><input type="text" placeholder="검색어 입력"></p>
-                            <p class="btnArea"><button type="submit"><span>검색</span></button></p>
+							<p><input name="keyword" type="text" placeholder="검색어 입력"></p>
+                            <p class="btnArea"><input type="submit" value="search"></button></p>
 						</div>
 					</form>
 				</div>
