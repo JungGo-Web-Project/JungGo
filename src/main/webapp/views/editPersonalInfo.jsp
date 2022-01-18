@@ -69,6 +69,7 @@
                 </table>
                 <hr color="grey" size="2">
                 <div class="btn">
+                    <input type="button" value="회원탈퇴" id="unregister" onclick="location.href='main?center=deleteAccount'">
                     <input type="button" value="수정하기" id="subBtn" onclick="checkEdit(form)">
                 </div>
                 <input type="hidden" name="command" value="editInfo">        

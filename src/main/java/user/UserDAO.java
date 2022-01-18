@@ -103,4 +103,17 @@ public class UserDAO {
 			e.printStackTrace();
 		}
 	}
+	
+	public void deleteUser(UserDTO user) {
+		try {
+			conn = DBManager.getConnection();
+			String sql = "delete from users where code=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, user.getCode());
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

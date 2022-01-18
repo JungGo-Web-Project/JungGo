@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import user.UserDTO;
 import util.DBManager;
 
 public class BoardDAO {
@@ -161,5 +162,18 @@ public class BoardDAO {
 			e.printStackTrace();
 		}
 		return list;
+	}
+	
+	public void deleteUserBoard(UserDTO user) {
+		try {
+			conn = DBManager.getConnection();
+			String sql = "delete from board where id=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getId());
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

@@ -7,6 +7,7 @@ import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import user.UserDTO;
 import utility.DBManager;
 
 public class ItemDAO {
@@ -153,6 +154,31 @@ public class ItemDAO {
 			pstmt.executeUpdate();
 			
 			System.out.println("상품 구매 완료");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<ItemDTO> getMyItem(String statue, String id){
+		ArrayList<ItemDTO> myItem = new ArrayList<ItemDTO>();
+		
+		ArrayList<ItemDTO> list = getItem();
+		for(ItemDTO item : list) {
+			if(item.getSellerId().equals(id) && item.getStatus().equals(statue)) {
+				myItem.add(item);
+			}
+		}
+		return myItem;
+	}
+	
+	public void deleteUserItem(UserDTO user) {
+		try {
+			conn = DBManager.getConnection();
+			String sql = "delete from items where sellerId=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getId());
+			pstmt.executeUpdate();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
