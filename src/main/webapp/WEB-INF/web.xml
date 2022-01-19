@@ -200,6 +200,24 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>categoryView</servlet-name>
+		<jsp-file>/views/categoryView.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>categoryView</servlet-name>
+		<url-pattern>/categoryView</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>search</servlet-name>
+		<jsp-file>/views/search.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>search</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>itemBuy</servlet-name>
 		<jsp-file>/views/itemBuy.jsp</jsp-file>
 	</servlet>

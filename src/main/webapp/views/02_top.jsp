@@ -1,3 +1,9 @@
+<%@ page import="item.ItemDAO"%>
+<%@ page import="item.ItemDTO"%>
+<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.sql.Timestamp" %>
+<%@ page import="utility.DBManager"%>
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,7 +13,7 @@
 
  function keyword_check(){
 
-  if(document.search.keyword.value==''){ //검색어가 없을 경우  
+  if(document.search.keyword.value == ''){ //검색어가 없을 경우  
 
   alert('검색어를 입력하세요'); //경고창 띄움 
 
@@ -20,10 +26,11 @@
   else return true;
 
  }
-
+ 
 </script>
 </head>
 <body>
+
 <div id="top_wrap">
 	<div id="header_wrap">
 		<div id="top_header">
@@ -81,19 +88,30 @@
 				<div id="category">
 					<ul>
 						<!-- 보완예정 -->
-						<li><a href="01_main.jsp?center=">남성의류</a></li>
-						<li><a href="01_main.jsp?center=">여성의류</a></li>
-						<li><a href="01_main.jsp?center=">생활가전</a></li>
-						<li><a href="01_main.jsp?center=">운동/스포츠</a></li>
+						<li>
+							<a href="main?center=categoryView&code=1">
+								디지털기기
+							</a>
+						</li>
+						<li><a href="main?center=categoryView&code=2">생활가전</a></li>
+						<li><a href="main?center=categoryView&code=3">남성/여성의류</a></li>
+						<li><a href="main?center=categoryView&code=4">가구/인테리어</a></li>
+						<li><a href="main?center=categoryView&code=5">스포츠용품</a></li>
+						<li><a href="main?center=categoryView&code=6">서적/음반</a></li>
+						<li><a href="main?center=categoryView&code=7">기타</a></li>
 					</ul>
 				</div>
 				<div id="search_area">
 					<!-- 키워드별 검색옵션 추가도 고려 -->
 					<!-- 검색은 일단 문장을 단어로 분해 후 2~3글자 일치 '연속'여부 확인 후 도출형식 -->
-					<form action="${request.contextPath}views/search.jsp" method="post" onsubmit="return keyword_check()">
+					<form action="main?center=search" accept-charset="utf-8" method="post" onsubmit="return keyword_check()">
 						<div>
-							<p><input name="keyword" type="text" placeholder="검색어 입력"></p>
-                            <p class="btnArea"><input type="submit" value="search"></p>
+							<p>
+								<input name="keyword" type="text" placeholder="검색어 입력">
+							</p>
+                            <p class="btnArea">
+                            	<input type="submit" value="search">
+                            </p>
 						</div>
 					</form>
 				</div>
