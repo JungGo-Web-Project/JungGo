@@ -13,7 +13,6 @@
     <title>main</title>
 </head>
 <body>
-        <div class="boardView-div">
 		<%
 		int code = Integer.parseInt(request.getParameter("code"));
 
@@ -35,7 +34,8 @@
 			list = 3;
 		}
 		%>
-		<section class="boardView-sec">
+        <div class="boardView-div">
+		<section class="boardView-sec1">
                         <article id="boardView-arti1">제 &nbsp;목 : <%=board.getTitle() %></article>
                         <article id="boardView-arti2">작성자 : <%=board.getId() %></article>
                         <article id="boardView-arti3">작성일 : <%=board.getDate() %></article>
@@ -43,14 +43,16 @@
                     </section>
                     <textarea id="boardView-textarea" name="content" readonly><%=board.getContent() %></textarea><br>
                     <input type="hidden" name="code" value="<%=board.getCode() %>">
+                    <section class="boardView-sec2">
                    <%
                    String id = (String) session.getAttribute("log");
                     if(board.getId().equals(id)){%>
-                    	<input id="boardView-submit" type="button" value="수정" onclick="location.href='main?center=boardCheck&num=1&code=<%=board.getCode() %>'">
-                    	<input id="boardView-submit" type="button" value="삭제" onclick="location.href='main?center=boardCheck&num=2&code=<%=board.getCode() %>'">
+                    	<input id="boardView-btn" type="button" value="수정" onclick="location.href='main?center=boardCheck&num=1&code=<%=board.getCode() %>'">
+                        <input id="boardView-btn" type="button" value="삭제" onclick="location.href='main?center=boardCheck&num=2&code=<%=board.getCode() %>'">
                 <%
                     }%>
-                    <input type="button" id="boardView-list" onclick="location.href='main?center=boardList&list=<%=list %>'" value="목록">
+                    <input id="boardView-btn" type="button" value="목록" onclick="location.href='main?center=boardList&list=<%=list %>'" >
+                    </section>
         </div>
 </body>
 </html>

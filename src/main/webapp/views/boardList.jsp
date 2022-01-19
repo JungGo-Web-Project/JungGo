@@ -70,11 +70,11 @@ ArrayList<BoardDTO> board = new ArrayList<BoardDTO>();
                 %>
             </table>
             <hr id="boardList-hr2">
-            <form method="post" action="service">
+            <form method="post" action="service" id="boardList-form">
             <input type="hidden" name="category" value="<%=cate %>">
             <input type="hidden" name="command" value="boardList">
-            <input type="submit" id="boardList-submit" value="글 작성" >
-            <input type="button" id="boardList-allList" onclick="location.href='main?center=boardMain'" value="전체 목록">
+            <input type="submit" id="boardList-btn" value="글 작성" >
+            <input type="button" id="boardList-btn" onclick="location.href='main?center=boardMain'" value="전체 목록">
             </form>
             <hr id="hr2">
     </div>

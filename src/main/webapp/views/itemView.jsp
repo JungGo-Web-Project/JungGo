@@ -1,3 +1,4 @@
+<%@page import="zzim.ZzimDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="item.ItemDTO"%>
 <%@page import="item.ItemDAO"%>
@@ -35,6 +36,8 @@ for(int i=0; i<list.size(); i++){
 }
 user = item.getSellerId();
 dao.viewItem(code);
+
+ZzimDAO zzim = ZzimDAO.getInstance();
 %>
     <div class="itemView-div">
         <section id="itemView-sec1">
@@ -71,17 +74,18 @@ dao.viewItem(code);
                         	if(item.getBuyerId() != ""){
                         	%>
                         <input id="itemView-btn" type="button" value="수정하기" onclick="location.href='main?center=itemUpdateForm&code=<%=code %>'">
+                        <input id="itemView-btn" type="button" value="삭제하기" onclick="location.href='main?center=itemDeleteForm&code=<%=code %>'">
                         	<%
                         	}
                         }
                         else{
-                        	if(!id.equals("") && item.getStatus().equals("판매중")){
+                        	if(!id.equals("") && item.getStatus().equals("판매중") && !zzim.checkZzim(code, id)){
                         	%>
                        <form method="post" action="service">
-                        <input type="hidden" name="command" value="itemView">
+                        <input type="hidden" name="command" value="itemZzim">
                         <input type="hidden" name="id" value="<%=id %>">
                         <input type="hidden" name="code" value="<%=code %>">
-                        <input id="itemView-btn" type="submit" value="구매하기">
+                        <input id="itemView-btn" type="submit" value="찜하기">
                        </form>
                         	<%
                         	}

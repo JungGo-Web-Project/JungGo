@@ -3,28 +3,41 @@
             margin: 0;
             padding: 0;
         }
-        div{
+        .boardWriteForm-div{
             display: grid;
             justify-content: center;
+            text-align: center;
         }
-        main{
-
-        }
-        #hr1{
+        #boardWriteForm-hr1{
             margin-top: 30px;
             width: 70vw;
             border: thin solid black;
             margin-bottom: 30px;
         }
-        #hr2{
+        #boardWriteForm-hr2{
             margin-top: 30px;
             width: 70vw;
             margin-bottom: 30px;
         }
-        #sec1{
-            display: flex;
-            align-items: center;
+        #boardWriteForm-submit{
+            height: 50px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
         }
-        h2{
-            width: 200px;
+        #boardWriteForm-title{
+            width: 300px;
+            height: 30px;
+        }
+        #boardWriteForm-textarea{
+            width: 500px;
+            height: 300px;
+            resize: none;
+        }
+        #boardWriteForm-password{
+            width: 300px;
+            height: 30px;
         }

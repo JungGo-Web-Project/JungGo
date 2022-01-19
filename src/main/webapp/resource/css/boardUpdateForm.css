@@ -1,37 +1,52 @@
 @charset "UTF-8";
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-div {
-	display: grid;
-	justify-content: center;
-}
-
-main {
-	
-}
-
-#hr1 {
-	margin-top: 30px;
-	width: 70vw;
-	border: thin solid black;
-	margin-bottom: 30px;
-}
-
-#hr2 {
-	margin-top: 30px;
-	width: 70vw;
-	margin-bottom: 30px;
-}
-
-#sec1 {
-	display: flex;
-	align-items: center;
-}
-
-h2 {
-	width: 200px;
-}
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .boardUpdateForm-div{
+            display: grid;
+            justify-content: center;
+            text-align: center;
+        }
+        #boardUpdateForm-hr1{
+            margin-top: 30px;
+            width: 70vw;
+            border: thin solid black;
+            margin-bottom: 30px;
+        }
+        #boardUpdateForm-hr2{
+            margin-top: 30px;
+            width: 70vw;
+            margin-bottom: 30px;
+        }
+        #boardUpdateForm-submit{
+            height: 50px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+        }
+        #boardUpdateForm-title{
+            width: 300px;
+            height: 30px;
+        }
+        #boardUpdateForm-textarea{
+            width: 500px;
+            height: 300px;
+            resize: none;
+        }
+        #boardUpdateForm-password{
+            width: 300px;
+            height: 30px;
+        }
+        #boardUpdateForm-cancle{
+            height: 50px;
+            width: 150px;
+            background-color: black;
+            color: white;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+        }

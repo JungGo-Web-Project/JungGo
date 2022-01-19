@@ -10,9 +10,12 @@ import controller.action.LogoutAction;
 import controller.action.boardCheckAction;
 import controller.action.boardListAction;
 import controller.action.boardWriteFormAction;
+import controller.action.itemCommentAction;
+import controller.action.itemDeleteFormAction;
 import controller.action.itemUpdateFormAction;
 import controller.action.itemViewAction;
 import controller.action.itemWriteFormAction;
+import controller.action.itemZzimAction;
 import controller.action.pwCheckForEditAction;
 
 public class ActionFactory {
@@ -37,6 +40,9 @@ public class ActionFactory {
 		else if(command.equals("itemWriteForm")) return new itemWriteFormAction();
 		else if(command.equals("itemView")) return new itemViewAction();
 		else if(command.equals("itemUpdateForm")) return new itemUpdateFormAction();
+		else if(command.equals("itemDeleteForm")) return new itemDeleteFormAction();
+		else if(command.equals("itemComment")) return new itemCommentAction();
+		else if(command.equals("itemZzim")) return new itemZzimAction();
 		return null;
 		
 	}

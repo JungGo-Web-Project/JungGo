@@ -39,23 +39,23 @@
             <form method="post" action="service">
                 <section id="boardUpdateForm-sec1">
                     <h2 id="boardUpdateForm-h2">제목</h2>
-                    <input name="title" id="boardUpdateForm-input1" type="text" required>
+                    <input name="title" id="boardUpdateForm-title" type="text" required>
                 </section>
                 <hr id="boardUpdateForm-hr2">
                 <section id="boardUpdateForm-sec1">
                     <h2 id="boardUpdateForm-h2">내용</h2>
-                    <textarea name="content" id="boardUpdateForm-input2" cols="30" rows="10"></textarea>
+                    <textarea name="content" id="boardUpdateForm-textarea" cols="30" rows="10"></textarea>
                 </section>
                 <hr id="boardUpdateForm-hr2">
                 <section id="boardUpdateForm-sec1">
                     <h2 id="boardUpdateForm-h2">비밀번호</h2>
-                    <input type="password" name="password" id="boardUpdateForm-input2" required>
+                    <input type="password" name="password" id="boardUpdateForm-password" required>
                 </section>
                 <hr id="boardUpdateForm-hr2">
                 <input type="hidden" name="command" value="boardUpdate">
                 <input type="hidden" name="code" value="<%=code %>">
                 <input id="boardUpdateForm-submit" type="submit" value="적용">
-                <button id="boardUpdateForm-cancle" onclick="">취소</button>
+                <button id="boardUpdateForm-cancle" onclick="location.href='main?center=boardMain'">취소</button>
             </form>
     </div>
 </body>

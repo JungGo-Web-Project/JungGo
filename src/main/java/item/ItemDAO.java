@@ -182,7 +182,6 @@ public class ItemDAO {
 			e.printStackTrace();
 		}
 	}
-	
 	public ArrayList<ItemDTO> getMyPurchase(String id) {
 		ArrayList<ItemDTO> list = new ArrayList<ItemDTO>();
 		try {
@@ -218,4 +217,5 @@ public class ItemDAO {
 		}
 		return list;
 	}
+	
 }
