@@ -29,7 +29,7 @@ div.login{
     display: flex;
     justify-content: center;
 }
-.login form{
+form.login{
     display: flex;
     flex-direction: column;
     align-items: center;
