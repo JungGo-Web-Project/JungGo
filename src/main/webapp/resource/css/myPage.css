@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 div.myPageWrap{
-    width: 100vw;
+    width: 1280px;
     display: flex;
     align-items: center;
     justify-content: center;
