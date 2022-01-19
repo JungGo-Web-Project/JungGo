@@ -8,6 +8,7 @@
 .boardMain-div {
 	display: grid;
 	justify-content: center;
+	text-align: center;
 }
 
 #boardMain-hr1 {
@@ -24,19 +25,10 @@
 }
 
 #boardMain-Table {
+    display: grid;
 	width: 80vw;
 	text-align: center;
 	font-size: 1.3em;
-}
-
-#boardMain-sec {
-	margin-left: 15px;
-	width: 18vw;
-	height: 30vh;
-	text-align: center;
-	font-size: 1.2em;
-	cursor: pointer;
-	border: solid 1px black;
 }
 
 #boardMain-title {
