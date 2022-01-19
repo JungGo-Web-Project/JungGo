@@ -1,6 +1,6 @@
 @charset "UTF-8";
 div.joinWrap{
-    width: 100vw;
+    width: 1280px;
 
     display: flex;
     flex-direction: column;

@@ -26,16 +26,23 @@
 			<ul>
 				<%
 				for(int i=0; i<item.size(); i++){
-					%>
+				%>
 				<li>
 					<a href="main?center=itemView&code=<%=item.get(i).getCode() %>">
 						<img src="<%=item.get(i).getImage_path() %>" width="230" height="190"><br>
 						<p><%=item.get(i).getTitle() %></p>
 						<strong><%=item.get(i).getPrice() %>원</strong>
 						<p><%=item.get(i).getDate() %>
+						<%if(item.get(i).getStatus().equals("판매중")){ %>
+						<strong><%=item.get(i).getStatus() %></strong>
+						<%} %>
+						<%if(item.get(i).getStatus().equals("판매완료")){ %>
+						<strong><%=item.get(i).getStatus() %></strong>
+						<%} %>
+						
 					</a>
 				</li>
-					<%
+				<%
 				}
 				%>
 			</ul>

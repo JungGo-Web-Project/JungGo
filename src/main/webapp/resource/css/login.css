@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 div.loginWrap{
-    width: 100vw;
+    width: 1280px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 150px 1fr;
@@ -29,7 +29,7 @@ div.login{
     display: flex;
     justify-content: center;
 }
-form{
+.login form{
     display: flex;
     flex-direction: column;
     align-items: center;
