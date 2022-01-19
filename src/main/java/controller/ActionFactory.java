@@ -2,6 +2,7 @@ package controller;
 
 import controller.action.Action;
 import controller.action.BoardUpdateAction;
+import controller.action.DeleteAccountAction;
 import controller.action.EditInfoAction;
 import controller.action.JoinAction;
 import controller.action.LoginAction;
@@ -28,6 +29,7 @@ public class ActionFactory {
 		else if(command.equals("join")) return new JoinAction();
 		else if(command.equals("pwCheck")) return new pwCheckForEditAction();
 		else if(command.equals("editInfo")) return new EditInfoAction();
+		else if(command.equals("deleteAccount")) return new DeleteAccountAction();
 		else if(command.equals("boardList")) return new boardListAction();
 		else if(command.equals("boardUpdate")) return new BoardUpdateAction();
 		else if(command.equals("boardWriteForm")) return new boardWriteFormAction();

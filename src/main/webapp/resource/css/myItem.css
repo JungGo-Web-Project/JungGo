@@ -1,27 +1,26 @@
 @charset "UTF-8";
-div.myBoardWrap{
+div.myItemWrap{
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-div.myBoard{
+div.myItem{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
 }
-div.myBoardTitle{
+div.myItemTitle{
     height: 100px;
     display: flex;
     align-items: flex-end;
 }
-span#myBoardTitle{
-    /* line-height: 100px; */
+span#myItemTitle{
     font-size: 2em;
     font-weight: bold;
 }
-div.boardSelect{
+div.itemSelect{
     padding-left: 10%;
     padding-right: 10%;
     width: 50vw;
@@ -29,12 +28,12 @@ div.boardSelect{
     justify-content: center;
     gap: 20px;
 }
-table.myBoard{
+table.myItem{
     width: 50vw;
     border: solid 2px black;
     border-collapse: collapse;
 }
-tr.myBoard{
+tr.myItem{
     border: solid 1px black;
     border-collapse: collapse;
 }
@@ -42,16 +41,19 @@ th.no,td.no{
     width: 50px;
     text-align: center;
 }
-th.category,td.category{
-	width: 120px;
-	text-align: center;
-}
 td.title{
-	width: calc(50vw - 370px);
+    width: calc(50vw - 350px);
     padding-left: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+th.title{
+    width: calc(50vw - 350px);
+}
+th.price,td.price{
+    width: 100px;
+	padding-left: 10px;
 }
 th.view,td.view{
     width: 50px;
@@ -62,9 +64,9 @@ th.date,td.date{
     text-align: center;
 }
 td.textWarning{
-	text-align: center;
+    text-align: center;
 }
-button.boardSelect{
+button.itemSelect{
     width: 120px;
     height: 40px;
     background-color: black;
@@ -73,7 +75,7 @@ button.boardSelect{
     border: none;
     cursor: pointer;
 }
-a.myBoardUrl{
+a.myItemUrl{
     text-decoration: none;
     color: black;
 }

@@ -26,6 +26,7 @@ header{
 }
 
 footer{
+	margin-top:100px;
 	display:flex;
 	position: relative;
 	height:20vh;

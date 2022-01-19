@@ -46,14 +46,14 @@ ArrayList<BoardDTO> list = dao.myBoardList(board, id);
                         <th class="date">Date</th>
                     </tr>
 	            	<%
-           			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	            	if(list.size() > 0){
-	            		for(BoardDTO b : list){ 
+	            		for(int i=list.size()-1; i>=0; i--){
+	            			BoardDTO b = list.get(i);
 	            			int no = b.getCode();
 	            			String category = b.getCategory();
 	            			String title = b.getTitle();
 	            			int view = b.getView();
-	            			String date = sdf.format(b.getDate());
+	            			String date = new SimpleDateFormat("yyyy-MM-dd").format(b.getDate());
 	            			String url = "main?center=boardView&code="+b.getCode();
 	            		%>
            			<tr class="myBoard">

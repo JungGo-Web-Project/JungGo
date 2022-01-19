@@ -101,12 +101,30 @@
 	</servlet-mapping>	
 	
 	<servlet>
+		<servlet-name>deleteAccount</servlet-name>
+		<jsp-file>/views/deleteAccount.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteAccount</servlet-name>
+		<url-pattern>/deleteAccount</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
 		<servlet-name>myBoard</servlet-name>
 		<jsp-file>/views/myBoard.jsp</jsp-file>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>myBoard</servlet-name>
 		<url-pattern>/myBoard</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>myItem</servlet-name>
+		<jsp-file>/views/myItem.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myItem</servlet-name>
+		<url-pattern>/myItem</url-pattern>
 	</servlet-mapping>	
 	
   	<servlet>
