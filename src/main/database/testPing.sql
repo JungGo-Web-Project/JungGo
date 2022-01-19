@@ -55,3 +55,18 @@ insert into items (category, title, address, content, sellerId, status, option1,
 insert into items (category, title, address, content, sellerId, status, option1, option2, num, price, date, image_path) values(5,'아령 팝니다','서울시 금천구', '운동할때 쓰는 아령입니다.', 'qwer', '판매중', '새상품', '교환가능', 4, 1000, current_timestamp(), 'http://img.danawa.com/prod_img/500000/359/124/img/4124359_1.jpg?shrink=330:330&_v=20210112165942');
 insert into items (category, title, address, content, sellerId, status, option1, option2, num, price, date, image_path) values(6,'요리책 팝니다','서울시 금천구', '유명한 요리사의 책입니다.', 'qwer', '판매중', '중고상품', '교환불가', 1, 5000, current_timestamp(), 'https://file.mk.co.kr/meet/neds/2015/03/image_readtop_2015_263284_14267650501823265.jpg');
 insert into items (category, title, address, content, sellerId, status, option1, option2, num, price, date, image_path) values(7,'김치 팝니다','서울시 금천구', '작년에 갓 담근 김치입니다.', 'qwer', '판매중', '새상품', '교환가능', 1, 20000, current_timestamp(), 'http://ccimg.hellomarket.com/images/2019/item/01/03/15/5633_3803110_1.jpg?size=s6');
+
+
+create table JungGo_test.comment(
+	code integer primary key auto_increment,
+    itemCode integer,
+    buyerId varchar(200),
+    content varchar(2000),
+    date datetime not null default current_timestamp
+)
+
+create table JungGo_test.zzim(
+	code integer primary key auto_increment,
+    itemCode integer,
+    buyerId varchar(200)
+)

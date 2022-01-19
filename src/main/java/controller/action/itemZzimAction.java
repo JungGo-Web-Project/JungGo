@@ -6,20 +6,20 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import item.ItemDAO;
+import zzim.ZzimDAO;
+import zzim.ZzimDTO;
 
-public class itemViewAction implements Action {
+public class itemZzimAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String buyerId = request.getParameter("id");
 		int code = Integer.parseInt(request.getParameter("code"));
+		String id = request.getParameter("id");
 		
-		ItemDAO dao = ItemDAO.getInstance();
-		
-		dao.buyItem(buyerId, code);
-		
-		request.getRequestDispatcher("main").forward(request, response);
+		ZzimDAO dao = ZzimDAO.getInstance();
+		ZzimDTO zzim = new ZzimDTO(code, id);
+		dao.addZzim(zzim);
+		request.getRequestDispatcher("main?center=itemZzim").forward(request, response);
 	}
 
 }

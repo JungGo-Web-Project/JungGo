@@ -244,4 +244,31 @@
 		<url-pattern>/itemBuy</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>itemDeleteForm</servlet-name>
+		<jsp-file>/views/itemDeleteForm.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemDeleteForm</servlet-name>
+		<url-pattern>/itemDeleteForm</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>itemZzim</servlet-name>
+		<jsp-file>/views/itemZzim.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemZzim</servlet-name>
+		<url-pattern>/itemZzim</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>itemComment</servlet-name>
+		<jsp-file>/views/itemComment.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>itemComment</servlet-name>
+		<url-pattern>/itemComment</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

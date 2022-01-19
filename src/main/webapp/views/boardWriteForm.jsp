@@ -42,7 +42,7 @@ else{
                     <h2 id="boardWriteForm-h2">비밀번호</h2>
                     <input id="boardWriteForm-password" name="password" type="password" required>
                 </section>
-                <hr id="hr2">
+                <hr id="boardWriteForm-hr2">
                 <input type="hidden" name="id" value="<%=id %>">
                 <input type="hidden" name="category" value="<%=cate %>">
                 <input type="hidden" name="command" value="boardWriteForm">
