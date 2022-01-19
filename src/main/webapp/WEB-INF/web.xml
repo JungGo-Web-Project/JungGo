@@ -126,6 +126,15 @@
 		<servlet-name>myItem</servlet-name>
 		<url-pattern>/myItem</url-pattern>
 	</servlet-mapping>	
+
+  	<servlet>
+		<servlet-name>myPurchase</servlet-name>
+		<jsp-file>/views/myPurchase.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myPurchase</servlet-name>
+		<url-pattern>/myPurchase</url-pattern>
+	</servlet-mapping>
 	
   	<servlet>
 		<servlet-name>boardWriteForm</servlet-name>

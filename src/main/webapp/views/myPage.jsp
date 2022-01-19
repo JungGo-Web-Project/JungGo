@@ -35,6 +35,7 @@
 	            <button class="myPageMenu" onclick="location.href='main?center=pwCheckForEdit'">정보수정</button>
 	            <button class="myPageMenu" onclick="location.href='main?center=myBoard'">작성한 글</button>
 	            <button class="myPageMenu" onclick="location.href='main?center=myItem'">등록한 상품</button>
+	            <button class="myPageMenu" onclick="location.href='main?center=myPurchase'">구매한 상품</button>
 	        </div>
 	    </div>
  	</div>

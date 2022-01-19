@@ -1,0 +1,64 @@
+@charset "UTF-8";
+div.myPurchaseWrap{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.myPurchase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+div.myPurchaseTitle{
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+}
+span#myPurchaseTitle{
+    font-size: 2em;
+    font-weight: bold;
+}
+table.myPurchase{
+    width: 50vw;
+    border: solid 2px black;
+    border-collapse: collapse;
+}
+tr.myPurchase{
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+th.no,td.no{
+    width: 50px;
+    text-align: center;
+}
+td.title{
+    width: calc(50vw - 400px);
+    padding-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+th.title{
+    width: calc(50vw - 400px);
+}
+th.price,td.price{
+    width: 100px;
+	padding-left: 10px;
+}
+th.category,td.category{
+    width: 100px;
+    text-align: center;
+}
+th.date,td.date{
+    width: 150px;
+    text-align: center;
+}
+td.textWarning{
+    text-align: center;
+}
+a.myItemUrl{
+    text-decoration: none;
+    color: black;
+}

@@ -44,5 +44,15 @@ public class CategoryDAO {
 		return categorys;
 	}
 	
+	public String getCategoryString(int code) {
+		ArrayList<CategoryDTO> cate = getCategory();
+		for(CategoryDTO c : cate) {
+			if(c.getCode() == code) {
+				return c.getCategory();
+			}
+		}
+		return null;
+	}
+	
 	
 }

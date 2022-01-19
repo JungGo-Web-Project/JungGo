@@ -182,4 +182,40 @@ public class ItemDAO {
 			e.printStackTrace();
 		}
 	}
+	
+	public ArrayList<ItemDTO> getMyPurchase(String id) {
+		ArrayList<ItemDTO> list = new ArrayList<ItemDTO>();
+		try {
+			conn = DBManager.getConnection();
+			String sql = "select * from items where buyerId=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int code = rs.getInt(1);
+				int category = rs.getInt(2);
+				String title = rs.getString(3);
+				String address = rs.getString(4);
+				String content = rs.getString(5);
+				String sellerId = rs.getString(6);
+				String buyerId = rs.getString(7);
+				String status = rs.getString(8);
+				String option1 = rs.getString(9);
+				String option2 = rs.getString(10);
+				int num = rs.getInt(11);
+				int price = rs.getInt(12);
+				int view = rs.getInt(13);
+				Timestamp date = rs.getTimestamp(14);
+				String image_path = rs.getString(15);
+				
+				ItemDTO item = new ItemDTO(code, category, title, address, content, sellerId, buyerId, status, option1, option2, num, price, view, date, image_path);
+				list.add(item);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
 }
