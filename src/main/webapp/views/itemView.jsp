@@ -74,7 +74,14 @@ for(int i=0; i<z.size(); i++){
                     <td><h3 id="itemView-h3">ㆍ거래지역 <%=item.getAddress() %></h3></td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ<%=item.getStatus() %></h3></td>
+                    <td>
+                    	<%if(item.getStatus().equals("판매중")){ %>
+						<h3 id="itemView-h3">ㆍ<%=item.getStatus() %></h3>
+						<%}
+						else if(item.getStatus().equals("판매완료")){ %>
+						<h3 id="itemView-h3" style="color: red;">ㆍ<%=item.getStatus() %></h3>
+						<%} %>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -112,7 +119,7 @@ for(int i=0; i<z.size(); i++){
                         	}
                         }
                         %>
-                        <input id="itemView-btn" type="button" value="목록으로" onclick="location.href='main?center=itemList&category=<%=item.getCategory() %>'">
+                        <input id="itemView-btn" type="button" value="목록으로" onclick="location.href='main?center=categoryView&code=<%=item.getCategory() %>'">
                     </td>
                 </tr>
             </table>

@@ -10,6 +10,7 @@ import controller.action.LogoutAction;
 import controller.action.boardCheckAction;
 import controller.action.boardListAction;
 import controller.action.boardWriteFormAction;
+import controller.action.itemBuyAction;
 import controller.action.itemCommentAction;
 import controller.action.itemDeleteFormAction;
 import controller.action.itemUpdateFormAction;
@@ -43,6 +44,7 @@ public class ActionFactory {
 		else if(command.equals("itemDeleteForm")) return new itemDeleteFormAction();
 		else if(command.equals("itemComment")) return new itemCommentAction();
 		else if(command.equals("itemZzim")) return new itemZzimAction();
+		else if(command.equals("itemBuy")) return new itemBuyAction();
 		return null;
 		
 	}

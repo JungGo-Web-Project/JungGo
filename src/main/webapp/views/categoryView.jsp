@@ -50,6 +50,12 @@
 							<p><%=item.get(i).getTitle() %></p>
 							<strong><%=item.get(i).getPrice() %>원</strong>
 							<p><%=item.get(i).getDate() %>
+						<%if(item.get(i).getStatus().equals("판매중")){ %>
+						<strong><%=item.get(i).getStatus() %></strong>
+						<%} %>
+						<%if(item.get(i).getStatus().equals("판매완료")){ %>
+						<strong style="color: red;"><%=item.get(i).getStatus() %></strong>
+						<%} %>
 						</a>
 					</li>
 				<% 

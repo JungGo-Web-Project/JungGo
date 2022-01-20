@@ -37,7 +37,7 @@
 						<strong><%=item.get(i).getStatus() %></strong>
 						<%} %>
 						<%if(item.get(i).getStatus().equals("판매완료")){ %>
-						<strong><%=item.get(i).getStatus() %></strong>
+						<strong style="color: red;"><%=item.get(i).getStatus() %></strong>
 						<%} %>
 						
 					</a>

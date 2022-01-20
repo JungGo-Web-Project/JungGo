@@ -17,7 +17,7 @@ String buyerId = request.getParameter("id");
 	<form method="post" action="service">
 	<input type="hidden" name="code" value="<%=code %>">
 	<input type="hidden" name="id" value="<%=buyerId %>">
-	<input type="hidden" name="command" value="itemView">
+	<input type="hidden" name="command" value="itemBuy">
 	<input id="itemBuy-btn" type="submit" value="판매완료">
 	<input id="itemBuy-btn" type="button" onclick="location.href='main'" value="메인으로">
 	</form>

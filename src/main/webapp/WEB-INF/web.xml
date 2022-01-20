@@ -233,15 +233,6 @@
 	</servlet-mapping>
 	
 	<servlet>
-		<servlet-name>itemList</servlet-name>
-		<jsp-file>/views/itemList.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>itemList</servlet-name>
-		<url-pattern>/itemList</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
 		<servlet-name>categoryView</servlet-name>
 		<jsp-file>/views/categoryView.jsp</jsp-file>
 	</servlet>
