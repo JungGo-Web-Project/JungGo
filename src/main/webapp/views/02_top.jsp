@@ -109,7 +109,6 @@
 						<div>
 							<p>
 								<select class="form-control" name="searchField">
-									<option value="0">선택</option>
 									<option value="search_Title">제목</option>
 									<option value="search_Area">지역명</option>
 								</select>

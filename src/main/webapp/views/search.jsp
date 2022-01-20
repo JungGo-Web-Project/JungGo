@@ -15,7 +15,8 @@
 	String tag = request.getParameter("searchField");
 	String reward = "";
 	
-	System.out.println(tag);
+	// 디버그용
+	// System.out.println(tag);
 	
 	ItemDAO dao = ItemDAO.getInstance();
 	ArrayList<ItemDTO> item = dao.getItem();
