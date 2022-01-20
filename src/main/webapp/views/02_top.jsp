@@ -36,7 +36,7 @@
 		<div id="top_header">
 			<h1>
 				<a href="main">
-					<img src="${request.contextPath}resource/img/LOGO.png">
+					<img width="300px" src="${request.contextPath}resource/img/LOGO.png">
 				</a>	
 						
 			</h1>
@@ -86,6 +86,7 @@
 				</ul>
 				
 				<div id="category">
+					<hr id="top_hr">
 					<ul>
 						<!-- 보완예정 -->
 						<li>
@@ -115,6 +116,7 @@
 						</div>
 					</form>
 				</div>
+				<hr id="top_hr">
 			</div>
 		</nav>
 	</div>

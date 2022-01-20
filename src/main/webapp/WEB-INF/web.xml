@@ -9,6 +9,21 @@
 	<!-- 변수명처럼 join을 선언하고, -->
 	<!-- 해당 이름의 대상을 JoinServlet -->
 	
+	<filter>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <!-- <async-supported>true</async-supported> -->
+    </filter>
+    
+    <filter-mapping>
+	<filter-name>setCharacterEncodingFilter</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	<servlet>
 		<servlet-name>service</servlet-name>
 		<servlet-class>controller.ServiceServlet</servlet-class>
