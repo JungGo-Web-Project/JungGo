@@ -97,11 +97,15 @@ header a{
 	text-decoration-line:none;
 }
 
+/* nav 영역 */
 #nav{
 	/*display: flex;*/
 	width:100%;
 	justify-content: center;
 	background-color:#fff;
+}
+select.form-control {
+    height: 28px;
 }
 #nav_inner{
 	width:1280px;
@@ -132,10 +136,10 @@ header a{
 }
 
 #category{
-	width:800px;
-	height:80px;
-	float:left;
-	margin-bottom: 10px;
+	width: 750px;
+    height: 80px;
+    float: left;
+    margin-bottom: 10px;
 }
 #category ul{
 	width:100%;
@@ -161,7 +165,7 @@ header a{
 	width:100%;
 	height:100%;
 	margin-top:30px;
-	margin-left:145px;
+	margin-left:110px;
 }
 #search_area p{
 	float:left;

@@ -108,8 +108,15 @@
 					<form action="main?center=search" accept-charset="utf-8" method="post" onsubmit="return keyword_check()">
 						<div>
 							<p>
-								<input name="keyword" type="text" placeholder="검색어 입력">
+								<select class="form-control" name="searchField">
+									<option value="0">선택</option>
+									<option value="search_Title">제목</option>
+									<option value="search_Area">지역명</option>
+								</select>
 							</p>
+							<p>
+								<input name="keyword" type="text" placeholder="검색어 입력">
+							</p>	
                             <p class="btnArea">
                             	<input type="submit" value="search">
                             </p>

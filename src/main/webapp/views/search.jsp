@@ -12,27 +12,36 @@
 <body>
 	<% 
 	String word = request.getParameter("keyword");
+	String tag = request.getParameter("searchField");
+	String reward = "";
+	
+	System.out.println(tag);
 	
 	ItemDAO dao = ItemDAO.getInstance();
 	ArrayList<ItemDTO> item = dao.getItem();
 	
-	ArrayList<String> title = new ArrayList<>();
-	ArrayList<String> reward = new ArrayList<>();
+	ArrayList<String> bucket = new ArrayList<>();
 	
-	// 제목 추출	
-	for(int i=0; i<item.size(); i++){
-		title.add(item.get(i).getTitle());		
+	// 제목 추출
+	if(tag.equals("search_Title")){
+		for(int i=0; i<item.size(); i++){
+			bucket.add(item.get(i).getTitle());
+			reward = "제목명";
+		}
 	}
-	
-	// 단어를 분해 해서 검색
-	
-	
+	else if(tag.equals("search_Area")){
+		for(int i=0; i<item.size(); i++){
+			bucket.add(item.get(i).getAddress());
+			reward = "지역명";
+		}
+	}
+			
 	%>
-	<h2>" <%=word %> "에 대한 검색결과</h2>
+	<h2>" <%=word %> "<%=reward %>에 대한 검색결과</h2>
 	<div id="content">
 		<ul>
 			<% for(int i=0; i<item.size(); i++){
-				if(title.get(i).contains(word)){
+				if(bucket.get(i).contains(word)){
 				%>
 					<li>
 						<a href="main?center=itemView&code=<%=item.get(i).getCode() %>">
@@ -42,7 +51,7 @@
 							<p id=inner_content><%=item.get(i).getDate() %>
 						</a>
 						<%if(item.get(i).getStatus().equals("판매중")){ %>
-						<strong id=inner_content><%=item.get(i).getStatus() %></strong>
+						<strong><%=item.get(i).getStatus() %></strong>
 						<%} %>
 						<%if(item.get(i).getStatus().equals("판매완료")){ %>
 						<strong style="color: red;"><%=item.get(i).getStatus() %></strong>
