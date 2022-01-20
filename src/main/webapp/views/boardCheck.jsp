@@ -22,8 +22,8 @@
             <input type="hidden" name="code" value="<%=code %>" >
             <input type="hidden" name="num" value="<%=num %>" >
             <input id="boardCheck-pw" type="password" name="pw" required>
-            <input id="boardCheck-submit" type="submit" value="확인">
-            <input id="boardCheck-cancle" type="button" onclick="" value="취소">
+            <input id="boardCheck-btn" type="submit" value="확인">
+            <input id="boardCheck-btn" type="button" onclick="" value="취소">
         </form>
     </div>
 </body>

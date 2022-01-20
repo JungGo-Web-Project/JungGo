@@ -54,7 +54,7 @@ public class CommentDAO {
 	public void addComment(CommentDTO com) {
 		try {
 			conn = DBManager.getConnection();
-			String sql = "insert into comment (itemCode, buyerId, content, date, num) value (?, ?, ?, ?)";
+			String sql = "insert into comment (itemCode, buyerId, content, date, num) value (?, ?, ?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, com.getItemCode());
 			pstmt.setString(2, com.getBuyerId());

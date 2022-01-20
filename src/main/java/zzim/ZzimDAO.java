@@ -29,7 +29,7 @@ public class ZzimDAO {
 		
 		try {
 			conn = DBManager.getConnection();
-			String sql = "select* from comment";
+			String sql = "select* from zzim";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			
@@ -63,13 +63,4 @@ public class ZzimDAO {
 		}
 	}
 	
-	public boolean checkZzim(int code, String id) {
-		ArrayList<ZzimDTO> temp = getZzim();
-		for(int i=0; i<temp.size(); i++) {
-			if(temp.get(i).getBuyerId().equals(id) && code == temp.get(i).getItemCode()) {
-				return true;
-			}
-		}
-		return false;
-	}
 }

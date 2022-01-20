@@ -26,7 +26,7 @@ public class boardCheckAction implements Action {
 			if(num == 1) { // 수정
 				url = "main?center=boardUpdateForm";
 			}
-			else { // 삭제
+			else { 		   // 삭제
 				dao.deleteBoard(code);
 				url = "main?center=boardMain";
 			}

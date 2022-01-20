@@ -13,10 +13,10 @@ public class itemCommentAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int code = Integer.parseInt(request.getParameter(""));
-		int num = Integer.parseInt(request.getParameter(""));
+		int code = Integer.parseInt(request.getParameter("code"));
+		int num = Integer.parseInt(request.getParameter("num"));
 		String id = request.getParameter("id");
-		String content = request.getParameter("");
+		String content = request.getParameter("content");
 		
 		CommentDAO dao = CommentDAO.getInstance();
 		

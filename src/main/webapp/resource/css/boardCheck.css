@@ -8,6 +8,7 @@
 .boardCheck-div {
 	display: grid;
 	justify-content: center;
+	text-align: center;
 }
 
 #boardCheck-form {
@@ -26,8 +27,9 @@
 	font-size: 2em;
 }
 
-#boardCheck-submit {
-	margin-left: 25px;
+#boardCheck-btn {
+	margin-top: 10px;
+	margin-bottom: 10px;
 	width: 150px;
 	height: 50px;
 	font-size: 1.5em;

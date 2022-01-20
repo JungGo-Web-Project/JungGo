@@ -1,3 +1,5 @@
+<%@page import="item.ItemDTO"%>
+<%@page import="item.ItemDAO"%>
 <%@page import="comment.CommentDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="comment.CommentDAO"%>
@@ -17,10 +19,58 @@ String buyerId = request.getParameter("id");				// 구매희망자 아이디
 String id = session.getAttribute("log").toString();			// 로그인한 아이디
 
 CommentDAO dao = CommentDAO.getInstance();
-ArrayList<CommentDTO> com = dao.userComment(code, buyerId);
+ArrayList<CommentDTO> temp = dao.getComment();
+ArrayList<CommentDTO> com = new ArrayList<CommentDTO>();
+
+for(int i=0; i<temp.size(); i++){
+	if(code == temp.get(i).getItemCode() && buyerId.equals(temp.get(i).getBuyerId())){
+		com.add(temp.get(i));
+	}
+}
+
+ItemDAO itemdao = ItemDAO.getInstance();
+ItemDTO item = null;
+
+ArrayList<ItemDTO> list = itemdao.getItem();
+
+for(int i=0; i<list.size(); i++){
+	if(list.get(i).getCode() == code){
+		item = list.get(i);
+	}
+}
 
 %>
 <div class="itemComment-div">
+        <section id="itemComment-sec1">
+            <img id="itemComment-img" src="<%=item.getImage_path() %>">
+            <table id="itemComment-table">
+                <tr>
+                    <th><h1 id="itemComment-h1"><%=item.getTitle() %></h1></th>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 id="itemComment-h2"><%=item.getPrice() %></h2>
+                        <hr id="itemComment-hr">
+                    </td>
+                </tr>
+                <tr>
+                    <td><h3 id="itemComment-h3">ㆍ조회수&nbsp;&nbsp; <%=item.getView()+1 %>회</h3></td>
+                </tr>
+                <tr>
+                    <td><h3 id="itemComment-h3">ㆍ상품상태 <%=item.getOption1() %></h3></td>
+                </tr>
+                <tr>
+                    <td><h3 id="itemComment-h3">ㆍ교환여부 <%=item.getOption2() %></h3></td>
+                </tr>
+                <tr>
+                    <td><h3 id="itemComment-h3">ㆍ거래지역 <%=item.getAddress() %></h3></td>
+                </tr>
+                <tr>
+                    <td><h3 id="itemComment-h3">ㆍ<%=item.getStatus() %></h3></td>
+                </tr>
+            </table>
+        </section>
+		
 		<table id="itemComment-table">
 			<tr>
 				<td id="itemComment-title" style="width: 4vw">번 호</td>
@@ -72,6 +122,7 @@ ArrayList<CommentDTO> com = dao.userComment(code, buyerId);
             }
             %>
             <input id="itemComment-submit" type="submit" value="입력">
+            <input id="" type="button" onclick="location.href='main'" value="메인으로">
 		</form>
 	</div>
 </body>

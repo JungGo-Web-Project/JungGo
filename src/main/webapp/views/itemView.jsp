@@ -1,3 +1,4 @@
+<%@page import="zzim.ZzimDTO"%>
 <%@page import="zzim.ZzimDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="item.ItemDTO"%>
@@ -38,6 +39,14 @@ user = item.getSellerId();
 dao.viewItem(code);
 
 ZzimDAO zzim = ZzimDAO.getInstance();
+ArrayList<ZzimDTO> z = zzim.getZzim();
+
+int num = 0;
+for(int i=0; i<z.size(); i++){
+	if(z.get(i).getItemCode() == code && z.get(i).getBuyerId().equals(id)){
+		num = 1;
+	}
+}
 %>
     <div class="itemView-div">
         <section id="itemView-sec1">
@@ -79,15 +88,27 @@ ZzimDAO zzim = ZzimDAO.getInstance();
                         	}
                         }
                         else{
-                        	if(!id.equals("") && item.getStatus().equals("판매중") && !zzim.checkZzim(code, id)){
-                        	%>
-                       <form method="post" action="service">
-                        <input type="hidden" name="command" value="itemZzim">
-                        <input type="hidden" name="id" value="<%=id %>">
-                        <input type="hidden" name="code" value="<%=code %>">
-                        <input id="itemView-btn" type="submit" value="찜하기">
-                       </form>
-                        	<%
+                        	if(!id.equals("") && item.getStatus().equals("판매중") && num == 1){ // 찜하고 나서 대화
+                            	%>
+                                <form method="post" action="service">
+                                 <input type="hidden" name="command" value="itemView">
+                                 <input type="hidden" name="id" value="<%=id %>">
+                                 <input type="hidden" name="code" value="<%=code %>">
+                                 <input type="hidden" name="check" value="1">
+                                 <input id="itemView-btn" type="submit" value="판매자와 대화">
+                                </form>
+                                <%
+                        	}
+							else if(!id.equals("") && item.getStatus().equals("판매중") && num == 0){ // 찜 하기 전 대화
+	                        	%>
+	                            <form method="post" action="service">
+	                             <input type="hidden" name="command" value="itemView">
+	                             <input type="hidden" name="id" value="<%=id %>">
+	                             <input type="hidden" name="code" value="<%=code %>">
+	                             <input type="hidden" name="check" value="2">
+	                             <input id="itemView-btn" type="submit" value="찜하고 대화">
+	                            </form>
+	                            <%
                         	}
                         }
                         %>
