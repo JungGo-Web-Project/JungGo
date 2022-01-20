@@ -19,9 +19,11 @@
 		}
 		String center = "/" + value;
 	%>
+
 	<header>
 		<jsp:include page="/top" />
 	</header>
+
 	<div id="main_wrap">
 		<main>
 			<jsp:include page="<%= center %>" />

@@ -11,7 +11,6 @@
 </head>
 <body>
 	<% 
-	// 문자 깨짐
 	String word = request.getParameter("keyword");
 	
 	ItemDAO dao = ItemDAO.getInstance();
@@ -19,7 +18,6 @@
 	
 	ArrayList<String> title = new ArrayList<>();
 	ArrayList<String> reward = new ArrayList<>();
-	System.out.println(word);
 	
 	// 제목 추출	
 	for(int i=0; i<item.size(); i++){
@@ -30,6 +28,7 @@
 	
 	
 	%>
+	<h2>" <%=word %> "에 대한 검색결과</h2>
 	<div id="content">
 		<ul>
 			<% for(int i=0; i<item.size(); i++){
@@ -38,10 +37,16 @@
 					<li>
 						<a href="main?center=itemView&code=<%=item.get(i).getCode() %>">
 							<img src="<%=item.get(i).getImage_path() %>" width="230" height="190"><br>
-							<p><%=item.get(i).getTitle() %></p>
-							<strong><%=item.get(i).getPrice() %>원</strong>
-							<p><%=item.get(i).getDate() %>
+							<p id=inner_content><%=item.get(i).getTitle() %></p>
+							<strong id=inner_content><%=item.get(i).getPrice() %>원</strong>
+							<p id=inner_content><%=item.get(i).getDate() %>
 						</a>
+						<%if(item.get(i).getStatus().equals("판매중")){ %>
+						<strong id=inner_content><%=item.get(i).getStatus() %></strong>
+						<%} %>
+						<%if(item.get(i).getStatus().equals("판매완료")){ %>
+						<strong style="color: red;"><%=item.get(i).getStatus() %></strong>
+						<%} %>
 					</li>
 				<% 
 				};		
