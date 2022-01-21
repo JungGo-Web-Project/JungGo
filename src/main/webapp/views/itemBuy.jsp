@@ -18,8 +18,8 @@ String buyerId = request.getParameter("id");
 	<input type="hidden" name="code" value="<%=code %>">
 	<input type="hidden" name="id" value="<%=buyerId %>">
 	<input type="hidden" name="command" value="itemBuy">
-	<input id="itemBuy-btn" type="submit" value="판매완료">
-	<input id="itemBuy-btn" type="button" onclick="location.href='main'" value="메인으로">
+	<input id="itemBuy-Btn" type="submit" value="판매완료">
+	<input id="itemBuy-Btn" type="button" onclick="location.href='main'" value="메인으로">
 	</form>
 </div>
 </body>

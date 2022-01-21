@@ -41,9 +41,9 @@ for(int i=0; i<list.size(); i++){
 
 %>
 <div class="itemComment-div">
-        <section id="itemComment-sec1">
-            <img id="itemComment-img" src="<%=item.getImage_path() %>">
-            <table id="itemComment-table">
+        <section id="itemComment-sec">
+            <img id="itemComment-img" src="<%=item.getImage_path() %>" width="300px" height="300">
+            <table id="itemComment-table1">
                 <tr>
                     <th><h1 id="itemComment-h1"><%=item.getTitle() %></h1></th>
                 </tr>
@@ -71,12 +71,12 @@ for(int i=0; i<list.size(); i++){
             </table>
         </section>
 		
-		<table id="itemComment-table">
+		<table id="itemComment-table2" border="1">
 			<tr>
-				<td id="itemComment-title" style="width: 4vw">번 호</td>
-				<td id="itemComment-title" style="width: 30vw">내 용</td>
-				<td id="itemComment-title" style="width: 10vw">작성자</td>
-				<td id="itemComment-title" style="width: 15vw">작성일자</td>
+				<th id="itemComment-title" style="width: 4vw">번 호</th>
+				<th id="itemComment-title" style="width: 30vw">내 용</th>
+				<th id="itemComment-title" style="width: 10vw">작성자</th>
+				<th id="itemComment-title" style="width: 15vw">작성일자</th>
 			</tr>
 			<%
 			if(com.size()>0){
@@ -93,9 +93,7 @@ for(int i=0; i<list.size(); i++){
                 	%><td><%=com.get(i).getBuyerId() %></td><%
                 }
                 %>
-                <td></td>
                 <td><%=com.get(i).getDate() %></td>
-                <td></td>
             </tr>
             	<%
 				}
@@ -111,7 +109,7 @@ for(int i=0; i<list.size(); i++){
             <%
             if(!buyerId.equals(id)){ // 판매자의 경우
             	%>
-            	<input id="" type="button" onclick="location.href='main?center=itemBuy&id=<%=buyerId %>&code=<%=code %>'" value="판매확정">
+            	<input id="itemComment-Btn1" type="button" onclick="location.href='main?center=itemBuy&id=<%=buyerId %>&code=<%=code %>'" value="판매확정">
             	<input type="hidden" name="num" value="1">
             	<%
             }
@@ -121,8 +119,8 @@ for(int i=0; i<list.size(); i++){
             	<%
             }
             %>
-            <input id="itemComment-submit" type="submit" value="입력">
-            <input id="" type="button" onclick="location.href='main'" value="메인으로">
+            <input id="itemComment-Btn2" type="submit" value="입력">
+            <input id="itemComment-Btn3" type="button" onclick="location.href='main'" value="메인으로">
 		</form>
 	</div>
 </body>

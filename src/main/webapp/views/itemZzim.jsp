@@ -10,7 +10,7 @@
 <body>
 <div class="itemZzim-div">
 	<h1>찜하기 완료!</h1>
-	<input id="itemBuy-btn" type="button" onclick="location.href='main'" value="메인으로">
+	<input id="itemZzim-btn" type="button" onclick="location.href='main'" value="메인으로">
 </div>
 </body>
 </html>
