@@ -40,7 +40,15 @@ String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
                 	if(list.size() > 0){ %>
                 	<ul class="zzimList">
 	                	<%for(int i=list.size()-1; i>=0; i--){ %>
-		                    <li class="zzimList"><%=list.get(i).getBuyerId() %></li>                		
+		                    <li class="zzimList"><%=list.get(i).getBuyerId() %>
+		                    <form method="post" action="service">
+		                    <input type="hidden" name="id" value="<%=list.get(i).getBuyerId() %>">
+		                    <input type="hidden" name="code" value="<%=code %>">
+		                    <input type="hidden" name="command" value="itemView">
+		                    <input type="hidden" name="check" value="1">
+		                    <input id="zzimList-btn" type="submit" value="거래하기">
+		                    </form>
+		                    </li>                		
 	                	<%}%>             		
 	                </ul>
                 	<%}

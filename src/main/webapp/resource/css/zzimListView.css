@@ -61,3 +61,10 @@ li.zzimList{
     list-style-image: url("../img/heartIcon.png");
     font-size: 1.2em;
 }
+#zzimList-btn{
+	width: 100px;
+	height: 40px;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+}
