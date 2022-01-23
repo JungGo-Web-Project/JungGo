@@ -1,6 +1,6 @@
 @charset "UTF-8";
 div.myPurchaseWrap{
-    width: 100vw;
+    width: 1280px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +21,7 @@ span#myPurchaseTitle{
     font-weight: bold;
 }
 table.myPurchase{
-    width: 50vw;
+    width: calc(1280px*0.5);
     border: solid 2px black;
     border-collapse: collapse;
 }
@@ -34,14 +34,14 @@ th.no,td.no{
     text-align: center;
 }
 td.title{
-    width: calc(50vw - 400px);
+    width: calc(1280px*0.5 - 400px);
     padding-left: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 th.title{
-    width: calc(50vw - 400px);
+    width: calc(1280px*0.5 - 400px);
 }
 th.price,td.price{
     width: 100px;

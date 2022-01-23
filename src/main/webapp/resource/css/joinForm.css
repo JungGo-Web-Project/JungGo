@@ -21,7 +21,7 @@ form#joinForm{
     gap: 30px;
 }
 table.info{
-    width: 35vw;
+    width: calc(1280px*0.4);
 }
 tr.info{
     height: 60px;
@@ -39,7 +39,7 @@ td#address{
 }
 td.txt{
 	border-spacing: 0;
-    width: calc(35vw - 250px);
+    width: calc(1280px*0.4 - 250px);
 }
 input.required{
     width: 250px;
@@ -96,7 +96,7 @@ div.option{
 }
 input.formButton{
     height: 50px;
-    width: calc(35vw/2);
+    width: calc(1280px*0.2);
     background-color: black;
     color: white;
     font-size: 1em;

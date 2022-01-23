@@ -1,6 +1,6 @@
 @charset "UTF-8";
 div.myBoardWrap{
-    width: 100vw;
+    width: 1280px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,13 +24,13 @@ span#myBoardTitle{
 div.boardSelect{
     padding-left: 10%;
     padding-right: 10%;
-    width: 50vw;
+    width: calc(1280px*0.5);
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 table.myBoard{
-    width: 50vw;
+    width: calc(1280px*0.5);
     border: solid 2px black;
     border-collapse: collapse;
 }
@@ -47,7 +47,7 @@ th.category,td.category{
 	text-align: center;
 }
 td.title{
-	width: calc(50vw - 370px);
+	width: calc(1280px*0.5 - 370px);
     padding-left: 20px;
     overflow: hidden;
     text-overflow: ellipsis;

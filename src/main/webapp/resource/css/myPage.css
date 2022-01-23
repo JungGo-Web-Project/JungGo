@@ -7,7 +7,7 @@ div.myPageWrap{
     justify-content: center;
 }
 div.myPage{
-    width: 50vw;
+    width: calc(1280px*0.5);
     display: flex;
     flex-direction: column;
 }
@@ -31,7 +31,7 @@ img#profileImage{
 }
 span#profileId{
     line-height: 100px;
-    width:calc(50vw - 260px);
+    width: calc(1280px*0.5 - 260px);
     font-weight: bold;
 }
 a#editInfo{
