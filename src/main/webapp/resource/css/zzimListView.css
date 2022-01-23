@@ -1,0 +1,63 @@
+@charset "UTF-8";
+div.zzimListWrap{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+div.zzimList{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div.itemView{
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+    "img title"
+    "img price"
+    ;
+    border: solid 2px;
+}
+img#itemImg{
+    grid-area: img;
+    width: 100px;
+    height: 100px;
+}
+span#itemTitle{
+    grid-area: title;
+    padding-left: 10px;
+    line-height: 50px;
+}
+a#itemTitle{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+span#price{
+    grid-area: price;
+    padding-left: 10px;
+    line-height: 50px;
+}
+div.zzimListView{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+span#listTitle{
+    line-height: 150px;
+    font-size: 2em;
+    font-weight: bold;
+}
+ul.zzimList{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+li.zzimList{
+    list-style-image: url("../img/heartIcon.png");
+    font-size: 1.2em;
+}

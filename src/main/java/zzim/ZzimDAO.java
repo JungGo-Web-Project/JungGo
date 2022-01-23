@@ -63,4 +63,54 @@ public class ZzimDAO {
 		}
 	}
 	
+	public ArrayList<ZzimDTO> getZzimById(String id){
+		zzim = new ArrayList<ZzimDTO>();
+		
+		try {
+			conn = DBManager.getConnection();
+			String sql = "select* from zzim where buyerId = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int code = rs.getInt(1);
+				int itemCode = rs.getInt(2);
+				String buyerId = rs.getString(3);
+				
+				ZzimDTO z = new ZzimDTO(code, itemCode, buyerId);
+				zzim.add(z);
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return zzim;
+	}
+	
+	public ArrayList<ZzimDTO> getZzimByItem(int itemCodeNum){
+		zzim = new ArrayList<ZzimDTO>();
+		
+		try {
+			conn = DBManager.getConnection();
+			String sql = "select* from zzim where itemCode = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, itemCodeNum);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				int code = rs.getInt(1);
+				int itemCode = rs.getInt(2);
+				String buyerId = rs.getString(3);
+				
+				ZzimDTO z = new ZzimDTO(code, itemCode, buyerId);
+				zzim.add(z);
+			}
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return zzim;
+	}
+	
 }

@@ -22,6 +22,7 @@ span#myPageTitle{
 }
 div.profileInfo{
     display: flex;
+    justify-content: space-between;
     gap: 30px;
 }
 img#profileImage{
@@ -30,7 +31,13 @@ img#profileImage{
 }
 span#profileId{
     line-height: 100px;
+    width:calc(50vw - 260px);
     font-weight: bold;
+}
+a#editInfo{
+	line-height: 100px;
+	width: 100px;
+	color: grey;
 }
 div.myPageMenu{
     padding-left: 10%;

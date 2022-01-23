@@ -141,6 +141,15 @@
 		<servlet-name>myItem</servlet-name>
 		<url-pattern>/myItem</url-pattern>
 	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>zzimListView</servlet-name>
+		<jsp-file>/views/zzimListView.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>zzimListView</servlet-name>
+		<url-pattern>/zzimListView</url-pattern>
+	</servlet-mapping>	
 
   	<servlet>
 		<servlet-name>myPurchase</servlet-name>
@@ -149,6 +158,15 @@
 	<servlet-mapping>
 		<servlet-name>myPurchase</servlet-name>
 		<url-pattern>/myPurchase</url-pattern>
+	</servlet-mapping>
+
+  	<servlet>
+		<servlet-name>myZzim</servlet-name>
+		<jsp-file>/views/myZzim.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myZzim</servlet-name>
+		<url-pattern>/myZzim</url-pattern>
 	</servlet-mapping>
 	
   	<servlet>

@@ -55,7 +55,7 @@ ArrayList<ItemDTO> list = dao.getMyItem(statue, id);
 	            			String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
 	            			int view = item.getView();
 	            			String date = new SimpleDateFormat("yyyy-MM-dd").format(item.getDate());
-	            			String url = "main?center=itemView&code="+item.getCode();
+	            			String url = "main?center=zzimListView&code="+item.getCode();
 	            		%>
            			<tr class="myItem">
                         <td class="no"><%=no %></td>
