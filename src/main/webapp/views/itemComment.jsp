@@ -83,7 +83,7 @@ for(int i=0; i<list.size(); i++){
 				for(int i=0; i<com.size(); i++){
             	%>
             <tr>
-                <td><%=i %></td>
+                <td><%=i+1 %></td>
                 <td><%=com.get(i).getContent() %></td>
                 <%
                 if(com.get(i).getNum()==1){
@@ -102,7 +102,7 @@ for(int i=0; i<list.size(); i++){
 		</table>
 		<form method="post" action="service">
 			<h2>내 용</h2>
-			<textarea name="content" id="itemComment-textarea" cols="30" rows="10"></textarea>
+			<textarea name="content" id="itemComment-textarea" cols="30" rows="10"></textarea><br>
 			<input type="hidden" name="id" value="<%=buyerId %>">
             <input type="hidden" name="code" value="<%=code %>">
             <input type="hidden" name="command" value="itemComment">

@@ -53,44 +53,49 @@ for(int i=0; i<z.size(); i++){
             <img id="itemView-img" src="<%=item.getImage_path() %>">
             <table id="itemView-table">
                 <tr>
-                    <th><h1 id="itemView-h1"><%=item.getTitle() %></h1></th>
+                    <th colspan="2"><h1 id="itemView-h1"><%=item.getTitle() %></h1></th>
                 </tr>
                 <tr>
-                    <td>
-                        <h2 id="itemView-h2"><%=item.getPrice() %></h2>
-                        <hr id="itemView-hr">
+                    <td colspan="2">
+                        <h2 id="itemView-h2"><%=item.getPrice() %>원</h2>
+                        <hr id="itemView-hr1">
                     </td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ조회수&nbsp;&nbsp; <%=item.getView()+1 %>회</h3></td>
+                    <td><h3 id="itemView-h3-title">ㆍ조회수</h3></td>
+                    <td><h3 id="itemView-h3"><%=item.getView()+1 %>회</h3></td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ상품상태 <%=item.getOption1() %></h3></td>
+                    <td><h3 id="itemView-h3-title">ㆍ상품상태</h3></td>
+                    <td><h3 id="itemView-h3"><%=item.getOption1() %></h3></td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ교환여부 <%=item.getOption2() %></h3></td>
+                    <td><h3 id="itemView-h3-title">ㆍ교환여부</h3></td>
+                    <td><h3 id="itemView-h3"><%=item.getOption2() %></h3></td>
                 </tr>
                 <tr>
-                    <td><h3 id="itemView-h3">ㆍ거래지역 <%=item.getAddress() %></h3></td>
+                    <td><h3 id="itemView-h3-title">ㆍ거래지역</h3></td>
+                    <td><h3 id="itemView-h3"><%=item.getAddress() %></h3></td>
                 </tr>
                 <tr>
                     <td>
                     	<%if(item.getStatus().equals("판매중")){ %>
-						<h3 id="itemView-h3">ㆍ<%=item.getStatus() %></h3>
+						<h3 id="itemView-h3-status">ㆍ<%=item.getStatus() %></h3>
 						<%}
 						else if(item.getStatus().equals("판매완료")){ %>
-						<h3 id="itemView-h3" style="color: red;">ㆍ<%=item.getStatus() %></h3>
+						<h3 id="itemView-h3-status" style="color: red;">ㆍ<%=item.getStatus() %></h3>
 						<%} %>
                     </td>
                 </tr>
                 <tr>
                     <td>
+                        <section id="itemView-sec2">
                         <%
                         if(id.equals(user)){
                         	if(item.getBuyerId() != ""){
                         	%>
-                        <input id="itemView-btn" type="button" value="수정하기" onclick="location.href='main?center=itemUpdateForm&code=<%=code %>'">
-                        <input id="itemView-btn" type="button" value="삭제하기" onclick="location.href='main?center=itemDeleteForm&code=<%=code %>'">
+                        <input id="itemView-btn3" type="button" value="수정하기" onclick="location.href='main?center=itemUpdateForm&code=<%=code %>'">
+                        <input id="itemView-btn3" type="button" value="삭제하기" onclick="location.href='main?center=itemDeleteForm&code=<%=code %>'">
                         	<%
                         	}
                         }
@@ -102,7 +107,7 @@ for(int i=0; i<z.size(); i++){
                                  <input type="hidden" name="id" value="<%=id %>">
                                  <input type="hidden" name="code" value="<%=code %>">
                                  <input type="hidden" name="check" value="1">
-                                 <input id="itemView-btn" type="submit" value="판매자와 대화">
+                                 <input id="itemView-btn1" type="submit" value="판매자와 대화">
                                 </form>
                                 <%
                         	}
@@ -113,20 +118,21 @@ for(int i=0; i<z.size(); i++){
 	                             <input type="hidden" name="id" value="<%=id %>">
 	                             <input type="hidden" name="code" value="<%=code %>">
 	                             <input type="hidden" name="check" value="2">
-	                             <input id="itemView-btn" type="submit" value="찜하고 대화">
+	                             <input id="itemView-btn2" type="submit" value="찜하고 대화">
 	                            </form>
 	                            <%
                         	}
                         }
                         %>
-                        <input id="itemView-btn" type="button" value="목록으로" onclick="location.href='main?center=categoryView&code=<%=item.getCategory() %>'">
+                        <input id="itemView-btn3" type="button" value="목록으로" onclick="location.href='main?center=categoryView&code=<%=item.getCategory() %>'">
+                        </section>
                     </td>
                 </tr>
             </table>
         </section>
-        <section id="itemView-sec2">
+        <section id="itemView-sec3">
             <h3 id="itemView-h3">상품정보</h3>
-            <hr id="itemView-hr">
+            <hr id="itemView-hr2">
             <p id="itemView-p"><%=item.getContent() %></p>
         </section>
     </div>

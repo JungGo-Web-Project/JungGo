@@ -36,6 +36,7 @@ for(int i=0; i<board.size(); i++){
 }
 %>
 	<div class="boardMain-div">
+		<h1 id="boardMain-MainTitle">우리동내 게시판</h1>
 		<hr id="boardMain-hr1">
 		<h1 id="boardMain-title" onclick="location.href='main?center=boardList&list=1'">자유게시판</h1>
 		<table id="boardMain-table" border="2">
@@ -50,7 +51,7 @@ for(int i=0; i<board.size(); i++){
 				for(int i=0; i<4; i++){
 					%>
 				<tr>
-				<td style="width: 40vw;"><a href="main?center=boardView&code=<%=free.get(i).getCode() %>"><%=free.get(i).getTitle() %></a></td>
+				<td style="width: 60%;"><a href="main?center=boardView&code=<%=free.get(i).getCode() %>"><%=free.get(i).getTitle() %></a></td>
                 <td><%=free.get(i).getId() %></td>
                 <td><%=free.get(i).getDate() %></td>
                 <td><%=free.get(i).getView() %></td>
@@ -62,7 +63,7 @@ for(int i=0; i<board.size(); i++){
 				for(int i=0; i<free.size(); i++){
 					%>
 				<tr>
-				<td style="width: 40vw;"><a href="main?center=boardView&code=<%=free.get(i).getCode() %>"><%=free.get(i).getTitle() %></a></td>
+				<td style="width: 60%;"><a href="main?center=boardView&code=<%=free.get(i).getCode() %>"><%=free.get(i).getTitle() %></a></td>
                 <td><%=free.get(i).getId() %></td>
                 <td><%=free.get(i).getDate() %></td>
                 <td><%=free.get(i).getView() %></td>
@@ -86,7 +87,7 @@ for(int i=0; i<board.size(); i++){
 				for(int i=0; i<4; i++){
 					%>
 				<tr>
-				<td style="width: 40vw;"><a href="main?center=boardView&code=<%=after.get(i).getCode() %>"><%=after.get(i).getTitle() %></a></td>
+				<td style="width: 60%;"><a href="main?center=boardView&code=<%=after.get(i).getCode() %>"><%=after.get(i).getTitle() %></a></td>
                 <td><%=after.get(i).getId() %></td>
                 <td><%=after.get(i).getDate() %></td>
                 <td><%=after.get(i).getView() %></td>
@@ -98,7 +99,7 @@ for(int i=0; i<board.size(); i++){
 				for(int i=0; i<after.size(); i++){
 					%>
 				<tr>
-				<td style="width: 40vw;"><a href="main?center=boardView&code=<%=after.get(i).getCode() %>"><%=after.get(i).getTitle() %></a></td>
+				<td style="width: 60%;"><a href="main?center=boardView&code=<%=after.get(i).getCode() %>"><%=after.get(i).getTitle() %></a></td>
                 <td><%=after.get(i).getId() %></td>
                 <td><%=after.get(i).getDate() %></td>
                 <td><%=after.get(i).getView() %></td>
@@ -122,7 +123,7 @@ for(int i=0; i<board.size(); i++){
 				for(int i=0; i<4; i++){
 					%>
 				<tr>
-				<td style="width: 40vw;"><a href="main?center=boardView&code=<%=reque.get(i).getCode() %>"><%=reque.get(i).getTitle() %></a></td>
+				<td style="width: 60%;"><a href="main?center=boardView&code=<%=reque.get(i).getCode() %>"><%=reque.get(i).getTitle() %></a></td>
                 <td><%=reque.get(i).getId() %></td>
                 <td><%=reque.get(i).getDate() %></td>
                 <td><%=reque.get(i).getView() %></td>
@@ -134,7 +135,7 @@ for(int i=0; i<board.size(); i++){
 				for(int i=0; i<reque.size(); i++){
 					%>
 				<tr>
-				<td style="width: 40vw;"><a href="main?center=boardView&code=<%=reque.get(i).getCode() %>"><%=reque.get(i).getTitle() %></a></td>
+				<td style="width: 60%;"><a href="main?center=boardView&code=<%=reque.get(i).getCode() %>"><%=reque.get(i).getTitle() %></a></td>
                 <td><%=reque.get(i).getId() %></td>
                 <td><%=reque.get(i).getDate() %></td>
                 <td><%=reque.get(i).getView() %></td>

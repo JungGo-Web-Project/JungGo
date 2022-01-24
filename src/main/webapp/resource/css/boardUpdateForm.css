@@ -7,16 +7,17 @@
             display: grid;
             justify-content: center;
             text-align: center;
+            width: 1280px;
         }
         #boardUpdateForm-hr1{
             margin-top: 30px;
-            width: 70vw;
+            width: 1280px;
             border: thin solid black;
             margin-bottom: 30px;
         }
         #boardUpdateForm-hr2{
             margin-top: 30px;
-            width: 70vw;
+            width: 1280px;
             margin-bottom: 30px;
         }
         #boardUpdateForm-submit{
@@ -29,17 +30,20 @@
             cursor: pointer;
         }
         #boardUpdateForm-title{
-            width: 300px;
+            width: 700px;
             height: 30px;
+            font-size: 1.7em;
         }
         #boardUpdateForm-textarea{
-            width: 500px;
-            height: 300px;
+            width: 700px;
+            height: 400px;
             resize: none;
+            font-size: 1.7em;
         }
         #boardUpdateForm-password{
-            width: 300px;
+            width: 700px;
             height: 30px;
+            font-size: 1.7em;
         }
         #boardUpdateForm-cancle{
             height: 50px;

@@ -6,6 +6,7 @@
 }
 
 .boardList-div {
+	width: 1280px;
 	display: grid;
 	justify-content: center;
 }
@@ -16,14 +17,14 @@
 
 #boardList-hr1 {
 	margin-top: 30px;
-	width: 70vw;
+	width: 1280px;
 	border: thin solid black;
 	margin-bottom: 30px;
 }
 
 #boardList-hr2 {
 	margin-top: 30px;
-	width: 70vw;
+	width: 1280px;
 	margin-bottom: 30px;
 }
 

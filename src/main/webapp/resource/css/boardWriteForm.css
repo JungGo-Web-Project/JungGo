@@ -7,16 +7,17 @@
             display: grid;
             justify-content: center;
             text-align: center;
+            width: 1280px;
         }
         #boardWriteForm-hr1{
             margin-top: 30px;
-            width: 70vw;
+            width: 1280px;
             border: thin solid black;
             margin-bottom: 30px;
         }
         #boardWriteForm-hr2{
             margin-top: 30px;
-            width: 70vw;
+            width: 1280px;
             margin-bottom: 30px;
         }
         #boardWriteForm-submit{

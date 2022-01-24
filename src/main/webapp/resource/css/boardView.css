@@ -6,9 +6,10 @@
         .boardView-div{
             display: grid;
             justify-content: center;
+            width: 1280px;
         }
         #boardView-textarea{
-            width: 60vw;
+            width: 1280px;
             height: 40vh;
             resize: none;
             margin-top: 20px;

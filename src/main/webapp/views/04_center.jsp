@@ -25,7 +25,7 @@
 		<div id=content>
 			<ul>
 				<%
-				for(int i=0; i<item.size(); i++){
+				for(int i=item.size()-1; i>=0; i--){
 				%>
 				<li>
 					<a href="main?center=itemView&code=<%=item.get(i).getCode() %>">

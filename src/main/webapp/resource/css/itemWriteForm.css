@@ -10,7 +10,10 @@
             display: grid;
             justify-content: center;
         }
-        
+        #itemWriteForm-title{
+        font-size: 2em;
+        text-align: center;
+        }
         #itemWriteForm-hr1{
             margin-top: 30px;
             width: 1280px;
@@ -25,49 +28,65 @@
         #itemWriteForm-sec1{
             display: flex;
             align-items: center;
+            margin-left: 100px;
         }
         #itemWriteForm-h2{
         	font-size: 1.2em;
         }
         #itemWriteForm-input1{
-        	width: 250px;
+        	width: 350px;
         	height: 40px;
+        	font-size: 1.7em;
         }
         #itemWriteForm-category{
-        	width: 150px;
+        	width: 200px;
         	height: 40px;
+        	font-size: 1.7em;
         }
         #sample6_postcode{
-        	width: 150px;
+        	width: 200px;
         	height: 40px;
+        	font-size: 1.7em;
         }
         #sample6_address{
-        	width: 150px;
+        	width: 200px;
         	height: 40px;
+        	font-size: 1.7em;
         }
         #sample6_detailAddress{
-        	width: 250px;
+        	width: 300px;
         	height: 40px;
+        	font-size: 1.7em;
         }
         #sample6_extraAddress{
-        	width: 150px;
+        	width: 200px;
         	height: 40px;
+        	font-size: 1.7em;
         }
         #itemWriteForm-btn{
-            width: 100px;
-            height: 40px;
-            font-size: 1.2em;
+            width: 180px;
+            height: 70px;
+            font-size: 1.7em;
             color: white;
             background-color: black;
+            margin-left: 45%;
+            cursor: pointer;
         }
         #postcodeBtn{
-         	width: 100px;
-            height: 40px;
+         	width: 140px;
+            height: 45px;
             color: white;
+            font-size: 1.3em;
             background-color: black;
+            margin-right: 3px;
+            cursor: pointer;
         }
         #itemWriteForm-textarea{
-        	width: 400px;
-            height: 250px;
+        	width: 800px;
+            height: 300px;
             resize: none;
+            font-size: 1.7em;
+        }
+        #itemWriteForm-span{
+        font-size: 1.5em;
         }
