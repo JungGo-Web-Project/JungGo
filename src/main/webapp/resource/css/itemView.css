@@ -34,8 +34,6 @@
             display: flex;
             margin-left: 100px;
 			text-align: left;
-			border-spacing: 10px;
-			border-collapse: separate;
         }
         #itemView-btn1{
 			margin-top: 10px;
