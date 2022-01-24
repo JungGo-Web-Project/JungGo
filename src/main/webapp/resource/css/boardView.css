@@ -12,6 +12,7 @@
             height: 40vh;
             resize: none;
             margin-top: 20px;
+            font-size: 1.7em;
         }
         #boardView-btn{
             height: 50px;
@@ -36,17 +37,20 @@
         #boardView-arti1{
             grid-area: arti1;
             text-align: center;
-            font-size: 1.7em;
+            font-size: 2em;
         }
         #boardView-arti2{
             grid-area: arti2;
+            font-size: 1.7em;
         }
         #boardView-arti3{
             grid-area: arti3;
             text-align: right;
+            font-size: 1.7em;
         }
         #boardView-arti4{
             grid-area: arti4;
+            font-size: 1.7em;
         }
         #boardView-arti5{
             grid-area: arti5;

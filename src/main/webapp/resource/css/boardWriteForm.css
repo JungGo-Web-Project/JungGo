@@ -29,15 +29,18 @@
             cursor: pointer;
         }
         #boardWriteForm-title{
-            width: 300px;
+            width: 700px;
             height: 30px;
+            font-size: 1.7em;
         }
         #boardWriteForm-textarea{
-            width: 500px;
-            height: 300px;
+            width: 700px;
+            height: 400px;
             resize: none;
+            font-size: 1.7em;
         }
         #boardWriteForm-password{
-            width: 300px;
+            width: 700px;
             height: 30px;
+            font-size: 1.7em;
         }

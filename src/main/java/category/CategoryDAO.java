@@ -31,9 +31,8 @@ public class CategoryDAO {
 			while(rs.next()) {
 				int code = rs.getInt(1);
 				String category = rs.getString(2);
-				String img = rs.getString(3);
 				
-				CategoryDTO cate = new CategoryDTO(code, category, img);
+				CategoryDTO cate = new CategoryDTO(code, category);
 				categorys.add(cate);
 			}
 			
