@@ -24,7 +24,7 @@
 		</div>
 		<div id="bottom_right">
 			<h2>ㅇㅇ은행 채무지급보증 안내</h2>
-			<p>G4market은 "blabla1","blabla2","blabla3" 상점이 판매한 상품에 한해, 고객님</p><br>
+			<p>G4market은 "blabla1","blabla2","blabla3" 상점이 판매한 상품에 한해, 고객님</p>
 			<p>이 현금결제한 금액에 대해 ㅇㅇ은행과 채부지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
 			<a href="">서비스 가입사실 확인</a>
 			

@@ -30,7 +30,7 @@
 				<li>
 					<a href="main?center=itemView&code=<%=item.get(i).getCode() %>">
 						<img src="<%=item.get(i).getImage_path() %>" width="230" height="190"><br>
-						<p id=inner_content><%=item.get(i).getTitle() %></p>
+						<p id=inner_title><%=item.get(i).getTitle() %></p>
 						<strong id=inner_content><%=item.get(i).getPrice() %>원</strong>
 						<p id=inner_content><%=item.get(i).getDate() %>					
 					</a>

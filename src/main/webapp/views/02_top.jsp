@@ -12,18 +12,19 @@
 <script type="text/javascript">
 
  function keyword_check(){
+	const bucket = document.getElementsByName("keyword")[0];
+	console.log(bucket);
+	if(bucket === ''){ //검색어가 없을 경우  
+		
+	alert('검색어를 입력하세요'); //경고창 띄움 
+	
+	document.keyword.focus(); //다시 검색창으로 돌아감 
+	
+	return false; 
+	
+	}
 
-  if(document.search.keyword.value == ''){ //검색어가 없을 경우  
-
-  alert('검색어를 입력하세요'); //경고창 띄움 
-
-  document.search.keyword.focus(); //다시 검색창으로 돌아감 
-
-  return false; 
-
-  }
-
-  else return true;
+  	else return true;
 
  }
  
@@ -105,19 +106,19 @@
 				<div id="search_area">
 					<!-- 키워드별 검색옵션 추가도 고려 -->
 					<!-- 검색은 일단 문장을 단어로 분해 후 2~3글자 일치 '연속'여부 확인 후 도출형식 -->
-					<form action="main?center=search" accept-charset="utf-8" method="post" onsubmit="return keyword_check()">
-						<div>
+					<form action="main?center=search" accept-charset="utf-8" method="post" onsubmit="keyword_check()">
+						<div id="search_wrap">
 							<p>
-								<select class="form-control" name="searchField">
+								<select id="select_box"class="form-control" name="searchField">
 									<option value="search_Title">제목</option>
 									<option value="search_Area">지역명</option>
 								</select>
 							</p>
 							<p>
-								<input name="keyword" type="text" placeholder="검색어 입력">
+								<input id="textbox" name="keyword" type="text" autocomplete="off" placeholder="검색어 입력">
 							</p>	
                             <p class="btnArea">
-                            	<input type="submit" value="search">
+                            	<input id="submit_button" type="submit" value="search">
                             </p>
 						</div>
 					</form>
