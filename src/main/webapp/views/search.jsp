@@ -14,7 +14,7 @@
 	String word = request.getParameter("keyword");
 	String tag = request.getParameter("searchField");
 	String reward = "";
-	
+	int cnt = 0;
 	// 디버그용
 	// System.out.println(tag);
 	
@@ -23,7 +23,6 @@
 	
 	ArrayList<String> bucket = new ArrayList<>();
 	
-	// 제목 추출
 	if(tag.equals("search_Title")){
 		for(int i=0; i<item.size(); i++){
 			bucket.add(item.get(i).getTitle());
@@ -43,6 +42,7 @@
 		<ul>
 			<% for(int i=0; i<item.size(); i++){
 				if(bucket.get(i).contains(word)){
+					cnt ++;
 				%>
 					<li>
 						<a href="main?center=itemView&code=<%=item.get(i).getCode() %>">
@@ -62,6 +62,9 @@
 				};		
 			}
 			%>
+			<%if(cnt == 0){%>
+				<h2>일치하는 게시물이 존재하지 않습니다.</h2>
+			<%} %>
 		</ul>
 	</div>
 </body>
