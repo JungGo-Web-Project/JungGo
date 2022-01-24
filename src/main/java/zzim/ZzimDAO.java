@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 import comment.CommentDTO;
+import user.UserDTO;
 import utility.DBManager;
 
 
@@ -112,5 +113,16 @@ public class ZzimDAO {
 		}
 		return zzim;
 	}
-	
+	public void deleteUserZzim(UserDTO user) {
+		try {
+			conn = DBManager.getConnection();
+			String sql = "delete from zzim where buyerId=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, user.getId());
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

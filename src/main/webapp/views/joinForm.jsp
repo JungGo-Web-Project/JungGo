@@ -33,7 +33,10 @@
 	                    <tr class="info">
 	                        <td class="txt"><span>비밀번호</span></td>
 	                        <td class="info">
-	                            <input type="password" name="pw" class="required" id="pw"><br>
+	                            <input type="password" name="pw" class="required" id="pw" onchange="pwConfirm(this)"><br>
+	                            <span id="pwAlert">비밀번호 사용가능 조건에 맞지 않습니다<br></span>
+	                            <span id="pwCriteria">숫자, 알파벳소문자를 조합하여 6자리 이상</span><br>
+	                            <input type="hidden" id="pwCriteria_check" value="false">
 	                            <span id="alert2" class="alert">필수정보입니다</span>
 	                        </td>
 	                    </tr>

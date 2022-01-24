@@ -41,6 +41,14 @@ td.txt{
 	border-spacing: 0;
     width: calc(1280px*0.4 - 250px);
 }
+span#pwCriteria{
+	font-size: 0.7em;
+}
+span#pwAlert{
+	color:red;
+    font-size: 0.7em;
+   	display: none;
+}
 input.required{
     width: 250px;
     height: 40px;

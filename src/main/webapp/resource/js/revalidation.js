@@ -14,31 +14,72 @@ function checkJoin(form){
     const required = document.getElementsByClassName("required");
     const checkRequired = form.required;
 	
-	let cnt = 0;
-	for(let i=0; i<required.length; i++){
-		if(required[i].value !== ""){
-			cnt ++;
+	if(document.getElementById("pwCriteria_check").value === 'true'){
+		let cnt = 0;
+		for(let i=0; i<required.length; i++){
+			if(required[i].value !== ""){
+				cnt ++;
+			}
+	        else{
+	            document.getElementById("alert"+(i+1)).style.display="block";
+	        }
 		}
-        else{
-            document.getElementById("alert"+(i+1)).style.display="block";
-        }
+	
+	    let checked = 0;
+	    for(let i=0; i<checkRequired.length; i++){
+	        if(checkRequired[i].checked) checked ++;
+	    }
+	
+		if(cnt === required.length && checked === checkRequired.length){
+			if(form.pw.value === form.pwCheck.value){
+				form.submit();
+			}
+			else{
+				alert("비밀번호가 일치하지 않습니다");
+			}
+		}
+		else if(checked !== checkRequired.length){
+			alert("필수정보에 대해 동의가 필요합니다");
+		}
 	}
+	else{
+		alert("비밀번호 조건을 다시 한번 확인해주세요");
+	}
+}
 
-    let checked = 0;
-    for(let i=0; i<checkRequired.length; i++){
-        if(checkRequired[i].checked) checked ++;
-    }
-
-	if(cnt === required.length && checked === checkRequired.length){
-		if(form.pw.value === form.pwCheck.value){
-			form.submit();
+function pwConfirm(password){
+	const num = ['0','1','2','3','4','5','6','7','8','9'];
+	const abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+	
+	let numCheck = false;
+	let abcCheck = false;
+	
+	if(password.value.length >= 6){
+		for(let i=0; i<password.value.length; i++){
+			const pw = password.value.charAt(i);
+			
+			for(let j=0; j<num.length; j++){
+				if(pw === num[j]) numCheck = true;
+			}
+			for(let j=0; j<abc.length; j++){
+				if(pw === abc[j]) abcCheck = true;
+			}
+			if(numCheck && abcCheck){
+				document.getElementById("pwAlert").style.display = "none";
+				document.getElementById("pwCriteria_check").value = "true";
+				
+				break;
+			}
 		}
-		else{
-			alert("비밀번호가 일치하지 않습니다");
+	
+		if(!numCheck || !abcCheck){
+			document.getElementById("pwAlert").style.display = "block";
+			document.getElementById("pwCriteria_check").value = "false";
 		}
 	}
-	else if(checked !== checkRequired.length){
-		alert("필수정보에 대해 동의가 필요합니다");
+	else{
+		document.getElementById("pwAlert").style.display = "block";
+		document.getElementById("pwCriteria_check").value = "false";	
 	}
 }
 
