@@ -69,7 +69,7 @@ ArrayList<CategoryDTO> cate = cateDao.getCategory();
 	            	}
 	            	else{%>
                     <tr class="myPurchase">
-                        <td class="textWarning" colspan="5">구매한 상품이 없습니다</td>
+                        <td class="textWarning" colspan="6">구매한 상품이 없습니다</td>
                     </tr>
 	            	<%} %>
                 </table>

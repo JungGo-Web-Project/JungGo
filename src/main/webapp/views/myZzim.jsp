@@ -73,7 +73,7 @@ ArrayList<ZzimDTO> list = zzimDao.getZzimById(id);
 	            	}
 	            	else{%>
                     <tr class="myZzim">
-                        <td class="textWarning" colspan="5">찜한 상품이 없습니다</td>
+                        <td class="textWarning" colspan="6">찜한 상품이 없습니다</td>
                     </tr>
 	            	<%} %>
                 </table>

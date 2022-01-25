@@ -71,7 +71,7 @@ ArrayList<ItemDTO> list = dao.getMyItem(statue, id);
 	            	}
 	            	else{%>
                     <tr class="myItem">
-                        <td class="textWarning" colspan="5">등록된 상품이 없습니다</td>
+                        <td class="textWarning" colspan="6">등록된 상품이 없습니다</td>
                     </tr>
 	            	<%} %>
                 </table>
