@@ -41,6 +41,7 @@ ArrayList<ItemDTO> list = dao.getMyItem(statue, id);
                 <table class="myItem">
                     <tr class="myItem">
                         <th class="no">No</th>
+                        <th class="thumbnail">Image</th>
                         <th class="title">Title</th>
                         <th class="price">Price</th>
                         <th class="view">View</th>
@@ -51,6 +52,7 @@ ArrayList<ItemDTO> list = dao.getMyItem(statue, id);
 	            		for(int i=list.size()-1; i>=0; i--){
 	            			ItemDTO item = list.get(i);
 	            			int no = item.getCode();
+	            			String thumbnail = item.getImage_path();
 	            			String title = item.getTitle();
 	            			String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
 	            			int view = item.getView();
@@ -59,6 +61,7 @@ ArrayList<ItemDTO> list = dao.getMyItem(statue, id);
 	            		%>
            			<tr class="myItem">
                         <td class="no"><%=no %></td>
+                        <td class="thumbnail"><img class="thumbnail" src="${request.contextPath}upload/<%=thumbnail%>"></td>
                         <td class="title"><a class=myItemUrl href=<%=url %>><%=title %></a></td>
                         <td class="price"><%=price %></td>
                         <td class="view"><%=view %></td>

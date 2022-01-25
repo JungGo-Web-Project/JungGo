@@ -38,6 +38,7 @@ table.myBoard{
 tr.myBoard{
     border: solid 1px grey;
     border-collapse: collapse;
+    height: 30px;
 }
 th.no,td.no{
     width: 50px;

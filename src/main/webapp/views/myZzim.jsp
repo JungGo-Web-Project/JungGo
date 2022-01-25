@@ -41,6 +41,7 @@ ArrayList<ZzimDTO> list = zzimDao.getZzimById(id);
                     <tr class="myZzim">
                         <th class="no">No</th>
                         <th class="category">Category</th>
+                        <th class="thumbnail">Image</th>
                         <th class="title">Title</th>
                         <th class="price">Price</th>
                         <th class="date">Date</th>
@@ -49,21 +50,26 @@ ArrayList<ZzimDTO> list = zzimDao.getZzimById(id);
 	            	if(list.size() > 0){
 	            		for(int i=list.size()-1; i>=0; i--){
 	            			ItemDTO item = itemDao.getItemByCode(list.get(i).getItemCode());
-	            			int no = item.getCode();
-	            			String category = cateDao.getCategoryString(item.getCategory());
-	            			String title = item.getTitle();
-	            			String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
-	            			String date = new SimpleDateFormat("yyyy-MM-dd").format(item.getDate());
-	            			String url = "main?center=itemView&code="+item.getCode();
-	            		%>
-           			<tr class="myZzim">
-                        <td class="no"><%=no %></td>
-                        <td class="category"><%=category %></td>
-                        <td class="title"><a class=myZzimUrl href=<%=url %>><%=title %></a></td>
-                        <td class="price"><%=price %></td>
-                        <td class="date"><%=date %></td>
-                    </tr>
-	            		<%}
+	            			if(item.getStatus().equals("판매중")){
+		            			int no = item.getCode();
+		            			String category = cateDao.getCategoryString(item.getCategory());
+		            			String thumbnail = item.getImage_path();
+		            			String title = item.getTitle();
+		            			String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
+		            			String date = new SimpleDateFormat("yyyy-MM-dd").format(item.getDate());
+		            			String url = "main?center=itemView&code="+item.getCode();
+		            		%>
+	           			<tr class="myZzim">
+	                        <td class="no"><%=no %></td>
+	                        <td class="category"><%=category %></td>
+	                        <td class="thumbnail"><img class="thumbnail" src="${request.contextPath}upload/<%=thumbnail%>"></td>
+	                        <td class="title"><a class=myZzimUrl href=<%=url %>><%=title %></a></td>
+	                        <td class="price"><%=price %></td>
+	                        <td class="date"><%=date %></td>
+	                    </tr>
+	            				
+	            			<%}
+	            		}
 	            	}
 	            	else{%>
                     <tr class="myZzim">

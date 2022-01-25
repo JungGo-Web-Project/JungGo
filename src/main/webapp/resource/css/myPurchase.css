@@ -22,35 +22,44 @@ span#myPurchaseTitle{
     color: rgb(7, 48, 109);
 }
 table.myPurchase{
-    width: calc(1280px*0.5);
+    width: calc(1280px*0.6);
     border: solid 2px grey;
     border-collapse: collapse;
 }
 tr.myPurchase{
     border: solid 1px grey;
     border-collapse: collapse;
+    height: 30px;
 }
 th.no,td.no{
     width: 50px;
     text-align: center;
 }
 td.title{
-    width: calc(1280px*0.5 - 400px);
+    width: calc(1280px*0.6 - 530px);
     padding-left: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 th.title{
-    width: calc(1280px*0.5 - 400px);
+    width: calc(1280px*0.5 - 530px);
 }
 th.price,td.price{
     width: 100px;
 	padding-left: 10px;
 }
 th.category,td.category{
-    width: 100px;
+    width: 150px;
     text-align: center;
+}
+th.thumbnail,td.thumbnail{
+	width: 80px;
+}
+td.thumbnail{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
 }
 th.date,td.date{
     width: 150px;
@@ -58,6 +67,10 @@ th.date,td.date{
 }
 td.textWarning{
     text-align: center;
+}
+img.thumbnail{
+	width: 80px;
+	height: 80px;
 }
 a.myPurchaseUrl{
     text-decoration: none;

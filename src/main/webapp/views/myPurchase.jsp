@@ -40,6 +40,7 @@ ArrayList<CategoryDTO> cate = cateDao.getCategory();
                     <tr class="myPurchase">
                         <th class="no">No</th>
                         <th class="category">Category</th>
+                        <th class="thumbnail">Image</th>
                         <th class="title">Title</th>
                         <th class="price">Price</th>
                         <th class="date">Date</th>
@@ -50,6 +51,7 @@ ArrayList<CategoryDTO> cate = cateDao.getCategory();
 	            			ItemDTO item = list.get(i);
 	            			int no = item.getCode();
 	            			String category = cateDao.getCategoryString(item.getCategory());
+	            			String thumbnail = item.getImage_path();
 	            			String title = item.getTitle();
 	            			String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
 	            			String date = new SimpleDateFormat("yyyy-MM-dd").format(item.getDate());
@@ -58,6 +60,7 @@ ArrayList<CategoryDTO> cate = cateDao.getCategory();
            			<tr class="myBoard">
                         <td class="no"><%=no %></td>
                         <td class="category"><%=category %></td>
+                        <td class="thumbnail"><img class="thumbnail" src="${request.contextPath}upload/<%=thumbnail%>"></td>
                         <td class="title"><a class=myPurchaseUrl href=<%=url %>><%=title %></a></td>
                         <td class="price"><%=price %></td>
                         <td class="date"><%=date %></td>
