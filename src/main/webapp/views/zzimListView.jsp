@@ -29,7 +29,7 @@ String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
     <div class="zzimListWrap">
         <div class="zzimList">
             <div class="itemView">
-                <img id="itemImg" src="${request.contextPath}<%=item.getImage_path()%>">
+                <img id="itemImg" src="${request.contextPath}upload/<%=item.getImage_path() %>">
                 <span id="itemTitle"><a id="itemTitle" href=<%=url%>><%=item.getTitle()%></a></span>
                 <span id="price"><%=price%></span>
             </div>

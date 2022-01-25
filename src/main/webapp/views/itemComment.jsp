@@ -42,7 +42,7 @@ for(int i=0; i<list.size(); i++){
 %>
 <div class="itemComment-div">
         <section id="itemComment-sec">
-            <img id="itemComment-img" src="<%=item.getImage_path() %>" width="300px" height="300">
+            <img id="itemComment-img" src="${request.contextPath}upload/<%=item.getImage_path() %>" width="300px" height="300">
             <table id="itemComment-table1">
                 <tr>
                     <th><h1 id="itemComment-h1"><%=item.getTitle() %></h1></th>

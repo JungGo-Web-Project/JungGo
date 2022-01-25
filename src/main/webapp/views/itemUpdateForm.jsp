@@ -43,7 +43,7 @@ for(int i=0; i<list.size(); i++){
 	<div class="itemUpdateForm-div">
 		<h1>기본정보</h1>
 		<hr id="itemUpdateForm-hr1">
-		<form method="post" action="service">
+		<form method="post" action="service" enctype="multipart/form-data">
 			<section id="itemUpdateForm-sec1">
 				<h2 id="itemUpdateForm-h2">제&nbsp; 목 </h2>
 				<input id="itemUpdateForm-input1" name="title" type="text" value="<%=item.getTitle() %>" required>
@@ -51,7 +51,7 @@ for(int i=0; i<list.size(); i++){
 			<hr id="itemUpdateForm-hr2">
 			<section id="itemUpdateForm-sec1">
 				<h2 id="itemUpdateForm-h2">이미지 </h2>
-				<input id="itemUpdateForm-input1" type="text" name="image_path" value="<%=item.getImage_path() %>" required>
+				<input id="itemUpdateForm-input1" type="file" accept="image/png, image/gif, image/jpeg" name="image_path" value="<%=item.getImage_path() %>" required>
 			</section>
 			<hr id="itemUpdateForm-hr2">
 			<section id="itemUpdateForm-sec1">

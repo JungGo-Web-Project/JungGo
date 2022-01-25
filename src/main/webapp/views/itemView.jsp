@@ -50,7 +50,7 @@ for(int i=0; i<z.size(); i++){
 %>
     <div class="itemView-div">
         <section id="itemView-sec1">
-            <img id="itemView-img" src="<%=item.getImage_path() %>">
+            <img id="itemView-img" src="${request.contextPath}upload/<%=item.getImage_path() %>">
             <table id="itemView-table">
                 <tr>
                     <th colspan="2"><h1 id="itemView-h1"><%=item.getTitle() %></h1></th>

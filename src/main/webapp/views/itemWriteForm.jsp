@@ -28,7 +28,7 @@ else{
 	<div class="itemWriteForm-div">
 		<h1 id="itemWriteForm-title">기본정보</h1>
 		<hr id="itemWriteForm-hr1">
-		<form id="itemWriteForm-form" method="post" action="service">
+		<form id="itemWriteForm-form" method="post" action="service?command=itemWriteForm" enctype="multipart/form-data">
 			<section id="itemWriteForm-sec1">
 				<h2 id="itemWriteForm-h2">제&nbsp;목&nbsp;&emsp;&emsp;</h2>
 				<input id="itemWriteForm-input1" type="text" name="title" required>
@@ -36,7 +36,7 @@ else{
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
 				<h2 id="itemWriteForm-h2">이미지&nbsp;&ensp;&emsp;</h2>
-				<input id="itemWriteForm-input1" type="text" name="image_path" required>
+				<input id="itemWriteForm-input1" type="file" accept="image/png, image/gif, image/jpeg" name="image_path" required>
 			</section>
 			<hr id="itemWriteForm-hr2">
 			<section id="itemWriteForm-sec1">
@@ -91,7 +91,6 @@ else{
 				<input id="itemWriteForm-input1" type="number" name="num" min="1" max="999" value="1" required><span id="itemWriteForm-span">개</span>
 			</section>
 			<hr id="itemWriteForm-hr2">
-			<input type="hidden" name="command" value="itemWriteForm">
 			<input type="hidden" name="sellerId" value="<%=id %>">
 			<input type="submit" id="itemWriteForm-btn" value="등록하기">
 		</form>
