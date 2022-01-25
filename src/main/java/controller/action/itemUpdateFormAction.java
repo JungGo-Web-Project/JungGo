@@ -19,11 +19,11 @@ public class itemUpdateFormAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
-		String savePath = "/Users/lk823/git/JungGo/src/main/webapp/upload";
+		String path = request.getRealPath("upload");
 		// 업로드 파일 크기 5mb 제한
 		int uploadFileSizeLimit = 5 * 1024 * 1024;
 		String enType = "UTF-8";
-		MultipartRequest multi = new MultipartRequest(request, savePath, uploadFileSizeLimit, enType, new DefaultFileRenamePolicy());
+		MultipartRequest multi = new MultipartRequest(request, path, uploadFileSizeLimit, enType, new DefaultFileRenamePolicy());
 		
 		ItemDAO dao = ItemDAO.getInstance();
 		int code = Integer.parseInt(multi.getParameter("code"));
