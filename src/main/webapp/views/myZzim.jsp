@@ -30,6 +30,7 @@ ItemDAO itemDao = ItemDAO.getInstance();
 CategoryDAO cateDao = CategoryDAO.getInstance();
 
 ArrayList<ZzimDTO> list = zzimDao.getZzimById(id);
+int cnt = 0;
 %>
 	<div class="myZzimWrap">
         <div class="myZzim">
@@ -58,6 +59,8 @@ ArrayList<ZzimDTO> list = zzimDao.getZzimById(id);
 		            			String price = new DecimalFormat("###,###").format(item.getPrice()) + "원";
 		            			String date = new SimpleDateFormat("yyyy-MM-dd").format(item.getDate());
 		            			String url = "main?center=itemView&code="+item.getCode();
+		            			
+		            			cnt ++;
 		            		%>
 	           			<tr class="myZzim">
 	                        <td class="no"><%=no %></td>
@@ -71,7 +74,7 @@ ArrayList<ZzimDTO> list = zzimDao.getZzimById(id);
 	            			<%}
 	            		}
 	            	}
-	            	else{%>
+	            	else if(list.size() == 0 || cnt == 0){%>
                     <tr class="myZzim">
                         <td class="textWarning" colspan="6">찜한 상품이 없습니다</td>
                     </tr>

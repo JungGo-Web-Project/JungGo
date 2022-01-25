@@ -52,14 +52,14 @@ td.thumbnail{
 	align-items: center;	
 }
 td.title{
-    width: calc(1280px*0.5 - 350px);
+    width: calc(1280px*0.5 - 430px);
     padding-left: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 th.title{
-    width: calc(1280px*0.5 - 350px);
+    width: calc(1280px*0.5 - 430px);
 }
 th.price,td.price{
     width: 100px;
